@@ -1,0 +1,42 @@
+import radio as radio
+from microbit import *
+from machine import *
+
+#CODE Micro:bit Sensors
+
+radio.on()
+# Frequency configuration
+radio.config(channel=18)
+# Address configuration
+radio.config(address=0x75626970)
+# Group configuration
+radio.config(group=18)
+# Message length configuration
+radio.config(length=251)
+
+# UART initialisation
+uart.init(115200, bits=8, parity=None, stop=1)
+
+# Read on UART messsage sent from python programm
+# Should come as "id1,id2,id3,id4:val1,val2,val3,val4"
+def uartReadMsg():
+    msg = uart.readline() 
+    return str(msg)
+ 
+# Code given message with Ceasar code, 18 character difference.
+def codeMessage(msg):
+    messagecode = ""
+    for i in range(0, len(msg)):
+        messagecode += chr(ord(msg[i])+18)
+    return messagecode
+
+# Send given message on Radio to the other Micro:bit.
+def sendMessageOnRadio(msg):
+    radio.send(codeMessage(msg))
+    
+while True:
+    #If there is msg form UART pending
+    if uart.any():
+        msg = uartReadMsg()
+        display.scroll(str(msg))
+        sendMessageOnRadio(msg)

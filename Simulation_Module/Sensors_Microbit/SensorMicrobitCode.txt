@@ -1,0 +1,41 @@
+import radio as radio
+from microbit import *
+from machine import *
+
+#CODE Micro:bit DataCenter
+
+radio.on()
+# Frequency configuration.
+radio.config(channel=18)
+# Address configuration.
+radio.config(address=0x75626970)
+# Group configuration.
+radio.config(group=18)
+# Message length configuration.
+radio.config(length=251)
+
+# UART initialisation
+uart.init(115200, bits=8, partity=None, stop=1)
+
+# Send received radio message on UART.
+def uartSendMsg(msg):
+    uart.write(msg)
+
+# Decode given message with Ceasar code, 18 character difference.
+def decodeMessage(msg):
+    messagedecode = ""
+    for i in range(0, len(msg)):
+        messagedecode += chr(ord(msg[i])-18)
+    return messagedecode
+
+# Receive message on Radio from other Micro:bit.
+def receiveMessageOnRadio():
+    return radio.receive()
+
+while True:
+    msg = receiveMessageOnRadio()
+    if msg :
+        uartSendMsg(msg)
+    
+    
+    
