@@ -6,20 +6,18 @@
 from microbit import *
 import radio as radio
 
-def setRadioOnAndSetting(channel, address, group, lenght):
+def setRadioOnAndSetting(channel, group, lenght):
     # Set radio on.
     radio.on()
     # Frequency configuration.
     radio.config(channel=channel)
     # Address configuration.
-    radio.config(address=address)
-    # Group configuration.
     radio.config(group=group)
     # Message length configuration.
     radio.config(length=lenght)
 
 def createMessage(msgType, Dest, Src, Data):
-    return "" + msgType + ":" + Dest + ":" + Src + ":" + Data
+    return msgType + ":" + Dest + ":" + Src + ":" + Data
 
 def getTypeMsg(msg):
     return str(msg.split(":")[0])
@@ -37,7 +35,7 @@ def codeMsg(msg):
     cMsg = ""
     for i in range(0,len(msg)):
         cMsg += chr(ord(msg[i]) + 18)
-    return cMsgg
+    return cMsg
 
 def decodeMsg(msg):
     dMsg = ""
@@ -47,7 +45,7 @@ def decodeMsg(msg):
 
 def ReceiveMsg():
     msg = radio.receive()
-    if msg :
+    if msg != None :
        return decodeMsg(msg)
     else :
         return None

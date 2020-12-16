@@ -1,42 +1,34 @@
 import radio as radio
 from microbit import *
 from machine import *
+from threebg import *
 
-#CODE Micro:bit Sensors
+#CODE Micro:bit DataCenter
 
-radio.on()
-# Frequency configuration
-radio.config(channel=18)
-# Address configuration
-radio.config(address=0x75626970)
-# Group configuration
-radio.config(group=18)
-# Message length configuration
-radio.config(length=251)
+MICROBIT_ID = 18
+
+setRadioOnAndSetting(18, 18, 251)
 
 # UART initialisation
 uart.init(115200, bits=8, parity=None, stop=1)
 
-# Read on UART messsage sent from python programm
-# Should come as "id1,id2,id3,id4:val1,val2,val3,val4"
+# Read on UART
 def uartReadMsg():
-    msg = uart.readline() 
+    msg = uart.readline()
     return str(msg)
- 
-# Code given message with Ceasar code, 18 character difference.
-def codeMessage(msg):
-    messagecode = ""
-    for i in range(0, len(msg)):
-        messagecode += chr(ord(msg[i])+18)
-    return messagecode
 
-# Send given message on Radio to the other Micro:bit.
-def sendMessageOnRadio(msg):
-    radio.send(codeMessage(msg))
-    
+# Write on UART
+def uartSendMsg(msg):
+    uart.write(msg)
+
 while True:
-    #If there is msg form UART pending
-    if uart.any():
-        msg = uartReadMsg()
-        display.scroll(str(msg))
-        sendMessageOnRadio(msg)
+    msg = ReceiveMsg()
+    sleep(2001)
+    # Si un message est reçu par radio : 
+    if msg != None :
+        if getTypeMsg(msg) == "update":
+            print(msg)
+            #uartSendMsg(getSourceMsg(msg) + ":" + getValueFromMsg(msg))
+            
+    
+    
