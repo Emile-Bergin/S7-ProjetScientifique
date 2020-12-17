@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-17T15:51:14.357Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="DsnnDA4vBo0fSG9zoyB7" version="14.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-17T16:01:05.100Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="HWTXV6mvapPGMoGaX0o2" version="14.0.4" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="2001" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3104" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,7 +34,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="DopvcjN36Z4AIwr0QMlW-1" value="WebServerConnector" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" parent="1" vertex="1">
-          <mxGeometry x="370" y="80" width="120" height="520" as="geometry" />
+          <mxGeometry x="370" y="80" width="590" height="530" as="geometry" />
         </mxCell>
         <mxCell id="DopvcjN36Z4AIwr0QMlW-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" parent="DopvcjN36Z4AIwr0QMlW-1" vertex="1">
           <mxGeometry x="55" y="80" width="10" height="440" as="geometry" />
@@ -49,6 +49,9 @@
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-89" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=4;" vertex="1" parent="DopvcjN36Z4AIwr0QMlW-1">
+          <mxGeometry x="-280" width="870" height="530" as="geometry" />
         </mxCell>
         <mxCell id="DopvcjN36Z4AIwr0QMlW-5" value="updateBarracks" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;exitX=0.979;exitY=0.374;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="DopvcjN36Z4AIwr0QMlW-2" edge="1">
           <mxGeometry relative="1" as="geometry">
