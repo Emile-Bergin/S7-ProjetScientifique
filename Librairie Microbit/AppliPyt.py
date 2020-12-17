@@ -1,9 +1,11 @@
 from time import sleep
 import serial
 
-SERIALPORT = "COM6"
+SERIALPORT = "COM5"
 BAUDRATE = 115200
 ser = serial.Serial()
+ListUpdate = []
+msg = ""
 
 ser.port = SERIALPORT
 def initUART():
@@ -23,6 +25,11 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
+def newUpdate(msg) :
+    ListUpdate.append(msg)
+    print("Nouveau message ajouté : " + msg)
+    print(ListUpdate)
+
 def receiveUartMessage() :
     return ser.read()
 
@@ -30,12 +37,15 @@ if __name__ == '__main__':
     initUART()
     try:
         while ser.isOpen():
-            sleep(1000)
-            msg = receiveUartMessage()
-            print(msg)
-            if msg != None :
-                print("oh, hi mark : " + str(msg))
-
+            character = receiveUartMessage().decode()
+            msg += character
+            if '\n' in msg :
+                print(msg + "\n")
+                newUpdate(msg.split('\n')[0])
+                if len(msg.split('\n')) > 1:
+                    msg = msg.split('\n', 1)[1]
+                else:
+                    msg = ""
     except (KeyboardInterrupt, SystemExit):
         ser.close()
         exit()

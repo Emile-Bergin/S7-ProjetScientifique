@@ -17,7 +17,7 @@ def setRadioOnAndSetting(channel, group, lenght):
     radio.config(length=lenght)
 
 def createMessage(msgType, Dest, Src, Data):
-    return msgType + ":" + Dest + ":" + Src + ":" + Data
+    return msgType + ":" + Dest + ":" + Src + ":" + Data + "\n"
 
 def getTypeMsg(msg):
     return str(msg.split(":")[0])

@@ -10,7 +10,7 @@ MICROBIT_ID = 18
 setRadioOnAndSetting(18, 18, 251)
 
 # UART initialisation
-uart.init(115200, bits=8, parity=None, stop=1)
+uart.init(115200)
 
 # Read on UART
 def uartReadMsg():
@@ -23,12 +23,12 @@ def uartSendMsg(msg):
 
 while True:
     msg = ReceiveMsg()
-    sleep(2001)
+    sleep(5001)
     # Si un message est reçu par radio : 
     if msg != None :
         if getTypeMsg(msg) == "update":
-            print(msg)
-            #uartSendMsg(getSourceMsg(msg) + ":" + getValueFromMsg(msg))
+            display.scroll(msg)
+            uartSendMsg(getSourceFromMsg(msg) + ':' + getValueFromMsg(msg))
             
     
     
