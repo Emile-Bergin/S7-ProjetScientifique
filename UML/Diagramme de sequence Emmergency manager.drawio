@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-17T14:00:54.766Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="jxR-FBIiGS7U4nF5vStX" version="14.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-17T14:03:32.232Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="8cqE5ytrC1_2KxUG9GxA" version="14.0.4" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="2239" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2528" dy="914" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -73,7 +73,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-30" value="updateFireAndTrucksState" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="DopvcjN36Z4AIwr0QMlW-16" source="DopvcjN36Z4AIwr0QMlW-17" target="DopvcjN36Z4AIwr0QMlW-17">
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-30" value="updateTrucksState" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="DopvcjN36Z4AIwr0QMlW-16" source="DopvcjN36Z4AIwr0QMlW-17" target="DopvcjN36Z4AIwr0QMlW-17">
           <mxGeometry x="-0.1124" relative="1" as="geometry">
             <mxPoint x="50" y="270" as="sourcePoint" />
             <mxPoint x="50" y="289" as="targetPoint" />
@@ -181,6 +181,74 @@
             <mxPoint x="285" y="980" as="targetPoint" />
             <Array as="points">
               <mxPoint x="240" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-32" value="&lt;span style=&quot;font-size: 11px ; background-color: rgb(255 , 255 , 255)&quot;&gt;detectIntensityIncreased&lt;/span&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=160;height=40;" vertex="1" parent="1">
+          <mxGeometry x="840" y="620" width="870" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-33" value="freeTruck" style="shape=umlFrame;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="860" width="500" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-34" value="MissionManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="670" width="100" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-35" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="GZD4Xb3dl9BsiS5UBGIe-34">
+          <mxGeometry x="45" y="80" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-37" value="isATruckFree(fireIntensity): Truck" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="GZD4Xb3dl9BsiS5UBGIe-34" source="GZD4Xb3dl9BsiS5UBGIe-35" target="GZD4Xb3dl9BsiS5UBGIe-35">
+          <mxGeometry x="-0.0909" relative="1" as="geometry">
+            <mxPoint x="60" y="160" as="sourcePoint" />
+            <mxPoint x="60" y="179" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="150" y="160" />
+              <mxPoint x="150" y="179" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-38" value="Truck" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="670" width="120" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-39" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="GZD4Xb3dl9BsiS5UBGIe-38">
+          <mxGeometry x="55" y="80" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-40" value="Mission" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1129" y="670" width="120" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-41" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="GZD4Xb3dl9BsiS5UBGIe-40">
+          <mxGeometry x="55" y="80" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-42" value="set(truck)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="GZD4Xb3dl9BsiS5UBGIe-35" target="GZD4Xb3dl9BsiS5UBGIe-41">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990.0000000000002" y="870" as="sourcePoint" />
+            <mxPoint x="1301.93" y="870" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1130" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-43" value="DataBaseConnector" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="670" width="120" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-44" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="GZD4Xb3dl9BsiS5UBGIe-43">
+          <mxGeometry x="55" y="80" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-45" value="setBusy(True)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="GZD4Xb3dl9BsiS5UBGIe-41" target="GZD4Xb3dl9BsiS5UBGIe-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1190" y="910" as="sourcePoint" />
+            <mxPoint x="1360" y="910" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1315" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-46" value="updateMission(List&lt;Truck&gt;,Fire)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="GZD4Xb3dl9BsiS5UBGIe-35" target="GZD4Xb3dl9BsiS5UBGIe-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="980" as="sourcePoint" />
+            <mxPoint x="1185" y="980" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1140" y="980" />
             </Array>
           </mxGeometry>
         </mxCell>
