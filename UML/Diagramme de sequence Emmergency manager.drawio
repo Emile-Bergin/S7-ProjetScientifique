@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-17T15:16:42.899Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="8w284v4Qi3CvbZ1HdzdG" version="14.0.4" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-17T15:20:28.815Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="WYz8uKvjj7Fv-qBLgM42" version="14.0.4" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="2001" dy="627" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -64,11 +64,11 @@
         </mxCell>
         <mxCell id="GZD4Xb3dl9BsiS5UBGIe-1" value="Newfire" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="DopvcjN36Z4AIwr0QMlW-16">
           <mxGeometry x="-0.3855" relative="1" as="geometry">
-            <mxPoint x="55" y="349" as="sourcePoint" />
-            <mxPoint x="55" y="368" as="targetPoint" />
+            <mxPoint x="55" y="356" as="sourcePoint" />
+            <mxPoint x="55" y="375" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="135" y="349" />
-              <mxPoint x="135" y="368" />
+              <mxPoint x="135" y="356" />
+              <mxPoint x="135" y="375" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -80,6 +80,17 @@
             <Array as="points">
               <mxPoint x="140" y="399" />
               <mxPoint x="140" y="418" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GZD4Xb3dl9BsiS5UBGIe-60" value="updateTruckState" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="DopvcjN36Z4AIwr0QMlW-16" source="DopvcjN36Z4AIwr0QMlW-17" target="DopvcjN36Z4AIwr0QMlW-17">
+          <mxGeometry x="-0.3855" relative="1" as="geometry">
+            <mxPoint x="62" y="321" as="sourcePoint" />
+            <mxPoint x="62" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="142" y="321" />
+              <mxPoint x="142" y="340" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
