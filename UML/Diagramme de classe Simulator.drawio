@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T08:53:03.391Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="aybwY7reTYGYcYOV8AUb" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-18T09:38:19.039Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="HJNzRsO1ffHhtXW9CYsB" version="14.0.5" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
-    <mxGraphModel dx="914" dy="1036" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
+    <mxGraphModel dx="-541" dy="288" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry x="1249" y="80" width="130" height="520" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-2" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-1">
-          <mxGeometry x="45" y="70" width="10" height="450" as="geometry" />
+          <mxGeometry x="60" y="70" width="10" height="450" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-3" value="[appel api/refreshdataFromDataBase]" style="verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-1" target="ytdSUjh50x-NLadKz5zi-2">
           <mxGeometry x="0.0286" relative="1" as="geometry">
@@ -28,35 +28,24 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-7" value="WebServerConnector" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1529" y="80" width="120" height="520" as="geometry" />
+          <mxGeometry x="1680" y="80" width="120" height="520" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-8" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-7">
           <mxGeometry x="55" y="80" width="10" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-9" value="getCaptors: List&lt;Captor&gt;" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-7" source="ytdSUjh50x-NLadKz5zi-8" target="ytdSUjh50x-NLadKz5zi-8">
-          <mxGeometry x="-0.1124" relative="1" as="geometry">
-            <mxPoint x="60" y="110" as="sourcePoint" />
-            <mxPoint x="60" y="129" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="135" y="110" />
-              <mxPoint x="135" y="129" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-10" value="MissionManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="2029" y="80" width="100" height="560" as="geometry" />
+        <mxCell id="ytdSUjh50x-NLadKz5zi-10" value="FireManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1830" y="80" width="100" height="560" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-11" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-10">
           <mxGeometry x="45" y="80" width="10" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-12" value="Newfire" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-12" value="updateTrucks" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10" source="ytdSUjh50x-NLadKz5zi-11" target="ytdSUjh50x-NLadKz5zi-11">
           <mxGeometry x="-0.3855" relative="1" as="geometry">
-            <mxPoint x="55" y="368" as="sourcePoint" />
-            <mxPoint x="55" y="387" as="targetPoint" />
+            <mxPoint x="55" y="260" as="sourcePoint" />
+            <mxPoint x="55" y="279" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="135" y="368" />
-              <mxPoint x="135" y="387" />
+              <mxPoint x="135" y="260" />
+              <mxPoint x="135" y="279" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
@@ -72,35 +61,24 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-14" value="updateTruckState" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-14" value="UpdateFires" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10">
           <mxGeometry x="-0.3855" relative="1" as="geometry">
-            <mxPoint x="55" y="333" as="sourcePoint" />
-            <mxPoint x="55" y="352" as="targetPoint" />
+            <mxPoint x="55" y="210" as="sourcePoint" />
+            <mxPoint x="55" y="229" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="142" y="333" />
-              <mxPoint x="142" y="352" />
+              <mxPoint x="142" y="210" />
+              <mxPoint x="142" y="229" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-15" value="FireManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
-          <mxGeometry x="1729" y="80" width="100" height="560" as="geometry" />
+        <mxCell id="ytdSUjh50x-NLadKz5zi-15" value="MissionManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1540" y="80" width="100" height="560" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-16" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-15">
           <mxGeometry x="45" y="80" width="10" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-17" value="DetectNewAndIncreaseFire(List&lt;Captor&gt;):List&lt;Fire&gt;" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-15" source="ytdSUjh50x-NLadKz5zi-16" target="ytdSUjh50x-NLadKz5zi-16">
-          <mxGeometry x="-0.1124" y="60" relative="1" as="geometry">
-            <mxPoint x="60" y="169.9999999999999" as="sourcePoint" />
-            <mxPoint x="60" y="189.0000000000001" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="130" y="170" />
-              <mxPoint x="130" y="189" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-18" value="updateCaptors" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-5" target="ytdSUjh50x-NLadKz5zi-8">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-18" value="update" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-5" target="ytdSUjh50x-NLadKz5zi-16">
           <mxGeometry x="0.0833" y="10" relative="1" as="geometry">
             <mxPoint x="1473.8899999999999" y="180.00000000000014" as="sourcePoint" />
             <mxPoint x="1594.1" y="180.00000000000014" as="targetPoint" />
@@ -110,56 +88,34 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-19" value="updateCaptors(List&lt;Captor&gt;)" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-8" target="ytdSUjh50x-NLadKz5zi-16">
-          <mxGeometry x="0.0833" y="10" relative="1" as="geometry">
-            <mxPoint x="1599" y="239.9999999999999" as="sourcePoint" />
-            <mxPoint x="1719" y="239.9999999999999" as="targetPoint" />
+        <mxCell id="ytdSUjh50x-NLadKz5zi-27" value="updateTruck" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry x="-0.0714" relative="1" as="geometry">
+            <mxPoint x="1595" y="212" as="sourcePoint" />
+            <mxPoint x="1735" y="212" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1684" y="240" />
+              <mxPoint x="1695" y="212" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-20" value="updateTrucks" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1464" y="359.71000000000004" as="sourcePoint" />
-            <mxPoint x="1583.999999999999" y="359.7099999999998" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-21" value="return List&amp;lt;Barracks&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-7" target="ytdSUjh50x-NLadKz5zi-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1559" y="330" as="sourcePoint" />
-            <mxPoint x="1479" y="330" as="targetPoint" />
+        <mxCell id="ytdSUjh50x-NLadKz5zi-28" value="updateMission" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+          <mxGeometry x="-0.0714" relative="1" as="geometry">
+            <mxPoint x="1595" y="235" as="sourcePoint" />
+            <mxPoint x="1735" y="235" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1680" y="330" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-22" value="return List&amp;lt;Barracks&amp;gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;" edge="1" parent="1" target="ytdSUjh50x-NLadKz5zi-10">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1583.999999999999" y="381" as="sourcePoint" />
-            <mxPoint x="1464" y="381" as="targetPoint" />
-            <Array as="points" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-23" value="refresh()" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-15" target="ytdSUjh50x-NLadKz5zi-10">
-          <mxGeometry x="0.0833" y="10" relative="1" as="geometry">
-            <mxPoint x="1850" y="290" as="sourcePoint" />
-            <mxPoint x="2030" y="290" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="1940" y="290" />
+              <mxPoint x="1705" y="235" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-24" value="updateBarracks" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-10" target="ytdSUjh50x-NLadKz5zi-8">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1463.79" y="304.84000000000015" as="sourcePoint" />
-            <mxPoint x="1589" y="305" as="targetPoint" />
+        <mxCell id="ytdSUjh50x-NLadKz5zi-29" value="update" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-16" target="ytdSUjh50x-NLadKz5zi-10">
+          <mxGeometry x="-0.0083" relative="1" as="geometry">
+            <mxPoint x="1600" y="270" as="sourcePoint" />
+            <mxPoint x="1721" y="270" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1900" y="310" />
+              <mxPoint x="1685" y="270" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
