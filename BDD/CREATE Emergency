@@ -72,6 +72,7 @@ CREATE TABLE fireworker.missions
     id_fire integer NOT NULL,
     id_truck integer NOT NULL,
     date date NOT NULL,
+    processed boolean,
     CONSTRAINT missions_pkey PRIMARY KEY (id, id_fire, id_truck, date),
     CONSTRAINT fires FOREIGN KEY (id_fire)
         REFERENCES public.fires (id) MATCH SIMPLE
