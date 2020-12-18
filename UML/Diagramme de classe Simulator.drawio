@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T09:51:30.033Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="UrMjcfRsdn-cq-cYu0-e" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-18T09:52:30.448Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="LCxTY_aAOddub68dOm52" version="14.0.5" type="github">
   <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
     <mxGraphModel dx="289" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="#ffffff" math="0" shadow="0">
       <root>
@@ -31,7 +31,7 @@
           <mxGeometry x="1650" y="80" width="190" height="520" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-8" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-7">
-          <mxGeometry x="55" y="80" width="10" height="440" as="geometry" />
+          <mxGeometry x="90" y="75" width="10" height="440" as="geometry" />
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-10" value="FireManager" style="shape=umlLifeline;perimeter=lifelinePerimeter;container=1;collapsible=0;recursiveResize=0;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="1846" y="80" width="100" height="560" as="geometry" />
@@ -39,7 +39,7 @@
         <mxCell id="ytdSUjh50x-NLadKz5zi-11" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-10">
           <mxGeometry x="45" y="80" width="10" height="440" as="geometry" />
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-14" value="updateFires" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10" source="ytdSUjh50x-NLadKz5zi-11" target="ytdSUjh50x-NLadKz5zi-11">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-14" value="updateSensor" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="ytdSUjh50x-NLadKz5zi-10" source="ytdSUjh50x-NLadKz5zi-11" target="ytdSUjh50x-NLadKz5zi-11">
           <mxGeometry x="-0.3855" relative="1" as="geometry">
             <mxPoint x="55" y="336" as="sourcePoint" />
             <mxPoint x="55" y="355" as="targetPoint" />
@@ -77,7 +77,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-27" value="getUpdateTruck" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-27" value="getUpdateTruck" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" target="ytdSUjh50x-NLadKz5zi-8">
           <mxGeometry x="-0.0714" relative="1" as="geometry">
             <mxPoint x="1595" y="212" as="sourcePoint" />
             <mxPoint x="1735" y="212" as="targetPoint" />
@@ -87,7 +87,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-28" value="getUpdateMission" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-28" value="getUpdateMission" style="verticalAlign=bottom;endArrow=block;shadow=0;strokeWidth=1;" edge="1" parent="1" target="ytdSUjh50x-NLadKz5zi-8">
           <mxGeometry x="-0.0714" relative="1" as="geometry">
             <mxPoint x="1595" y="235" as="sourcePoint" />
             <mxPoint x="1735" y="235" as="targetPoint" />
@@ -122,7 +122,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytdSUjh50x-NLadKz5zi-35" value="postUpadateFire" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-11" target="ytdSUjh50x-NLadKz5zi-31">
+        <mxCell id="ytdSUjh50x-NLadKz5zi-35" value="postUpadateSensor" style="html=1;verticalAlign=bottom;endArrow=block;" edge="1" parent="1" source="ytdSUjh50x-NLadKz5zi-11" target="ytdSUjh50x-NLadKz5zi-31">
           <mxGeometry width="80" relative="1" as="geometry">
             <mxPoint x="1700" y="340" as="sourcePoint" />
             <mxPoint x="1780" y="340" as="targetPoint" />
@@ -145,6 +145,15 @@
         </mxCell>
         <mxCell id="ytdSUjh50x-NLadKz5zi-40" value="" style="points=[];perimeter=orthogonalPerimeter;rounded=0;shadow=0;strokeWidth=1;" vertex="1" parent="ytdSUjh50x-NLadKz5zi-39">
           <mxGeometry x="85" y="80" width="10" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="ytdSUjh50x-NLadKz5zi-41" value="postUpadateSensor" style="html=1;verticalAlign=bottom;endArrow=block;exitX=0.478;exitY=0.731;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1893.8000000000002" y="493.3599999999999" as="sourcePoint" />
+            <mxPoint x="2265.5" y="494" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2009" y="494" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
