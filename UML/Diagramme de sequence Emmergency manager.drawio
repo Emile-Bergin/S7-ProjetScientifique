@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T08:07:32.801Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="OcTPTtwo4eVhdg-GR847" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-18T08:08:58.843Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="kDxMJPozYyeBVLKKDthz" version="14.0.5" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
     <mxGraphModel dx="2404" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -485,10 +485,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="KDF3uTEyH0ih5DaAIvDB-2" value="A Truck is launched" style="shape=umlFrame;whiteSpace=wrap;html=1;width=130;height=30;" vertex="1" parent="1">
-          <mxGeometry x="850" y="890" width="910" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="KDF3uTEyH0ih5DaAIvDB-3" value="A Truck is launched" style="shape=umlFrame;whiteSpace=wrap;html=1;width=130;height=30;" vertex="1" parent="1">
+        <mxCell id="KDF3uTEyH0ih5DaAIvDB-3" value="A Truck is not launched" style="shape=umlFrame;whiteSpace=wrap;html=1;width=130;height=30;" vertex="1" parent="1">
           <mxGeometry x="850" y="970" width="910" height="210" as="geometry" />
         </mxCell>
       </root>
