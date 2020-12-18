@@ -1,0 +1,9 @@
+def updateFire(id, intensity):
+    sql = 'UPDATE public.fires SET intensity = %s WHERE id = %s'
+    args = (intensity, id)
+    cur.execute(sql, args)
+	
+@app.route("/api/updateFire/", methods=["POST"])
+def updateFireAPI():
+    updateFire(request.form.get("id"), request.form.get("intensity"))
+    return ''
