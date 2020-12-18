@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T08:14:16.708Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="Z9c6lCk6z3TRoMcOFy4b" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-18T08:16:35.227Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="re-HmD1COA_NLuYBWWFA" version="14.0.5" type="github">
   <diagram id="eigChdQNg6bgcLg3cVgB" name="Page-1">
-    <mxGraphModel dx="2381" dy="757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1729" dy="439" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -66,6 +66,9 @@
         </mxCell>
         <mxCell id="Fq7706VyEmhTDiXR55tR-17" value="The smoke settles here" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;base=20;size=30;position=0.5;" vertex="1" parent="1">
           <mxGeometry x="-70" y="240" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Fq7706VyEmhTDiXR55tR-18" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://i.pinimg.com/originals/d5/92/b0/d592b099af8623be202b7be634b11507.png;" vertex="1" parent="1">
+          <mxGeometry x="50" y="308.29" width="47" height="55.04" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
