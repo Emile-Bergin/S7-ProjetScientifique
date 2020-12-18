@@ -41,7 +41,7 @@ def getSensors_Fires():
     cur.execute(sql)
     return cur.fetchall()
 
-def createSensors_Fires(id_sensor, id_fire):
+def createSensor_Fire(id_sensor, id_fire):
     sql = 'INSERT INTO public.sensors__fires (id_sensor, id_fire) VALUES (%s, %s)'
     args = (id_sensor, id_fire)
     cur.execute(sql, args)

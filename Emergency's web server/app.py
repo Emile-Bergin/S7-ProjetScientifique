@@ -2,7 +2,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import os
-from MQTT.service import test
+from MQTT.service import sendSensorMQTT
 
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def hello():
     return "Hello World!"
 
 def main():
-    test()
+    sendSensorMQTT(10,28)
     app.run(debug=True)
     
 #A ne pas touché => Après avoir déclaré app
