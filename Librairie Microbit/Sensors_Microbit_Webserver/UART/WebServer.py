@@ -1,14 +1,14 @@
 from time import sleep
 import serial
 
-SERIALPORT = "COM6"
+# send serial message
+SERIALPORT = "COM5"
 BAUDRATE = 115200
 ser = serial.Serial()
-ListUpdate = []
-msg = ""
 
-ser.port = SERIALPORT
+
 def initUART():
+    ser.port = SERIALPORT
     ser.baudrate = BAUDRATE
     ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
     ser.parity = serial.PARITY_NONE  # set parity check: no parity
@@ -25,27 +25,9 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
-def newUpdate(msg) :
-    ListUpdate.append(msg)
-    print("Nouveau message ajouté : " + msg)
-    print(ListUpdate)
-
-def receiveUartMessage() :
-    return ser.read()
-
-if __name__ == '__main__':
+def sendUARTMsg(id, intensity):
     initUART()
-    try:
-        while ser.isOpen():
-            character = receiveUartMessage().decode()
-            msg += character
-            if '\n' in msg :
-                print(msg + "\n")
-                newUpdate(msg.split('\n')[0])
-                if len(msg.split('\n')) > 1:
-                    msg = msg.split('\n', 1)[1]
-                else:
-                    msg = ""
-    except (KeyboardInterrupt, SystemExit):
-        ser.close()
-        exit()
+    msg = str(id) + ':' + str(intensity)
+    ser.write(msg.encode())
+    print("Buffer Envoyé 0_0")
+    ser.close()

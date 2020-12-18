@@ -2,7 +2,7 @@ from time import sleep
 import serial
 
 # send serial message
-SERIALPORT = "COM6"
+SERIALPORT = "COM5"
 BAUDRATE = 115200
 ser = serial.Serial()
 
