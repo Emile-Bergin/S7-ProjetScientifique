@@ -1,5 +1,6 @@
-from time import sleep
 import serial
+import os
+import signal
 
 SERIALPORT = "COM6"
 BAUDRATE = 115200
@@ -25,15 +26,15 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
-def newUpdate(msg) :
-    ListUpdate.append(msg)
+def newUpdate(msg, QueueMsg, pid) :
+    QueueMsg.put(msg)
     print("Nouveau message ajouté : " + msg)
-    print(ListUpdate)
+    os.kill(pid, signal.SIGUSR1)
 
 def receiveUartMessage() :
     return ser.read()
 
-if __name__ == '__main__':
+def main(QueueMsg, pid):
     initUART()
     try:
         while ser.isOpen():
@@ -41,7 +42,7 @@ if __name__ == '__main__':
             msg += character
             if '\n' in msg :
                 print(msg + "\n")
-                newUpdate(msg.split('\n')[0])
+                newUpdate(msg.split('\n')[0], QueueMsg,pid)
                 if len(msg.split('\n')) > 1:
                     msg = msg.split('\n', 1)[1]
                 else:
