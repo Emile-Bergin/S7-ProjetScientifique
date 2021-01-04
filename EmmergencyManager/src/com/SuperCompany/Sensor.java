@@ -1,20 +1,17 @@
 package com.SuperCompany;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-public class Fire implements PhysiqueElement{
+public class Sensor implements PhysiqueElement{
     private Integer m_id;
-    private Date m_date;
+    private Integer m_column;
+    private Integer m_line;
     private Double m_longitude;
     private Double m_latitude;
     private Integer m_intensity;
-    private List<Integer> m_previousIntensity= new ArrayList<Integer>();
 
-    public Fire(Integer m_id, Date m_date, Double m_longitude, Double m_latitude, Integer m_intensity) {
+    public Sensor(Integer m_id, Integer m_column, Integer m_line, Double m_longitude, Double m_latitude, Integer m_intensity) {
         this.m_id = m_id;
-        this.m_date = m_date;
+        this.m_column = m_column;
+        this.m_line = m_line;
         this.m_longitude = m_longitude;
         this.m_latitude = m_latitude;
         this.m_intensity = m_intensity;
@@ -22,13 +19,13 @@ public class Fire implements PhysiqueElement{
 
     @Override
     public String toString() {
-        return "Fire{" +
+        return "Sensor{" +
                 "m_id=" + m_id +
-                ", m_date=" + m_date +
+                ", m_column=" + m_column +
+                ", m_line=" + m_line +
                 ", m_longitude=" + m_longitude +
                 ", m_latitude=" + m_latitude +
                 ", m_intensity=" + m_intensity +
-                ", m_previousIntensity=" + m_previousIntensity +
                 "}\n";
     }
 
@@ -36,12 +33,19 @@ public class Fire implements PhysiqueElement{
         return m_id;
     }
 
-    public void setM_intensity(Integer newIntensity) {
-        m_previousIntensity.add(m_intensity);
-        this.m_intensity = newIntensity;
+    public Double getM_longitude() {
+        return m_longitude;
+    }
+
+    public Double getM_latitude() {
+        return m_latitude;
     }
 
     public Integer getM_intensity() {
         return m_intensity;
+    }
+
+    public void setM_intensity(Integer m_intensity) {
+        this.m_intensity = m_intensity;
     }
 }
