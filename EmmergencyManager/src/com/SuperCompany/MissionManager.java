@@ -3,7 +3,8 @@ package com.SuperCompany;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MissionManager implements Manager {
+public class MissionManager {
+    private List<Fire> m_fires= new ArrayList<Fire>();
     private List<Mission> m_missions= new ArrayList<Mission>();
     private List<Barrack> m_barracks= new ArrayList<Barrack>();
     private List<Truck> m_trucks= new ArrayList<Truck>();
@@ -15,9 +16,9 @@ public class MissionManager implements Manager {
         Debug.println("Fin Création MissionManager");
     }
 
-    @Override
-    public void update() {
+    public void update(List<Fire> fires) {
         Debug.println("MissionManager: updateCaptors");
+        m_fires=fires;
         List<Barrack> Barracks = m_webServerConnector.getBarracks();
         m_trucks = m_webServerConnector.getTrucks();
         Debug.println(m_trucks.toString());
@@ -56,11 +57,64 @@ public class MissionManager implements Manager {
 
     private void newFire() {
         Debug.println("MissionManager: newFire");
+        List<Fire> newFires= new ArrayList<Fire>();
+        Boolean isPresent=Boolean.FALSE;
+        for(Fire f : m_fires){
+            isPresent=Boolean.FALSE;
+            for(Mission m :m_missions){
+                if(f.getM_id()==m.getM_fire().getM_id()){
+                    isPresent=Boolean.TRUE;
+                }
+            }
+            if (!isPresent){
+                newFires.add(f);
+            }
+        }
+        if (newFires.size()>0){
+            for(Fire f :newFires){
+                Mission newMission = new Mission(f);
+                Truck t =isTruckFree(f.getM_intensity());
+                if(t!=null){
+                    t.setM_isBusy(Boolean.TRUE);
+                    List<Truck> trucks = new ArrayList<Truck>();
+                    trucks.add(t);
+                    newMission.setM_trucks(trucks);
+                }
+            }
+            updateMission();
+        }
 
+    }
+
+    private void updateMission() {
+    }
+
+    private Truck isTruckFree(Integer intensity) {
+        List<Truck> potentialTrucks=new ArrayList<Truck>();
+        for(Truck t : m_trucks){
+            if(t.getM_isBusy()==Boolean.FALSE){
+                potentialTrucks.add(t);
+            }
+        }
+        Truck finalTruck=null;
+        int previous=10000;
+        for(Truck t : potentialTrucks){
+            int dist= Math.abs(intensity-t.getM_type());
+            if(dist<=previous){
+                previous=dist;
+                finalTruck=t;
+            }
+        }
+        return finalTruck;
     }
 
     private void detectIntensityFireIncreased() {
         Debug.println("MissionManager: detectIntensityFireIncreased");
+        for(Fire f : m_fires){
+            if (f.getM_increase()){
+
+            }
+        }
     }
 
     private void detectIntensityEqualZero() {

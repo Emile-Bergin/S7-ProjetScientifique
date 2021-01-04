@@ -22,7 +22,7 @@ public class FireManager implements Manager{
         List<Sensor> sensorsUpdated =m_webServerManager.getSensors();
         Debug.println(sensorsUpdated.toString());
         DetectNewAndIncreaseFire(sensorsUpdated);
-        m_missionManager.update();
+        m_missionManager.update(m_fires);
     }
 
     private void DetectNewAndIncreaseFire(List<Sensor> sensorsUpdated) { //Aucun traitement pour l'instant Sensors = Fires
@@ -59,6 +59,9 @@ public class FireManager implements Manager{
                 if(f.getM_id()==s.getM_id()){
                     if(f.getM_intensity()!=s.getM_intensity()) {
                         f.setM_intensity(s.getM_intensity());
+                        if(f.getM_intensity()<s.getM_intensity()){
+                            f.setM_increase(Boolean.TRUE);
+                        }
                     }
                     isPresent=Boolean.TRUE;
                 }
