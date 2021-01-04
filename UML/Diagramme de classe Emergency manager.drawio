@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T10:49:43.094Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="0XiMBKGzaHmEKD7fn34F" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-04T08:18:21.309Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="mg2x41XYBJZXj5Gd5lcP" version="14.1.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2014" dy="1097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -281,10 +281,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=classic;startFill=1;startSize=10;endArrow=none;endFill=0;endSize=10;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-60" target="44YlCq1gV8FXRdKzaybf-12" edge="1">
+        <mxCell id="44YlCq1gV8FXRdKzaybf-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=classic;startFill=1;startSize=10;endArrow=none;endFill=0;endSize=10;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-12" target="44YlCq1gV8FXRdKzaybf-60" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="445" y="875" />
+              <mxPoint x="520" y="875" />
               <mxPoint x="540" y="875" />
             </Array>
           </mxGeometry>
@@ -311,7 +311,7 @@
             <mxPoint x="870" y="1025" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u49EwX9QcP8J2rWEQy_O-0" value="&lt;div style=&quot;box-sizing: border-box ; font-family: &amp;#34;segoe ui&amp;#34; , , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;&lt;div&gt;Vu ensemble : essayez de décomposer &quot;Manager&quot; en traitements un peu plus petits, plus précis, que vous pourrez décrire plus facilement, et qui vont collaborer pour produire le fonctionnement de l&#39;ensemble.&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Par ex : détecter les nouveaux feux pour lui affecter des camions, transmettre les ordres de mission aux camions, déplacer les camions, etc...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Vous pouvez vous aider de la formulation des User Stories : en tant que... lorsque... je souhaite... afin de...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;qui rejoint la logique des Use Case : préconditions (état initial nécessaire) / déclenchencheur / traitement / post-conditions (état final attendu)&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;L&#39;objectif étant de construire des diagrammes de séquence un peu plus précis (données, quand requises, sur les messages et leurs retour), de façon à alimenter/valider/compléter votre diagramme de classe : méthodes présentes aux bons endroits (dans les bonnes classes), qui reçoivent, ou ont à portée (attributs de classe, ou via méthodes d&#39;objets associés) les données nécessaires à leurs traitements.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="u49EwX9QcP8J2rWEQy_O-0" value="&lt;div style=&quot;box-sizing: border-box ; font-family: &amp;#34;segoe ui&amp;#34; , , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;&lt;div&gt;Vu ensemble : essayez de décomposer &quot;Manager&quot; en traitements un peu plus petits, plus précis, que vous pourrez décrire plus facilement, et qui vont collaborer pour produire le fonctionnement de l&#39;ensemble.&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Par ex : détecter les nouveaux feux pour lui affecter des camions, transmettre les ordres de mission aux camions, déplacer les camions, etc...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Vous pouvez vous aider de la formulation des User Stories : en tant que... lorsque... je souhaite... afin de...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;qui rejoint la logique des Use Case : préconditions (état initial nécessaire) / déclenchencheur / traitement / post-conditions (état final attendu)&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;L&#39;objectif étant de construire des diagrammes de séquence un peu plus précis (données, quand requises, sur les messages et leurs retour), de façon à alimenter/valider/compléter votre diagramme de classe : méthodes présentes aux bons endroits (dans les bonnes classes), qui reçoivent, ou ont à portée (attributs de classe, ou via méthodes d&#39;objets associés) les données nécessaires à leurs traitements.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1600" y="391" width="630" height="370" as="geometry" />
         </mxCell>
       </root>
