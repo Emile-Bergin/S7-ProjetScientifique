@@ -1,0 +1,8 @@
+
+N
+java:S1068",Remove this unused "m_trucks" private field.(’¸¿ûÿÿÿÿ8¡åÌãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+r	java:S116"QRename this field "m_fire" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âƒÖŞÿÿÿÿÿ8±ë¯ãì.
+L
+java:S1068"*Remove this unused "m_fire" private field.(âƒÖŞÿÿÿÿÿ8±ë¯ãì.
+t	java:S116"SRename this field "m_trucks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¸¿ûÿÿÿÿ8¡åÌãì.

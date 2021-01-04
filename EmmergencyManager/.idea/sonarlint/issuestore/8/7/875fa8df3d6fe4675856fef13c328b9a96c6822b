@@ -1,0 +1,5 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+S
+java:S1068"1Remove this unused "m_fireManager" private field.(ƒ²â±øÿÿÿÿ8Þ»ýãì.
+y	java:S116"XRename this field "m_fireManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ²â±øÿÿÿÿ8Þ»ýãì.

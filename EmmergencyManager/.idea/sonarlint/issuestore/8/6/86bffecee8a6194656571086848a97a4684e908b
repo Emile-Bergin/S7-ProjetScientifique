@@ -1,0 +1,11 @@
+
+J
+java:S1068".Remove this unused "m_missions" private field.(ö´Æ8ÏİÍãì.
+p	java:S116"URename this field "m_missions" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö´Æ8ÏİÍãì.
+K
+java:S1068".Remove this unused "m_barracks" private field.(£ãäí8§øÍãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+q	java:S116"URename this field "m_barracks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ãäí8§øÍãì.
+{	java:S116"_Rename this field "m_webServerConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é…Ï 8ØÏäãì.
+U
+java:S1068"8Remove this unused "m_webServerConnector" private field.(é…Ï 8ØÏäãì.

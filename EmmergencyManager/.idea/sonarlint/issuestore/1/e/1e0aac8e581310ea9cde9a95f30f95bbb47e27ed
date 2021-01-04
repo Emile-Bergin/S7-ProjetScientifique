@@ -1,0 +1,5 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+P
+java:S1068"4Remove this unused "m_missionManager" private field.(½õºq8µ‚Úãì.
+v	java:S116"[Rename this field "m_missionManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½õºq8µ‚Úãì.

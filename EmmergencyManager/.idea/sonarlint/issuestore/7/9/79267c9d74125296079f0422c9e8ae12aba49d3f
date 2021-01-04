@@ -1,0 +1,22 @@
+
+L
+java:S1068"/Remove this unused "m_longitude" private field.(®“ÎÖ8ë—¤ãì.
+K
+java:S1068	".Remove this unused "m_latitude" private field.(ÊÃ×8ë—¤ãì.
+m	java:S116"QRename this field "m_date" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·á‹±8Ñ²¨ãì.
+q	java:S116	"URename this field "m_latitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÃ×8ë—¤ãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+Q
+java:S1068
+"/Remove this unused "m_intensity" private field.(îöúÿÿÿÿÿ8ÁÏªãì.
+p	java:S116"ORename this field "m_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆæ“şÿÿÿÿ8ë—¤ãì.
+J
+java:S1068"(Remove this unused "m_id" private field.(ÿÆæ“şÿÿÿÿ8ë—¤ãì.
+w	java:S116
+"VRename this field "m_intensity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îöúÿÿÿÿÿ8ÁÏªãì.
+G
+java:S1068"*Remove this unused "m_date" private field.(·á‹±8Ñ²¨ãì.
+r	java:S116"VRename this field "m_longitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®“ÎÖ8ë—¤ãì.
+	java:S116"^Rename this field "m_previousIntensity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ƒ¢Ùşÿÿÿÿ8ª‰«ãì.
+Y
+java:S1068"7Remove this unused "m_previousIntensity" private field.(—ƒ¢Ùşÿÿÿÿ8ª‰«ãì.

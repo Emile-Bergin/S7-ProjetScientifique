@@ -1,0 +1,6 @@
+
+X	java:S125"<This block of commented-out lines of code should be removed.(„ƒ’‹8¤ü÷ãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+€	java:S116"_Rename this field "m_WebServerConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÍïÕöÿÿÿÿÿ8¤ü÷ãì.
+Z
+java:S1068"8Remove this unused "m_WebServerConnector" private field.(ÍïÕöÿÿÿÿÿ8¤ü÷ãì.

@@ -1,0 +1,20 @@
+
+q	java:S116"URename this field "m_latitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÃ×8ˆ ãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+r	java:S116"VRename this field "m_longitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®“ÎÖ8ˆ ãì.
+J
+java:S1068"(Remove this unused "m_id" private field.(ÿÆæ“şÿÿÿÿ8ãæ”ãì.
+G
+java:S1068"*Remove this unused "m_type" private field.(â°äü8ãæ”ãì.
+N
+java:S1068	",Remove this unused "m_isBusy" private field.(ª„Õşÿÿÿÿ8’¶¡ãì.
+t	java:S116	"SRename this field "m_isBusy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª„Õşÿÿÿÿ8’¶¡ãì.
+r	java:S116"VRename this field "m_idCaserne" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¡¹ç8ãæ”ãì.
+K
+java:S1068".Remove this unused "m_latitude" private field.(ÊÃ×8ˆ ãì.
+m	java:S116"QRename this field "m_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â°äü8ãæ”ãì.
+p	java:S116"ORename this field "m_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆæ“şÿÿÿÿ8ãæ”ãì.
+L
+java:S1068"/Remove this unused "m_idCaserne" private field.(Î¡¹ç8ãæ”ãì.
+L
+java:S1068"/Remove this unused "m_longitude" private field.(®“ÎÖ8ˆ ãì.

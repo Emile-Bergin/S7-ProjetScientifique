@@ -1,0 +1,5 @@
+
+J
+java:S1068"-Remove this unused "m_manager" private field.(Þ©Ýý8’»ñãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+p	java:S116"TRename this field "m_manager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Þ©Ýý8’»ñãì.
