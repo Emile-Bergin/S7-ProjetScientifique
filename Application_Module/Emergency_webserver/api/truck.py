@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
 from app import app
-from database.service import getTrucks
+import database.service as db
 
 @app.route('/api/getTrucks/')
 def getTrucksAPI():
-    return jsonify(getTrucks())
+    return jsonify(db.getTrucks())
 

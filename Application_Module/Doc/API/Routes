@@ -1,13 +1,20 @@
 API coté datacenter:
 
 	Microbit:
-		Update Sensor:
-			URL: /api/updateSensor/
-			Format:
-				{
-					"intensity" : "..."
-					"id" : "..."
-				}
+		POST:
+			Update Sensor:
+				URL: /api/updateSensor/
+				Format:
+					{
+						"intensity" : "..."
+						"id" : "..."
+					}
+			Report Dead Sensor:
+				URL: /api/reportDeadSensor/
+				Format:
+					{
+						"id" : "..."
+					}
 	
 	Emergency Manager:
 		POST:
@@ -35,7 +42,6 @@ API coté datacenter:
 						"latitude" : "..."
 						"intensity" : "..."
 					}
-		
 		GET:
 			Get Barracks
 				URL: /api/getBarracks/
