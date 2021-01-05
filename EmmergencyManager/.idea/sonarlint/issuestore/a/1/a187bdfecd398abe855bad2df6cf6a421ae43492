@@ -1,39 +1,0 @@
-
-B
-java:S2129" Remove this "Double" constructor(®¦ çûÿÿÿÿ8±º×êì.
-{
-java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹“ÿ”øÿÿÿÿ8„íÔêì.
-B
-java:S2129" Remove this "Double" constructor(®¦ çûÿÿÿÿ8±º×êì.
-P
-java:S1874".Remove this use of "Double"; it is deprecated.(®¦ çûÿÿÿÿ8±º×êì.
-o	java:S116"SRename this field "m_column" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡²€´8™î¡èì.
-m	java:S116"QRename this field "m_line" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜€”8™î¡èì.
-=
-java:S2129" Remove this "Double" constructor(İ±’8åÙ›èì.
-m	java:S117'"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÕÔá8Ä¤îîì.
-u
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ùœ{8¿ùæêì.
-z
-java:S1450	"XRemove the "m_Sensors" field and declare it as a local variable in the relevant methods.(¹“ÿ”øÿÿÿÿ8¿ùæêì.
-P
-java:S1874".Remove this use of "Double"; it is deprecated.(®¦ çûÿÿÿÿ8±º×êì.
-L
-java:S3740'"/Provide the parametrized type for this generic.(ÔÕÔá8Ä¤îîì.
-T
-java:S1068
-"2Remove this unused "trucksLocation" private field.(©Ñ˜°ùÿÿÿÿ8Ä¤îîì.
-u	java:S116	"TRename this field "m_Sensors" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹“ÿ”øÿÿÿÿ8À¼ˆèì.
-@
-java:S2119"Save and re-use this "Random".(®ø»›şÿÿÿÿ8’›èì.
-=
-java:S2129" Remove this "Double" constructor(İ±’8åÙ›èì.
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
-K
-java:S1874".Remove this use of "Double"; it is deprecated.(İ±’8åÙ›èì.
-@
-java:S2119("Save and re-use this "Random".(®ø»›şÿÿÿÿ8×óğîì.
-K
-java:S1874".Remove this use of "Double"; it is deprecated.(İ±’8åÙ›èì.
-L
-java:S5411"*Use the primitive boolean expression here.(½ª¢íùÿÿÿÿ8¨Ù”èì.
