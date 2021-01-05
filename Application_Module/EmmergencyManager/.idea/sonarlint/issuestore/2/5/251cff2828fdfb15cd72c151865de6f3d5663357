@@ -1,0 +1,21 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.
+r	java:S116"VRename this field "m_longitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®“ÎÖ8ÀÍËêì.
+a	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(ÜóI8”‰ÍŒí.
+i	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜóI8§Ğììì.
+o	java:S116"SRename this field "m_column" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÖšŞ8ëÓ¶çì.
+b	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(…ö¶8ÈÖÌŒí.
+o	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ïøŸÿÿÿÿÿ8óÀŒìì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.
+o	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è±óúüÿÿÿÿ8ª„½ëì.
+l	java:S116"QRename this field "m_line" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö‘Ç8ëÓ¶çì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.
+q	java:S116"URename this field "m_latitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÃ×8ëÓ¶çì.
+j	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÏ¢Ê8óÀŒìì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.
+p	java:S116"ORename this field "m_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆæ“şÿÿÿÿ8ëÓ¶çì.
+w	java:S116	"VRename this field "m_intensity" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îöúÿÿÿÿÿ8ëÓ¶çì.
+i	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï Ô)8óÀŒìì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áú˜®ıÿÿÿÿ8çı·çì.

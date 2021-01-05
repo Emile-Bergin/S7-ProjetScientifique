@@ -1,0 +1,63 @@
+
+s	java:S116	"RRename this field "m_fires" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜éûôıÿÿÿÿ8ØÇ¸ğì.
+t
+java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(‘†õ‚şÿÿÿÿ8ØÇ¸ğì.
+v
+java:S2293d"YReplace the type specification in this constructor call with the diamond operator ("<>").(€Åœ€8¡‡¾í.
+[
+java:S4973f"9Use the "equals" method if value comparison was intended.(¯µ™Öüÿÿÿÿ8¡‡¾í.
+Y
+java:S1854%"<Remove this useless assignment to local variable "toRemove".(Õºš•8ØÇ¸ğì.
+[
+java:S4973F"9Use the "equals" method if value comparison was intended.(ÓÙ‘‚ÿÿÿÿÿ8éÀğì.
+^
+java:S1854"<Remove this useless assignment to local variable "Barracks".( Åˆïşÿÿÿÿ8ØÇ¸ğì.
+`
+java:S11557">Use isEmpty() to check whether the collection is empty or not.(”¥àûÿÿÿÿ8Ë¾¶ğì.
+o	java:S116"SRename this field "m_trucks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(É—¶8ˆîÒïì.
+P
+java:S1068".Remove this unused "m_barracks" private field.(”¸æûÿÿÿÿ8×¾í.
+v	java:S116"URename this field "m_barracks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¸æûÿÿÿÿ8§øÍãì.
+{
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒ®È˜ÿÿÿÿÿ8ØÇ¸ğì.
+[
+java:S1155N">Use isEmpty() to check whether the collection is empty or not.(Ø¯¸Ã8Ë¾¶ğì.
+G
+java:S5411y"*Use the primitive boolean expression here.(ğ»¼ì8¡‡¾í.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”¸æûÿÿÿÿ8ØÇ¸ğì.
+Z
+java:S1854B"=Remove this useless assignment to local variable "isPresent".(Ø£¹ï8éÀğì.
+{
+java:S2293	"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜éûôıÿÿÿÿ8ØÇ¸ğì.
+[
+java:S4973,"9Use the "equals" method if value comparison was intended.(ÙÇ§µøÿÿÿÿ8—óÚïì.
+Ÿ
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(è¦¥8–‡í.
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(É—¶8ØÇ¸ğì.
+{
+java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ì á•ùÿÿÿÿ8ØÇ¸ğì.
+V
+java:S4973+"9Use the "equals" method if value comparison was intended.(êèÀ8Ë¾¶ğì.
+u
+java:S2293]"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÆÀ¯e8¡‡¾í.
+¤
+java:S1186¢"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‰ú­¶ıÿÿÿÿ8È‚í.
+[
+java:S4973{"9Use the "equals" method if value comparison was intended.(‘¤Óîşÿÿÿÿ8ñĞí.
+q	java:S116
+"URename this field "m_missions" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡¹êÜ8ÏİÍãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ºÏà„ûÿÿÿÿ
+v
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(Õºš•8ØÇ¸ğì.
+O
+java:S1481"-Remove this unused "Barracks" local variable.( Åˆïşÿÿÿÿ8ØÇ¸ğì.
+{	java:S116"_Rename this field "m_webServerConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é…Ï 8ØÏäãì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( Åˆïşÿÿÿÿ8Ë¾¶ğì.
+G
+java:S5411J"*Use the primitive boolean expression here.(¼À’Ì8æĞÄğì.
+v
+java:S2293
+"YReplace the type specification in this constructor call with the diamond operator ("<>").(‡¹êÜ8ØÇ¸ğì.
+]	java:S125"<This block of commented-out lines of code should be removed.(ˆ˜·œûÿÿÿÿ8ØÇ¸ğì.
