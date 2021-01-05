@@ -1,5 +1,15 @@
+CREATE DATABASE grafana
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'French_France.1252'
+    LC_CTYPE = 'French_France.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
 CREATE TABLE public.sensors
 (
+	date timestamp without time zone NOT NULL,
     id integer NOT NULL,
     intensity integer NOT NULL
 )
@@ -13,3 +23,16 @@ CREATE TABLE public.fires
     intensity integer,
     CONSTRAINT fires_pkey PRIMARY KEY (id)
 );
+
+CREATE ROLE grafana WITH
+	LOGIN
+	NOSUPERUSER
+	NOINHERIT
+	NOCREATEDB
+	NOCREATEROLE
+	NOREPLICATION
+	ENCRYPTED PASSWORD 'md5fdb10e45bc7593af893c2c57f911f197';
+
+GRANT USAGE ON SCHEMA public TO grafana;
+GRANT SELECT ON public.fires TO grafana;
+GRANT SELECT ON public.sensors TO grafana;

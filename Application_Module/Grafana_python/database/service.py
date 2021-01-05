@@ -12,9 +12,9 @@ cur = conn.cursor()
 
 #======================================================#
 #SENSORS
-def createSensors(id, intensity):
-    sql = 'INSERT INTO public.sensors (id, intensity) VALUES (%s, %s)'
-    args = (id, intensity)
+def createSensors(date, id, intensity):
+    sql = 'INSERT INTO public.sensors (date, id, intensity) VALUES (%s, %s, %s)'
+    args = (date, id, intensity)
     cur.execute(sql, args)
     conn.commit()
 

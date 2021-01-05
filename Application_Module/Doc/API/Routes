@@ -10,27 +10,45 @@ API coté datacenter:
 				}
 	
 	Emergency Manager:
-		Create Sensor__Fire:
-			URL: /api/createSensorFire/
-			Format:
-				{
-					"id_sensor" : "..."
-					"id_fire" : "..."
-				}
-		Create Mission:
-			URL: /api/createMission/
-			Format:
-				{
-					"id_fire" : "..."
-					"id_truck" : "..."
-					"date" : "..."
-				}
-		Create Fire:
-			URL: /api/createFire/
-			Format:
-				{
-					"date" : "..."
-					"longitute" : "..."
-					"latitude" : "..."
-					"intensity" : "..."
-				}
+		POST:
+			Create Sensor__Fire:
+				URL: /api/createSensorFire/
+				Format:
+					{
+						"id_sensor" : "..."
+						"id_fire" : "..."
+					}
+			Create Mission:
+				URL: /api/createMission/
+				Format:
+					{
+						"id_fire" : "..."
+						"id_truck" : "..."
+						"date" : "..."
+					}
+			Create Fire:
+				URL: /api/createFire/
+				Format:
+					{
+						"date" : "..."
+						"longitute" : "..."
+						"latitude" : "..."
+						"intensity" : "..."
+					}
+		
+		GET:
+			Get Barracks
+				URL: /api/getBarracks/
+			Get Fires
+				URL: /api/getFires/
+			Get Missions
+				URL: /api/getMissions/
+			Get Sensors__Fires
+				URL: /api/getSensorsFires/
+			Get Sensors
+				URL: /api/getSensors/
+			Get Trucks
+				URL: /api/getTrucks/
+			Get Barracks
+				URL: /api/getBarracks/
+			
