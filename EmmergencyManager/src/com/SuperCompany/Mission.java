@@ -32,4 +32,19 @@ public class Mission {
     public void setM_trucks(List<Truck> m_trucks) {
         this.m_trucks = m_trucks;
     }
+
+    @Override
+    public String toString() {
+        if(m_trucks==null){
+            return "\nMission{" +
+                    "m_fire=" + m_fire.toString() +
+                    '}';
+        }else{
+            return "\nMission{" +
+                    "m_fire=" + m_fire.toString() +
+                    ", m_trucks=" + m_trucks.toString() +
+                    '}';
+        }
+
+    }
 }

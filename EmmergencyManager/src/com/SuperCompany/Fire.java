@@ -30,6 +30,7 @@ public class Fire implements PhysiqueElement{
                 ", m_latitude=" + m_latitude +
                 ", m_intensity=" + m_intensity +
                 ", m_previousIntensity=" + m_previousIntensity +
+                ", m_increase=" + m_increase +
                 "}\n";
     }
 

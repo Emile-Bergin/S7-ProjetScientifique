@@ -1,8 +1,16 @@
 
-N
-java:S1068",Remove this unused "m_trucks" private field.(’¸¿ûÿÿÿÿ8¡åÌãì.
+t	java:S116"SRename this field "m_trucks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Íõìçûÿÿÿÿ8¡åÌãì.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¼âÁ8ÏÁÄïì.
+r	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÜàúüÿÿÿÿ8ÏÁÄïì.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²¼âÁ8ÏÁÄïì.
+o	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒÜàúüÿÿÿÿ8ÏÁÄïì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ºÑşÿÿÿÿ8”‚Áïì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ºÑşÿÿÿÿ8”‚Áïì.
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
-r	java:S116"QRename this field "m_fire" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âƒÖŞÿÿÿÿÿ8±ë¯ãì.
-L
-java:S1068"*Remove this unused "m_fire" private field.(âƒÖŞÿÿÿÿÿ8±ë¯ãì.
-t	java:S116"SRename this field "m_trucks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’¸¿ûÿÿÿÿ8¡åÌãì.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Íõìçûÿÿÿÿ8¡ÊÆïì.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıòÄ8ÏÁÄïì.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Ùµ¥øÿÿÿÿ8ÏÁÄïì.
+r	java:S116"QRename this field "m_fire" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âƒÖŞÿÿÿÿÿ8±ë¯ãì.
+r	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·î»¦ûÿÿÿÿ8 ÉÂïì.

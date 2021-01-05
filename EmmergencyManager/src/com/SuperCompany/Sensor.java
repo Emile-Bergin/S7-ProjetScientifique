@@ -8,13 +8,13 @@ public class Sensor implements PhysiqueElement{
     private Double m_latitude;
     private Integer m_intensity;
 
-    public Sensor(Integer m_id, Integer m_column, Integer m_line, Double m_longitude, Double m_latitude, Integer m_intensity) {
+    public Sensor(Integer m_id, Integer m_column, Integer m_line, Double m_longitude, Double m_latitude, Integer m_intensity) throws Exception {
         this.m_id = m_id;
         this.m_column = m_column;
         this.m_line = m_line;
         this.m_longitude = m_longitude;
         this.m_latitude = m_latitude;
-        this.m_intensity = m_intensity;
+        setM_intensity(m_intensity);
     }
 
     @Override
@@ -45,7 +45,11 @@ public class Sensor implements PhysiqueElement{
         return m_intensity;
     }
 
-    public void setM_intensity(Integer m_intensity) {
-        this.m_intensity = m_intensity;
+    public void setM_intensity(Integer intensity) throws Exception {
+        if (intensity>=0 && intensity<=8){
+            this.m_intensity = intensity;
+        }else{
+            throw new Exception("Valeur intensity n'est pas entre 0 et 8 : "+intensity);
+        }
     }
 }

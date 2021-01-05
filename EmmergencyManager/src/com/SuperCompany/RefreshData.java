@@ -18,6 +18,7 @@ public class RefreshData {
           public void run(){
               while(true) {
                   Debug.println("");
+                  Debug.println("#####################################################################");
                   Debug.println("Trigger Refresh Data");
                   m_generalManager.update();
                   try {

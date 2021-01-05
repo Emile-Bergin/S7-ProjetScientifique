@@ -1,5 +1,8 @@
 package com.SuperCompany;
 
+import com.FireManager.FireManager;
+import com.MissionManager.MissionManager;
+
 public class GeneralManager implements Manager{
     //private RefreshData m_refreshData;
     private WebServerConnector m_webServerConnector;

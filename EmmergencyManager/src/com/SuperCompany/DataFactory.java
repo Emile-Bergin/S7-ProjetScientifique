@@ -11,14 +11,18 @@ public class DataFactory {
 
     DataFactory(){}
 
-    public List<Sensor> getSensors(){
+    public List<Sensor> getSensors() {
         Integer id=0;
         Random rd = new Random();
         m_Sensors=new ArrayList<Sensor>();
         if(firstSensors){
             for (int i=0;i<=m_column;i++){
                 for (int k=0;k<=m_line;k++){
-                    m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), 0));
+                    try {
+                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), 0));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     firstSensors=Boolean.FALSE;
                     id++;
                 }
@@ -26,7 +30,11 @@ public class DataFactory {
         }else{
             for (int i=0;i<=m_column;i++){
                 for (int k=0;k<=m_line;k++){
-                    m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), rd.nextInt(8)));
+                    try {
+                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), rd.nextInt(8)));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                     firstSensors=Boolean.FALSE;
                     id++;
                 }

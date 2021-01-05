@@ -1,5 +1,7 @@
 package com.SuperCompany;
 
+import com.FireManager.FireManager;
+
 import java.util.List;
 
 public class WebServerConnector {
@@ -11,7 +13,7 @@ public class WebServerConnector {
     private String m_user = "userName";
     private String m_Password = "BeatifulPassword";
 
-    WebServerConnector(){
+    public WebServerConnector(){
         Debug.println("Création WebServerConnector");
         m_dataFactory= new DataFactory();
         Debug.println("Fin Création WebServerConnector");
@@ -21,7 +23,7 @@ public class WebServerConnector {
         return null;
     }
 
-    protected List<Barrack> getBarracks(){
+    public List<Barrack> getBarracks(){
         return m_dataFactory.getBarracks();
     }
 
@@ -29,12 +31,12 @@ public class WebServerConnector {
         return null;
     }
 
-    protected List<Truck> getTrucks(){
+    public List<Truck> getTrucks(){
         List<Truck> trucks = m_dataFactory.getTrucks(); //A modifier, provisoir
         return trucks;
     }
 
-    protected List<Sensor> getSensors(){
+    public List<Sensor> getSensors() {
         Debug.println("WebServerConnector: getSensors");
         List<Sensor> sensors = m_dataFactory.getSensors(); //A modifier, provisoir
         return sensors;

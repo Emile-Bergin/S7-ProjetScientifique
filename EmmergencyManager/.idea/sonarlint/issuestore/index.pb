@@ -19,3 +19,15 @@ N
 src/com/SuperCompany/Main.java,c/a/ca9d7dd2a199fdb5aed2ca6843efd82a8206ad11
 \
 ,src/com/SuperCompany/WebServerConnector.java,8/7/875fa8df3d6fe4675856fef13c328b9a96c6822b
+X
+(src/com/SuperCompany/GeneralManager.java,7/8/784bd042cd0e5c37c2fe73803134d7a9269fb4e0
+Y
+)src/com/SuperCompany/PhysiqueElement.java,2/0/20d43f8e54789f7ed5104294cb716f22bcb904d5
+O
+src/com/SuperCompany/Debug.java,f/e/fe0639e2e347ff560f67b76e3e914756bc49b143
+P
+ src/com/SuperCompany/Sensor.java,2/5/251cff2828fdfb15cd72c151865de6f3d5663357
+U
+%src/com/SuperCompany/DataFactory.java,a/1/a187bdfecd398abe855bad2df6cf6a421ae43492
+O
+Test/com/SuperCompany/test.java,0/6/06ee97ec894efa7601857f8af67e6e30ff472af1

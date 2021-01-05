@@ -1,3 +1,7 @@
 
+X
+java:S1854"6Remove this useless assignment to local variable "rd".(üÂÚîÿÿÿÿÿ8Ö§¡äì.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(‹ê­±8ü·ôâì.
+I
+java:S1481"'Remove this unused "rd" local variable.(üÂÚîÿÿÿÿÿ8Ö§¡äì.
 t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ëôßÊ8ü·ôâì.
