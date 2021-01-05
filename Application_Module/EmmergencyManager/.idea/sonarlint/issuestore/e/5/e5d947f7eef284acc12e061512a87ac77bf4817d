@@ -1,0 +1,14 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•«¶ºùÿÿÿÿ8óÛ•ïì.
+L
+java:S1068"/Remove this unused "m_longitude" private field.(®“ÎÖ8•Ñãì.
+r	java:S116"VRename this field "m_longitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®“ÎÖ8•Ñãì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•«¶ºùÿÿÿÿ8óÛ•ïì.
+p	java:S116"ORename this field "m_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆæ“şÿÿÿÿ8•Ñãì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+K
+java:S1068".Remove this unused "m_latitude" private field.(ÊÃ×8•Ñãì.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•«¶ºùÿÿÿÿ8óÛ•ïì.
+J
+java:S1068"(Remove this unused "m_id" private field.(ÿÆæ“şÿÿÿÿ8•Ñãì.
+q	java:S116"URename this field "m_latitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÃ×8•Ñãì.

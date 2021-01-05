@@ -1,0 +1,26 @@
+
+G
+java:S1068"*Remove this unused "m_user" private field.(ºšïñ8Ù–¾åì.
+E
+java:S1068"(Remove this unused "m_ip" private field.(È·È¡8‰â¹åì.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+r	java:S116"QRename this field "m_port" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¿¨£êøÿÿÿÿ8šêºåì.
+v	java:S116"URename this field "m_Password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ²Ûşÿÿÿÿ8Ù–¾åì.
+{
+java:S1488#"^Immediately return this expression instead of assigning it to the temporary variable "trucks".(êæİ¡8ê¼Íîì.
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8ßíÆåì.
+y	java:S116	"XRename this field "m_dataFactory" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õöÑëúÿÿÿÿ8Ì€§èì.
+H
+java:S1168"+Return an empty collection instead of null.(¥¹ï8î¢îì.
+L
+java:S1068"*Remove this unused "m_port" private field.(¿¨£êøÿÿÿÿ8šêºåì.
+P
+java:S1068".Remove this unused "m_Password" private field.(Œ²Ûşÿÿÿÿ8Ù–¾åì.
+S
+java:S1068"1Remove this unused "m_fireManager" private field.(ƒ²â±øÿÿÿÿ8Ş»ıãì.
+y	java:S116"XRename this field "m_fireManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ²â±øÿÿÿÿ8Ş»ıãì.
+k	java:S116"ORename this field "m_ip" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È·È¡8‰â¹åì.
+m	java:S116"QRename this field "m_user" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºšïñ8Ù–¾åì.
+|
+java:S1488)"_Immediately return this expression instead of assigning it to the temporary variable "sensors".(¡ğ€Ú8Ÿ¹úêì.

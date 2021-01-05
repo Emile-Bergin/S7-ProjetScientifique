@@ -1,0 +1,28 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(àçğúşÿÿÿÿ
+U
+java:S4973-"9Use the "equals" method if value comparison was intended.(ô¼+8¬åÙìì.
+Z
+java:S1854>"=Remove this useless assignment to local variable "isPresent".(Ø£¹ï8Ş“îì.
+|	java:S116
+"[Rename this field "m_missionManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø¦íìÿÿÿÿÿ8µ‚Úãì.
+~	java:S116"]Rename this field "m_webServerManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â¦‰ıÿÿÿÿ8¢õ§æì.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÓÿšÜùÿÿÿÿ8£âöëì.
+G
+java:S54116"*Use the primitive boolean expression here.(¼À’Ì8¬åÙìì.
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úòàº8şºŸìì.
+Z
+java:S1854)"=Remove this useless assignment to local variable "isPresent".(Ø£¹ï8šÆßìì.
+[
+java:S4973C"9Use the "equals" method if value comparison was intended.(©œåøÿÿÿÿ8ñ™ˆğì.
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷ÿ—Şùÿÿÿÿ8ƒ¢›ëì.
+t
+java:S3776<"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ñ·±äüÿÿÿÿ8’—ñì.
+u	java:S116"TRename this field "m_sensors" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷ÿ—Şùÿÿÿÿ8½«°çì.
+V
+java:S4973B"9Use the "equals" method if value comparison was intended.(æ”¹‹8üÇíì.
+s	java:S116"RRename this field "m_fires" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÿšÜùÿÿÿÿ8£âöëì.
+L
+java:S5411L"*Use the primitive boolean expression here.(¯ø²¿ûÿÿÿÿ8´Ğ†îì.

@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-18T08:45:26.175Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="erOUFmr7UbeBUm3DtQnV" version="14.0.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-04T08:26:44.123Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="wQmcuPVwUsy6N_LsswD8" version="14.1.8" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2254" dy="1036" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1274" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -188,7 +188,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=diamond;startFill=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wQDDT3JTGFAhfexbX7fs-4" target="cqY_JHH3xeIgvpchSHmY-6" edge="1">
+        <mxCell id="44YlCq1gV8FXRdKzaybf-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=diamond;startFill=0;endArrow=none;endFill=0;endSize=9;startSize=26;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="wQDDT3JTGFAhfexbX7fs-4" target="cqY_JHH3xeIgvpchSHmY-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="wQDDT3JTGFAhfexbX7fs-4" value="Mission" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -227,14 +227,6 @@
             <mxPoint x="280" y="709.9999999999998" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-12" target="zkfFHV4jXpPFQw0GAbJ--17" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="600" y="630" />
-              <mxPoint x="490" y="630" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="44YlCq1gV8FXRdKzaybf-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=diamondThin;startFill=1;endArrow=none;endFill=0;endSize=24;startSize=24;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-12" target="wQDDT3JTGFAhfexbX7fs-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -265,7 +257,7 @@
         <mxCell id="44YlCq1gV8FXRdKzaybf-58" value="detectIntensityFireIncreased" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="44YlCq1gV8FXRdKzaybf-12" vertex="1">
           <mxGeometry y="138" width="190" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-60" target="zkfFHV4jXpPFQw0GAbJ--0" edge="1">
+        <mxCell id="44YlCq1gV8FXRdKzaybf-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-60" target="zkfFHV4jXpPFQw0GAbJ--0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="280" y="828" />
@@ -273,18 +265,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=none;startFill=0;endArrow=none;endFill=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-60" target="zkfFHV4jXpPFQw0GAbJ--17" edge="1">
+        <mxCell id="44YlCq1gV8FXRdKzaybf-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=classic;startFill=1;startSize=10;endArrow=none;endFill=0;endSize=10;exitX=0;exitY=0;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-12" target="44YlCq1gV8FXRdKzaybf-60" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="435" y="670" />
-              <mxPoint x="435" y="670" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="44YlCq1gV8FXRdKzaybf-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shadow=0;startArrow=classic;startFill=1;startSize=10;endArrow=none;endFill=0;endSize=10;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="44YlCq1gV8FXRdKzaybf-60" target="44YlCq1gV8FXRdKzaybf-12" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="445" y="875" />
+              <mxPoint x="520" y="875" />
               <mxPoint x="540" y="875" />
             </Array>
           </mxGeometry>
@@ -311,7 +295,7 @@
             <mxPoint x="870" y="1025" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="u49EwX9QcP8J2rWEQy_O-0" value="&lt;div style=&quot;box-sizing: border-box ; font-family: &amp;#34;segoe ui&amp;#34; , , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;&lt;div&gt;Vu ensemble : essayez de décomposer &quot;Manager&quot; en traitements un peu plus petits, plus précis, que vous pourrez décrire plus facilement, et qui vont collaborer pour produire le fonctionnement de l&#39;ensemble.&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Par ex : détecter les nouveaux feux pour lui affecter des camions, transmettre les ordres de mission aux camions, déplacer les camions, etc...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Vous pouvez vous aider de la formulation des User Stories : en tant que... lorsque... je souhaite... afin de...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;qui rejoint la logique des Use Case : préconditions (état initial nécessaire) / déclenchencheur / traitement / post-conditions (état final attendu)&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;L&#39;objectif étant de construire des diagrammes de séquence un peu plus précis (données, quand requises, sur les messages et leurs retour), de façon à alimenter/valider/compléter votre diagramme de classe : méthodes présentes aux bons endroits (dans les bonnes classes), qui reçoivent, ou ont à portée (attributs de classe, ou via méthodes d&#39;objets associés) les données nécessaires à leurs traitements.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="u49EwX9QcP8J2rWEQy_O-0" value="&lt;div style=&quot;box-sizing: border-box ; font-family: &amp;#34;segoe ui&amp;#34; , , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;&lt;div&gt;Vu ensemble : essayez de décomposer &quot;Manager&quot; en traitements un peu plus petits, plus précis, que vous pourrez décrire plus facilement, et qui vont collaborer pour produire le fonctionnement de l&#39;ensemble.&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Par ex : détecter les nouveaux feux pour lui affecter des camions, transmettre les ordres de mission aux camions, déplacer les camions, etc...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;Vous pouvez vous aider de la formulation des User Stories : en tant que... lorsque... je souhaite... afin de...&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;qui rejoint la logique des Use Case : préconditions (état initial nécessaire) / déclenchencheur / traitement / post-conditions (état final attendu)&lt;/div&gt;&lt;br/&gt;&lt;br/&gt;&lt;div&gt;L&#39;objectif étant de construire des diagrammes de séquence un peu plus précis (données, quand requises, sur les messages et leurs retour), de façon à alimenter/valider/compléter votre diagramme de classe : méthodes présentes aux bons endroits (dans les bonnes classes), qui reçoivent, ou ont à portée (attributs de classe, ou via méthodes d&#39;objets associés) les données nécessaires à leurs traitements.&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1600" y="391" width="630" height="370" as="geometry" />
         </mxCell>
       </root>
