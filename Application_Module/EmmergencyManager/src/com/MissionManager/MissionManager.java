@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MissionManager {
-    private List<Fire> m_fires= new ArrayList<Fire>();
+    List<Fire> m_fires= new ArrayList<Fire>();
     List<Mission> m_missions= new ArrayList<Mission>();
     private List<Barrack> m_barracks= new ArrayList<Barrack>();
     List<Truck> m_trucks= new ArrayList<Truck>();
@@ -86,13 +86,16 @@ public class MissionManager {
 
     }
 
-    void launchTruckOnMission(Mission m) {
+    Boolean launchTruckOnMission(Mission m) {
         Truck t =isTruckFree(m.getM_fire().getM_intensity());
         if(t!=null){
             t.setM_isBusy(Boolean.TRUE);
             List<Truck> trucks = new ArrayList<Truck>();
             trucks.add(t);
             m.setM_trucks(trucks);
+            return Boolean.TRUE;
+        }else{
+            return Boolean.FALSE;
         }
     }
 
@@ -121,8 +124,10 @@ public class MissionManager {
             if (f.getM_increase()){                                 //Si le feu augmente
                 for(Mission m : m_missions){                        //On cherche la mission qui lui est rattaché
                     if(m.getM_fire().getM_id()== f.getM_id()){
-                        f.setM_increase(Boolean.FALSE);
-                        launchTruckOnMission(m);                    //On lance un camion supplémentaire
+                        Boolean launchTruck = launchTruckOnMission(m);          //On lance un camion supplémentaire
+                        if(launchTruck==Boolean.TRUE){                          //Si un camion a été lancé on eneleve Increase sur le feux
+                            f.setM_increase(Boolean.FALSE);
+                        }
                     }
                 }
             }
@@ -130,14 +135,16 @@ public class MissionManager {
         updateMission();
     }
 
-    void detectIntensityEqualZero() {                       //Faire le test
+    void detectIntensityEqualZero() {
         Debug.println("MissionManager: detectIntensityEqualZero");
         Fire fireOut=null;
         Mission missionFinished=null;
         for(Mission m: m_missions){
             if(m.getM_fire().getM_intensity()==0){                  //Si plus d'intensité
-                for(Truck t : m.getM_trucks()){
-                    t.setM_isBusy(Boolean.FALSE);                   //Tous les camions ne sont plus occupés
+                if(m.getM_trucks()!=null){
+                    for(Truck t : m.getM_trucks()){
+                        t.setM_isBusy(Boolean.FALSE);                   //Tous les camions ne sont plus occupés
+                    }
                 }
                 fireOut=m.getM_fire();
                 missionFinished=m;

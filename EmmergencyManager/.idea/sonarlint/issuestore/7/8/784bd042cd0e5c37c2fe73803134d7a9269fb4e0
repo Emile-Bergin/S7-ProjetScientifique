@@ -1,6 +1,0 @@
-
-y	java:S116"XRename this field "m_fireManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ²â±øÿÿÿÿ8¸¯£æì.
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
-X	java:S125"<This block of commented-out lines of code should be removed.(„ƒ’‹8¤ü÷ãì.
-{	java:S116"_Rename this field "m_webServerConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é…Ï 8†ª´åì.
-v	java:S116"[Rename this field "m_missionManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½õºq8¸¯£æì.

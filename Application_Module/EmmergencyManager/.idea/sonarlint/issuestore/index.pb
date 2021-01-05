@@ -5,10 +5,6 @@ O
 src/com/SuperCompany/Truck.java,5/7/5740f489463e7f30876073fcbc9f91685547ef3b
 U
 %src/com/SuperCompany/RefreshData.java,c/e/cece89a66df04d7b956873b3aac9cdae56585f11
-U
-%src/com/SuperCompany/FireManager.java,1/e/1e0aac8e581310ea9cde9a95f30f95bbb47e27ed
-X
-(src/com/SuperCompany/MissionManager.java,8/6/86bffecee8a6194656571086848a97a4684e908b
 Q
 !src/com/SuperCompany/Mission.java,4/3/4387417b819b4ca2194c4724ca071e4329e25a79
 Q
@@ -29,8 +25,6 @@ P
  src/com/SuperCompany/Sensor.java,2/5/251cff2828fdfb15cd72c151865de6f3d5663357
 U
 %src/com/SuperCompany/DataFactory.java,a/1/a187bdfecd398abe855bad2df6cf6a421ae43492
-O
-Test/com/SuperCompany/test.java,0/6/06ee97ec894efa7601857f8af67e6e30ff472af1
 ]
 -Test/com/SuperCompany/GeneralManagerTest.java,5/2/52724faf67a2f03b1cf31de8ded7ea00ba4687f6
 U
