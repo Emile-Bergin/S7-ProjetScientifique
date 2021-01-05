@@ -1,5 +1,0 @@
-Mosquitto:
-
-net start mosquitto => Lance le brocker
-
-.\mosquitto_sub -t test => s'abonne au topic test

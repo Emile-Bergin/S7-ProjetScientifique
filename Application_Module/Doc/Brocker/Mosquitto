@@ -1,0 +1,34 @@
+Mosquitto:
+
+net start mosquitto => Lance le brocker
+
+.\mosquitto_sub -t test => s'abonne au topic test
+
+.\mosquitto_pub -t 'sensor' -m '{
+    \"id\": 10,
+    \"intensity\": 28
+}'
+.\mosquitto_pub -t 'fire' -m '{
+>>     \"date\": \"date\",
+>>     \"intensity\": 10,
+>>     \"position\": [
+>>         0,
+>>         0
+>>     ]
+>> }'  
+
+
+
+{
+    "id": 10,
+    "intensity": 28
+}
+
+{
+    "date": "date",
+    "intensity": 10,
+    "position": [
+        0,
+        0
+    ]
+}

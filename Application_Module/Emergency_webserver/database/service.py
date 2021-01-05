@@ -21,6 +21,7 @@ def updateSensor(id, intensity):
     sql = 'UPDATE public.sensors SET intensity = %s WHERE id = %s'
     args = (intensity, id)
     cur.execute(sql, args)
+    conn.commit()
 
 #======================================================#
 #FIRES
@@ -33,6 +34,7 @@ def createFire(date, longitude, latitude, intensity):
     sql = 'INSERT INTO public.fires (date, longitude, latitude, intensity) VALUES (%s, %s, %s, %s)'
     args = (date, longitude, latitude, intensity)
     cur.execute(sql, args)
+    conn.commit()
 
 #======================================================#
 #SENSOR_FIRE
@@ -45,6 +47,7 @@ def createSensor_Fire(id_sensor, id_fire):
     sql = 'INSERT INTO public.sensors__fires (id_sensor, id_fire) VALUES (%s, %s)'
     args = (id_sensor, id_fire)
     cur.execute(sql, args)
+    conn.commit()
 
 #======================================================#
 #TRUCKS
@@ -64,6 +67,7 @@ def createMission(id_fire, id_truck, date):
     sql = 'INSERT INTO fireworker.missions (id_fire, id_truck, date) VALUES (%s, %s, %s)'
     args = (id_fire, id_truck, date)
     cur.execute(sql, args)
+    conn.commit()
 
 #======================================================#
 #BARRACKS
