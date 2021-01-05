@@ -10,6 +10,8 @@ def getSensorAPI():
 
 @app.route("/api/updateSensor/", methods=["POST"])
 def updateSensorAPI():
+    print(request.form.get("intensity"))
+    print(request.form.get("id"))
     updateSensor(request.form.get("intensity"), request.form.get("id"))
     sendSensorMQTT(request.form.get("id"), request.form.get("intensity"))
     return ''
