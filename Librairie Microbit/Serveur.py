@@ -1,11 +1,20 @@
 from time import sleep
+import queue
 import serial
 
 # send serial message
 SERIALPORT = "COM5"
 BAUDRATE = 115200
 ser = serial.Serial()
-
+list_msg = queue.Queue()
+list_msg.put("15:4")
+list_msg.put("31:2")
+list_msg.put("23:1")
+list_msg.put("3:6")
+list_msg.put("60:8")
+list_msg.put("15:2")
+envoi_msg = queue.Queue()
+init = True
 
 def initUART():
     ser.port = SERIALPORT
@@ -25,17 +34,37 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
+def newMsg(msg):
+    id = msg.split(':')[0]
+    if msg.split(':')[1] == "OK":
+        message = envoi_msg.get()
+        if id != message.split(':')[0]:
+            envoi_msg.put()
+
 def sendUARTMessage(msg):
     ser.write(msg.encode())
+
+def receiveUartMessage() :
+    return ser.read()
 
 if __name__ == '__main__':
     initUART()
     try:
         while ser.isOpen():
-            sleep(10)
-            buffer = "15:3"
-            sendUARTMessage(buffer)
-            print("Buffer Envoyé 0_0")
+            character = receiveUartMessage().decode()
+            msg = msg + character
+            if '\n' in msg :
+                newMsg(msg.split('\n')[0])
+                if len(msg.split('\n')) > 1:
+                    msg = msg.split('\n', 1)[1]
+                else:
+                    msg = ""
+            if envoi_msg.empty() and not list_msg.empty():
+                envoi_msg.put(list_msg.get())
+            elif not envoi_msg.empty :
+                msg_to_send = envoi_msg
+                wait(2)
+                sendUARTMessage(msg_to_send)
 
     except (KeyboardInterrupt, SystemExit):
         ser.close()
