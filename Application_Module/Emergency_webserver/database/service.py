@@ -23,6 +23,12 @@ def updateSensor(id, intensity):
     cur.execute(sql, args)
     conn.commit()
 
+def reportDeadSensor(id):
+    sql = 'UPDATE public.sensors SET alive = false WHERE id = %s'
+    args = (id)
+    cur.execute(sql, args)
+    conn.commit()
+
 #======================================================#
 #FIRES
 def getFires():

@@ -1,4 +1,4 @@
-package com.SuperCompany;
+package com.Objects;
 
 public interface PhysiqueElement {
     Double Longitude = null;

@@ -1,10 +1,9 @@
 package com.MissionManager;
 
-import com.FireManager.FireManager;
-import com.SuperCompany.Fire;
-import com.SuperCompany.Mission;
-import com.SuperCompany.Truck;
-import com.SuperCompany.WebServerConnector;
+import com.Objects.Fire;
+import com.Objects.Mission;
+import com.Objects.Truck;
+import com.Connector.WebServerConnector;
 import org.junit.Before;
 import org.junit.Test;
 

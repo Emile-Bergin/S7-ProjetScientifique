@@ -38,8 +38,9 @@ CREATE TABLE public.sensors
     longitude integer,
     latitude integer,
     intensity integer NOT NULL,
+    alive boolean NOT NULL,
     CONSTRAINT sensors_pkey PRIMARY KEY (id)
-);
+)
 
 CREATE TABLE public.fires
 (

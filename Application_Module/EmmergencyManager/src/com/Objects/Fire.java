@@ -1,10 +1,10 @@
-package com.SuperCompany;
+package com.Objects;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Fire implements PhysiqueElement{
+public class Fire implements PhysiqueElement {
     private Integer m_id;
     private Date m_date;
     private Double m_longitude;

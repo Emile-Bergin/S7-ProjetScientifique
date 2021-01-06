@@ -1,4 +1,4 @@
-package com.SuperCompany;
+package com.Objects;
 
 public class Barrack {
     private Integer m_id;

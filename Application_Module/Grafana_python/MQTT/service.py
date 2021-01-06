@@ -2,6 +2,7 @@ import paho.mqtt.client as mqtt
 import database.service as db
 import time
 import json
+from datetime import datetime
 
 #http://www.steves-internet-guide.com/into-mqtt-python-client/
 
@@ -9,11 +10,12 @@ import json
 def on_message(client, userdata, message):
     if message.topic == "fire":
         jsonmsg = json.loads(str(message.payload.decode("utf-8")))
-        db.createFire(jsonmsg["date"],jsonmsg["position"][0],jsonmsg["position"][1],jsonmsg["intensity"])
+        db.createFire(jsonmsg["date"], jsonmsg["position"][0], jsonmsg["position"][1], jsonmsg["intensity"])
     elif message.topic == "sensor":
+        print(datetime.now())
         jsonmsg = json.loads(str(message.payload.decode("utf-8")))
-        print(jsonmsg)
-        db.createSensors(jsonmsg["id"],jsonmsg["intensity"])
+        #print(jsonmsg)
+        db.createSensors(datetime.now(), jsonmsg["id"], jsonmsg["intensity"])
 
 # Informations de connexion à votre broker MQTT : 
 # adresse IP

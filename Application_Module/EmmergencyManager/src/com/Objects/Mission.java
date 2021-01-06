@@ -1,4 +1,4 @@
-package com.SuperCompany;
+package com.Objects;
 
 import java.util.ArrayList;
 import java.util.List;

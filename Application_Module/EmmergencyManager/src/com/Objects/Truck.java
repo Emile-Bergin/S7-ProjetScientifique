@@ -1,6 +1,6 @@
-package com.SuperCompany;
+package com.Objects;
 
-public class Truck implements PhysiqueElement{
+public class Truck implements PhysiqueElement {
     private Integer m_id;
     private Integer m_idCaserne;
     private Integer m_type;

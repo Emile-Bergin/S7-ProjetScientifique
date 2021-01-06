@@ -1,5 +1,9 @@
 package com.SuperCompany;
 
+import com.Objects.Barrack;
+import com.Objects.Sensor;
+import com.Objects.Truck;
+
 import java.util.*;
 
 public class DataFactory {
@@ -9,7 +13,7 @@ public class DataFactory {
     private List<Sensor> m_Sensors= new ArrayList<Sensor>();
     private Boolean trucksLocation = Boolean.TRUE;
 
-    DataFactory(){}
+    public DataFactory(){}
 
     public List<Sensor> getSensors() {
         Integer id=0;
