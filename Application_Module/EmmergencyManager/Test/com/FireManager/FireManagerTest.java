@@ -2,10 +2,9 @@ package com.FireManager;
 
 
 import com.MissionManager.MissionManager;
-import com.SuperCompany.Fire;
-import com.SuperCompany.Mission;
-import com.SuperCompany.Sensor;
-import com.SuperCompany.WebServerConnector;
+import com.Objects.Fire;
+import com.Objects.Sensor;
+import com.Connector.WebServerConnector;
 import org.junit.Before;
 import org.junit.Test;
 

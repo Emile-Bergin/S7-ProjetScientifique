@@ -1,6 +1,9 @@
 package com.FireManager;
 
+import com.Connector.WebServerConnector;
 import com.MissionManager.MissionManager;
+import com.Objects.Fire;
+import com.Objects.Sensor;
 import com.SuperCompany.*;
 
 import java.util.ArrayList;

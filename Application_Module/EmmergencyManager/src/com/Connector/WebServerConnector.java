@@ -1,17 +1,23 @@
-package com.SuperCompany;
+package com.Connector;
 
 import com.FireManager.FireManager;
+import com.Objects.Barrack;
+import com.Objects.Fire;
+import com.Objects.Sensor;
+import com.Objects.Truck;
+import com.SuperCompany.DataFactory;
+import com.SuperCompany.Debug;
 
 import java.util.List;
 
 public class WebServerConnector {
     private FireManager m_fireManager;
     private DataFactory m_dataFactory;
-    //Var connections BD
+    //Var API
     private String m_ip = "192.168.1.1";
     private Integer m_port = 3300;
-    private String m_user = "userName";
-    private String m_Password = "BeatifulPassword";
+    //private String m_user = "userName";
+    //private String m_Password = "BeatifulPassword";
 
     public WebServerConnector(){
         Debug.println("Création WebServerConnector");

@@ -1,6 +1,6 @@
-package com.SuperCompany;
+package com.Objects;
 
-public class Sensor implements PhysiqueElement{
+public class Sensor implements PhysiqueElement {
     private Integer m_id;
     private Integer m_column;
     private Integer m_line;

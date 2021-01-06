@@ -1,6 +1,6 @@
 package com.SuperCompany;
 
-import junit.framework.TestCase;
+import com.Objects.Sensor;
 import org.junit.Before;
 import org.junit.Test;
 
