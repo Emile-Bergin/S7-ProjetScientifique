@@ -1,14 +1,13 @@
 from flask import Flask, jsonify, request
 from app import app
-from database.service import getMissions
-from database.service import createMission
+import database.service as db
 
 @app.route('/api/getMissions/')
 def getMissionsAPI():
-    return jsonify(getMissions())
+    return jsonify(db.getMissions())
 
 @app.route("/api/createMission/", methods=["POST"])
 def createMissionAPI():
-    createMission(request.form.get("id_fire"), request.form.get("id_truck"), request.form.get("date"))
+    db.createMission(request.form.get("id_fire"), request.form.get("id_truck"), request.form.get("date"))
     return ''
 

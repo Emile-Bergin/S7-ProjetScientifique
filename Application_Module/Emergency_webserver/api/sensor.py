@@ -1,15 +1,19 @@
 from flask import Flask, jsonify, request
 from app import app
-from database.service import getSensors
-from database.service import updateSensor
 from MQTT.service import sendSensorMQTT
+import database.service as db
 
 @app.route('/api/getSensors/')
 def getSensorAPI():
-    return jsonify(getSensors())
+    return jsonify(db.getSensors())
 
 @app.route("/api/updateSensor/", methods=["POST"])
 def updateSensorAPI():
-    updateSensor(request.form.get("intensity"), request.form.get("id"))
+    db.updateSensor(request.form.get("id"), request.form.get("intensity"))
     sendSensorMQTT(request.form.get("id"), request.form.get("intensity"))
+    return ''
+
+@app.route("/api/reportDeadSensor/", methods=["POST"])
+def reportDeadSensorAPI():
+    db.reportDeadSensor(request.form.get("id"))
     return ''

@@ -1,8 +1,8 @@
 from flask import Flask, jsonify
 from app import app
-from database.service import getBarracks
+import database.service as db
 
 @app.route('/api/getBarracks/')
 def getBarracksAPI():
-    return jsonify(getBarracks())
+    return jsonify(db.getBarracks())
 
