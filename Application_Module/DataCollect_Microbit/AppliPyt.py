@@ -1,23 +1,18 @@
 from time import sleep
-import queue
 import serial
+from queue import Queue
+import requests
 
-# send serial message
-SERIALPORT = "COM5"
+SERIALPORT = "COM6"
 BAUDRATE = 115200
 ser = serial.Serial()
-list_msg = queue.Queue()
-list_msg.put("15:4")
-list_msg.put("31:2")
-list_msg.put("23:1")
-list_msg.put("3:6")
-list_msg.put("60:8")
-list_msg.put("15:2")
-envoi_msg = queue.Queue()
-init = True
+ListUpdate = Queue()
+msg = ""
 
+url = 'http://127.0.0.1:5000/api/updateSensor/'
+
+ser.port = SERIALPORT
 def initUART():
-    ser.port = SERIALPORT
     ser.baudrate = BAUDRATE
     ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
     ser.parity = serial.PARITY_NONE  # set parity check: no parity
@@ -34,12 +29,9 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
-def newMsg(msg):
+def newMsg(msg) :
     id = msg.split(':')[0]
-    if msg.split(':')[1] == "OK":
-        message = envoi_msg.get()
-        if id != message.split(':')[0]:
-            envoi_msg.put()
+    ListUpdate.put(msg)
 
 def sendUARTMessage(msg):
     ser.write(msg.encode())
@@ -59,12 +51,14 @@ if __name__ == '__main__':
                     msg = msg.split('\n', 1)[1]
                 else:
                     msg = ""
-            if envoi_msg.empty() and not list_msg.empty():
-                envoi_msg.put(list_msg.get())
-            elif not envoi_msg.empty :
-                msg_to_send = envoi_msg
-                wait(2)
-                sendUARTMessage(msg_to_send)
+            if not ListUpdate.empty():
+                pending = ListUpdate.get()
+                obj = {"intensity": pending.split(':')[1], "id": pending.split(':')[0]}
+                x = requests.post(url, data=obj)
+                if x:
+                    print("Response OK")
+                else:
+                    print("Response Failed")
 
     except (KeyboardInterrupt, SystemExit):
         ser.close()

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Sensors_Microbit_Webserver.iml" filepath="$PROJECT_DIR$/.idea/Sensors_Microbit_Webserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Python Webserver.iml" filepath="$PROJECT_DIR$/.idea/Python Webserver.iml" />
     </modules>
   </component>
 </project>
