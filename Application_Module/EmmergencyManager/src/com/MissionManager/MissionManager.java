@@ -1,12 +1,11 @@
 package com.MissionManager;
 
-import com.Connector.WebServerConnector;
+import com.Connector.Api;
 import com.Objects.Barrack;
 import com.Objects.Fire;
 import com.Objects.Mission;
 import com.Objects.Truck;
 import com.SuperCompany.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,30 +14,64 @@ public class MissionManager {
     List<Mission> m_missions= new ArrayList<Mission>();
     private List<Barrack> m_barracks= new ArrayList<Barrack>();
     List<Truck> m_trucks= new ArrayList<Truck>();
-    private WebServerConnector m_webServerConnector;
+    private Api m_api;
 
-    public MissionManager(WebServerConnector wsc){
-        Debug.println("Création MissionManager");
-        m_webServerConnector=wsc;
-        Debug.println("Fin Création MissionManager");
+    public MissionManager(Api api){
+        Mode.println("Création MissionManager");
+        m_api =api;
+        Mode.println("Fin Création MissionManager");
     }
 
     public void update(List<Fire> fires) {
-        Debug.println("MissionManager: updateCaptors");
+        Mode.println("MissionManager: updateCaptors");
         m_fires=fires;
-        List<Barrack> Barracks = m_webServerConnector.getBarracks();
-        m_trucks = m_webServerConnector.getTrucks();
-        Debug.println(m_trucks.toString());
-        //List<Mission> missions = updateMissions();
-        updateTrucksState();
+
+        updatedBarracks();
+        updateMissions();
+        updateTrucks();
+
         newFire();
         detectIntensityFireIncreased();
         detectIntensityEqualZero();
-        Debug.println(m_missions.toString());
+
+        Mode.println(m_missions.toString());
+    }
+
+    private void updatedBarracks() {
+        Mode.println("MissionManager: updateBarracks");
+        List<Barrack> updatedBarracks = m_api.getBarracks();
+        compareBarracks(updatedBarracks);
+    }
+
+    private void compareBarracks(List<Barrack> updatedBarracks) {
+        Mode.println("MissionManager: updateBarracks");
+        //TODO
+    }
+
+    private void updateMissions() {
+        List<Mission> UpdatedMissions = m_api.getMissions();
+        compareMissions();
+        updateMissionState(UpdatedMissions);
+    }
+
+    private void compareMissions() {
+        //TODO
+    }
+
+
+    private void updateMissionState(List<Mission> missions) {
+        Mode.println("MissionManager: updateMissionState");
+        //TODO
+    }
+
+    private void updateTrucks() {
+        m_trucks = m_api.getTrucks();
+        Mode.println(m_trucks.toString());
+        updateTrucksState();
     }
 
     void updateTrucksState() {
-        Debug.println("MissionManager: updateTrucksState");
+        Mode.println("MissionManager: updateTrucksState");
         List<Truck> toRemove = new ArrayList<Truck>();
         for(Mission m : m_missions){                                                //Parcours les mission
             toRemove = new ArrayList<Truck>();                                      //Liste des camions a enlever
@@ -48,6 +81,7 @@ public class MissionManager {
                         if (t.getM_id() == updatedTruck.getM_id()) {                //Si les camions correspondent
                             if (updatedTruck.getM_isBusy() == Boolean.FALSE) {      //si le camion qui est a jour n'est pas occupé, on l'enleve de la mission
                                 toRemove.add(t);                                    //Le camion n'est pas sur la mission, on l'eneleve donc
+                                m_api.updateMission(m);
                             } else {                                                //Si non, on le met à jour
                                 t.setM_latitude(updatedTruck.getM_latitude());
                                 t.setM_longitude(updatedTruck.getM_longitude());
@@ -66,7 +100,7 @@ public class MissionManager {
     }
 
     void newFire() {
-        Debug.println("MissionManager: newFire");
+        Mode.println("MissionManager: newFire");
         List<Fire> newFires= new ArrayList<Fire>();
         Boolean isPresent=Boolean.FALSE;
         for(Fire f : m_fires){
@@ -85,8 +119,8 @@ public class MissionManager {
                 Mission newMission = new Mission(f);
                 launchTruckOnMission(newMission);
                 m_missions.add(newMission);
+                m_api.createMission(newMission);
             }
-            updateMission();
         }
 
     }
@@ -98,6 +132,7 @@ public class MissionManager {
             List<Truck> trucks = new ArrayList<Truck>();
             trucks.add(t);
             m.setM_trucks(trucks);
+            m_api.updateMission(m);
             return Boolean.TRUE;
         }else{
             return Boolean.FALSE;
@@ -124,7 +159,7 @@ public class MissionManager {
     }
 
     void detectIntensityFireIncreased() {
-        Debug.println("MissionManager: detectIntensityFireIncreased");
+        Mode.println("MissionManager: detectIntensityFireIncreased");
         for(Fire f : m_fires){
             if (f.getM_increase()){                                 //Si le feu augmente
                 for(Mission m : m_missions){                        //On cherche la mission qui lui est rattaché
@@ -137,11 +172,10 @@ public class MissionManager {
                 }
             }
         }
-        updateMission();
     }
 
     void detectIntensityEqualZero() {
-        Debug.println("MissionManager: detectIntensityEqualZero");
+        Mode.println("MissionManager: detectIntensityEqualZero");
         Fire fireOut=null;
         Mission missionFinished=null;
         for(Mission m: m_missions){
@@ -149,6 +183,7 @@ public class MissionManager {
                 if(m.getM_trucks()!=null){
                     for(Truck t : m.getM_trucks()){
                         t.setM_isBusy(Boolean.FALSE);                   //Tous les camions ne sont plus occupés
+                        m_api.updateTruck(t);
                     }
                 }
                 fireOut=m.getM_fire();
@@ -161,18 +196,5 @@ public class MissionManager {
         if(missionFinished!=null){
             m_missions.remove(missionFinished);
         }
-        updateMission();
-        updateFire();
-        updateTrucks();
     }
-
-    private void updateMission() { //Send mission to data base via WebServerConnector
-    }
-
-    private void updateFire() {
-    }
-    private void updateTrucks() {
-    }
-
-
 }

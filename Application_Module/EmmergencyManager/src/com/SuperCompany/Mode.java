@@ -1,7 +1,8 @@
 package com.SuperCompany;
 
-public class Debug {
+public class Mode {
     private static boolean DEBUG = true;
+    public static boolean USEREELAPI = false;
 
     public static void println(String str){
         if (DEBUG){

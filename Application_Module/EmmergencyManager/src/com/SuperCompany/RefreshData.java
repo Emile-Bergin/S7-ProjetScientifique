@@ -6,10 +6,10 @@ public class RefreshData {
     private Integer m_refreshTime = 5; //En secondes
 
     RefreshData(){
-        Debug.println("Création RefreshData");
+        Mode.println("Création RefreshData");
         m_generalManager= new GeneralManager();
         this.refresh();
-        Debug.println("Fin Création RefreshData");
+        Mode.println("Fin Création RefreshData");
     }
 
     private void refresh(){
@@ -17,9 +17,9 @@ public class RefreshData {
         Thread t = new Thread(){
           public void run(){
               while(true) {
-                  Debug.println("");
-                  Debug.println("#####################################################################");
-                  Debug.println("Trigger Refresh Data");
+                  Mode.println("");
+                  Mode.println("#####################################################################");
+                  Mode.println("Trigger Refresh Data");
                   m_generalManager.update();
                   try {
                       Thread.sleep(m_refreshTime*1000);

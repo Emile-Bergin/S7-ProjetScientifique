@@ -1,46 +1,49 @@
 package com.FireManager;
 
+import com.Connector.Api;
 import com.Connector.WebServerConnector;
 import com.MissionManager.MissionManager;
 import com.Objects.Fire;
 import com.Objects.Sensor;
 import com.SuperCompany.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FireManager implements Manager {
     MissionManager m_missionManager;
-    WebServerConnector m_webServerManager;
+    Api m_api;
     List<Sensor> m_sensors = new ArrayList<Sensor>();
     List<Fire> m_fires = new ArrayList<Fire>();
 
-    public FireManager(WebServerConnector wsc, MissionManager mm){
-        Debug.println("Création FireManager");
-        m_webServerManager=wsc;
+    public FireManager(Api api, MissionManager mm){
+        Mode.println("Création FireManager");
+        m_api =api;
         m_missionManager=mm;
-        Debug.println("Fin Création FireManager");
+        Mode.println("Fin Création FireManager");
     }
 
     @Override
     public void update() {
-        Debug.println("FireManager: update");
-        List<Sensor> sensorsUpdated = m_webServerManager.getSensors();
-        Debug.println(sensorsUpdated.toString());
-        DetectNewAndIncreaseFire(sensorsUpdated);
+        Mode.println("FireManager: update");
+        //SENSORS
+        updateSensors();
+        Mode.println(m_sensors.toString());
+        //FIRES
+        updateFires();
+        DetectNewAndIncreaseFire();
+        //UPLOAD UPDATES
         m_missionManager.update(m_fires);
     }
 
-    void DetectNewAndIncreaseFire(List<Sensor> sensorsUpdated) { //Aucun traitement pour l'instant Sensors = Fires
-        Debug.println("FireManager: DetectNewAndIncreaseFire");
-        updateSensors(sensorsUpdated);
-        Debug.println(m_sensors.toString());
-        updateFires();
-        Debug.println(m_fires.toString());
+    void updateSensors() { //add New Sensors If Not Present And Update Intensity
+        //List<Sensor> sensorsUpdated = m_webServerManager.getSensors();
+        Mode.println("FireManager: updateSensors");
+        //compareSensors(sensorsUpdated);
     }
 
-    void updateSensors(List<Sensor> sensorsUpdated) { //add New Sensors If Not Present And Update Intensity
-        Debug.println("FireManager: updateSensors");
+    void compareSensors(List<Sensor> sensorsUpdated) {
         Boolean isPresent=Boolean.FALSE;
         for (Sensor sensorUptaded: sensorsUpdated){
             isPresent= Boolean.FALSE;
@@ -60,8 +63,25 @@ public class FireManager implements Manager {
         }
     }
 
-    void updateFires() {
-        Debug.println("FireManager: updateFires");
+    private void updateFires() {
+        List<Fire> updatedFires = m_api.getFires();
+        Mode.println("FireManager: updateFires");
+        compareFires(updatedFires);
+    }
+
+    void compareFires(List<Fire> firesUpdated) {
+        //TODO
+        // +tests
+    }
+
+    void DetectNewAndIncreaseFire() { //Aucun traitement pour l'instant Sensors = Fires
+        Mode.println("FireManager: DetectNewAndIncreaseFire");
+        areThereNewFires();
+        Mode.println(m_fires.toString());
+    }
+
+    void areThereNewFires(){
+        Mode.println("FireManager: areThereNewFires?");
         Boolean isPresent=Boolean.FALSE;
         for (Sensor s: m_sensors) {                                     //parcours les sensors
             isPresent= Boolean.FALSE;                                   //par defaut le feu n'est pas présent

@@ -1,11 +1,14 @@
 package com.MissionManager;
 
+import com.Connector.Api;
 import com.Objects.Fire;
 import com.Objects.Mission;
 import com.Objects.Truck;
 import com.Connector.WebServerConnector;
 import org.junit.Before;
 import org.junit.Test;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +18,15 @@ import static org.junit.Assert.assertEquals;
 public class MissionManagerTest {
     private WebServerConnector wsc;
     private MissionManager mm;
+    private Retrofit retrofit;
+    private Api m_api;
 
     @Before
     public void Before(){
-        wsc=new WebServerConnector();
-        mm= new MissionManager(wsc);
+        retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        wsc = retrofit.create(WebServerConnector.class);
+        m_api=new Api(wsc);
+        mm= new MissionManager(m_api);
     }
 
     @Test

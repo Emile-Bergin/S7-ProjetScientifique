@@ -1,12 +1,15 @@
 package com.FireManager;
 
 
+import com.Connector.Api;
 import com.MissionManager.MissionManager;
 import com.Objects.Fire;
 import com.Objects.Sensor;
 import com.Connector.WebServerConnector;
 import org.junit.Before;
 import org.junit.Test;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +20,17 @@ public class FireManagerTest {
     private FireManager fm;
     private MissionManager mm;
     private WebServerConnector wsc;
+    private Retrofit m_retrofit;
+    private Api m_api;
 
     @Before
     public void Before(){
-        wsc=new WebServerConnector();
-        mm = new MissionManager(wsc);
-        fm = new FireManager(wsc, mm);
+        //wsc=new WebServerConnector();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        wsc = m_retrofit.create(WebServerConnector.class);
+        m_api=new Api(wsc);
+        mm = new MissionManager(m_api);
+        fm = new FireManager(m_api, mm);
     }
 
     @Test
@@ -41,7 +49,8 @@ public class FireManagerTest {
         sensors.add(s5);
         sensors.add(s6);
 
-        fm.DetectNewAndIncreaseFire(sensors);
+        fm.compareSensors(sensors);
+        fm.DetectNewAndIncreaseFire();
 
         assertEquals(fm.m_fires.size(),5);
     }
@@ -65,7 +74,7 @@ public class FireManagerTest {
             e.printStackTrace();
         }
 
-        fm.updateSensors(sensorsWithNewOnes);
+        fm.compareSensors(sensorsWithNewOnes);
 
         assertEquals(fm.m_sensors.size(),8);
     }
@@ -87,7 +96,7 @@ public class FireManagerTest {
         sensorsWithNewOnes.get(2).setM_intensity(new Integer(5));
         sensorsWithNewOnes.get(3).setM_intensity(new Integer(6));
 
-        fm.updateSensors(sensorsWithNewOnes);
+        fm.compareSensors(sensorsWithNewOnes);
 
         assertEquals(fm.m_sensors.get(0).getM_intensity(), new Integer(3));
         assertEquals(fm.m_sensors.get(1).getM_intensity(), new Integer(1));
@@ -110,7 +119,7 @@ public class FireManagerTest {
 
         System.out.println(fm.m_sensors.toString());
         System.out.println(fm.m_fires.toString());
-        fm.updateFires();
+        fm.areThereNewFires();
         System.out.println(fm.m_fires.toString());
 
         for(Fire f: fm.m_fires){
