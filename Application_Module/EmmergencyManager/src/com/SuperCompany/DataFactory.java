@@ -4,7 +4,9 @@ import com.Objects.Barrack;
 import com.Objects.Sensor;
 import com.Objects.Truck;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class DataFactory {
     private Integer m_column=1;

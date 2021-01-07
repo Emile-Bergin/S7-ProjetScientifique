@@ -1,18 +1,10 @@
 package com.Connector;
 
-import com.FireManager.FireManager;
 import com.Objects.*;
-import com.SuperCompany.DataFactory;
-import com.SuperCompany.Mode;
-import com.fasterxml.jackson.core.*;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import retrofit2.Call;
 import retrofit2.http.*;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.concurrent.Executor;
 
 public interface WebServerConnector{
     @GET("api/getBarracks/")

@@ -2,10 +2,10 @@ package com.FireManager;
 
 
 import com.Connector.Api;
+import com.Connector.WebServerConnector;
 import com.MissionManager.MissionManager;
 import com.Objects.Fire;
 import com.Objects.Sensor;
-import com.Connector.WebServerConnector;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Retrofit;
@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class FireManagerTest {
     private FireManager fm;

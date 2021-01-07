@@ -1,16 +1,11 @@
 package com.Connector;
 
-import com.Connector.WebServerConnector;
-import com.Objects.Fire;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 

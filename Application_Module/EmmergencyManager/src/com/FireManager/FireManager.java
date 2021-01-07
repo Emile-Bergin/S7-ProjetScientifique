@@ -1,13 +1,12 @@
 package com.FireManager;
 
 import com.Connector.Api;
-import com.Connector.WebServerConnector;
 import com.MissionManager.MissionManager;
 import com.Objects.Fire;
 import com.Objects.Sensor;
-import com.SuperCompany.*;
+import com.SuperCompany.Manager;
+import com.SuperCompany.Mode;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
