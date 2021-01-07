@@ -1,11 +1,15 @@
 from time import sleep
 import serial
+from queue import Queue
+import requests
 
 SERIALPORT = "COM6"
 BAUDRATE = 115200
 ser = serial.Serial()
-ListUpdate = []
+ListUpdate = Queue()
 msg = ""
+
+url = 'http://127.0.0.1:5000/api/updateSensor/'
 
 ser.port = SERIALPORT
 def initUART():
@@ -25,10 +29,12 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
-def newUpdate(msg) :
-    ListUpdate.append(msg)
-    print("Nouveau message ajouté : " + msg)
-    print(ListUpdate)
+def newMsg(msg) :
+    id = msg.split(':')[0]
+    ListUpdate.put(msg)
+
+def sendUARTMessage(msg):
+    ser.write(msg.encode())
 
 def receiveUartMessage() :
     return ser.read()
@@ -38,14 +44,22 @@ if __name__ == '__main__':
     try:
         while ser.isOpen():
             character = receiveUartMessage().decode()
-            msg += character
+            msg = msg + character
             if '\n' in msg :
-                print(msg + "\n")
-                newUpdate(msg.split('\n')[0])
+                newMsg(msg.split('\n')[0])
                 if len(msg.split('\n')) > 1:
                     msg = msg.split('\n', 1)[1]
                 else:
                     msg = ""
+            if not ListUpdate.empty():
+                pending = ListUpdate.get()
+                obj = {"intensity": pending.split(':')[1], "id": pending.split(':')[0]}
+                x = requests.post(url, data=obj)
+                if x:
+                    print("Response OK")
+                else:
+                    print("Response Failed")
+
     except (KeyboardInterrupt, SystemExit):
         ser.close()
         exit()

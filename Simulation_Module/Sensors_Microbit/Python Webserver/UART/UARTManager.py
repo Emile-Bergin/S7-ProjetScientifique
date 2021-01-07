@@ -1,11 +1,12 @@
 from time import sleep
+import queue
 import serial
+import time
 
 # send serial message
 SERIALPORT = "COM5"
 BAUDRATE = 115200
 ser = serial.Serial()
-
 
 def initUART():
     ser.port = SERIALPORT
@@ -25,9 +26,17 @@ def initUART():
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
-def sendUARTMsg(id, intensity):
-    initUART()
-    msg = str(id) + ':' + str(intensity)
+def sendUARTMessage(msg):
     ser.write(msg.encode())
-    print("Buffer Envoyé 0_0")
-    ser.close()
+
+def launch(Messages):
+    initUART()
+    try:
+        while ser.isOpen():
+            time.sleep(5)
+            if not Messages.empty() :
+                sendUARTMessage(Messages.get())
+
+    except (KeyboardInterrupt, SystemExit):
+        ser.close()
+        exit()
