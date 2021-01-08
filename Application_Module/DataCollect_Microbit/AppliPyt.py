@@ -9,7 +9,7 @@ ser = Serial()
 ListUpdate = Queue()
 msg = ""
 
-url = 'http://192.168.1.25:5000/api/updateSensor/'
+url = 'http://192.168.1.25:5001/api/updateSensor/'
 
 ser.port = SERIALPORT
 def initUART():
@@ -53,7 +53,7 @@ if __name__ == '__main__':
                     msg = ""
             if not ListUpdate.empty():
                 pending = ListUpdate.get()
-                obj = {"m_intensity": pending.split(':')[1], "m_id": pending.split(':')[0]}
+                obj = {"intensity": pending.split(':')[1], "id": pending.split(':')[0]}
                 x = requests.post(url, data=obj, timeout=1)
                 if x:
                     print("Response OK")
