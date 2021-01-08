@@ -29,10 +29,10 @@ public interface WebServerConnector{
     Call<Mission> createMission(@Body Mission Mission);
 
     @POST("api/updateMission/")
-    Call<Mission> updateMission(Mission m);
+    Call<Mission> updateMission(@Body Mission m);
 
     @POST("api/updateTruck/")
-    Call<Truck> updateTruck(Truck t);
+    Call<Truck> updateTruck(@Body Truck t);
 
     @FormUrlEncoded
     @POST("api/createSensorFire/")

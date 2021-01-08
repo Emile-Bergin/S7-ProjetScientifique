@@ -4,43 +4,75 @@ import com.Objects.Fire;
 import com.Objects.Mission;
 import com.Objects.Mode;
 import com.Objects.Truck;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
+import java.io.IOException;
 import java.util.List;
 
 public class ApiEmergencyWebServer {
     private EmergencyWebServerConnector m_emergencyWebServerConnector;
+    private Retrofit m_retrofit;
 
-    public ApiEmergencyWebServer(EmergencyWebServerConnector ewsc){
-        m_emergencyWebServerConnector =ewsc;
+    public ApiEmergencyWebServer(){
+        m_retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_emergencyWebServerConnector = m_retrofit.create(EmergencyWebServerConnector.class);
     }
 
     public List<Truck> getTrucks(){
         if(Mode.USEREELAPI){
-            //TODO
-            return null;
+            try {
+                return m_emergencyWebServerConnector.getTrucks().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
         }else
             return null;
     }
 
     public List<Mission> getMissions(){
         if(Mode.USEREELAPI){
-            //TODO
-            return null;
+            try {
+                return m_emergencyWebServerConnector.getMissions().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
         }else
             return null;
-    }
-
-    public void  updateTruck(Truck t){
-        if(Mode.USEREELAPI){
-            //TODO
-        }
     }
 
     public List<Fire> getFires(){
         if(Mode.USEREELAPI){
+            try {
+                return m_emergencyWebServerConnector.getFires().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }else
+            return null;
+    }
+
+    /*
+    public List<Fire> getSensors(){
+        if(Mode.USEREELAPI){
             //TODO
             return null;
         }else
             return null;
+    }*/
+
+    public void  updateTruck(Truck t){
+        if(Mode.USEREELAPI){
+            try {
+                m_emergencyWebServerConnector.updateTruck(t).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
+
+
 }

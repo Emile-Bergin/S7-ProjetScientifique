@@ -10,21 +10,16 @@ services:
         environment:
             POSTGRES_PASSWORD: admin
         volumes:
-            - type: bind
-              source: "./database" 
-              target: "/var/lib/postgresql/data"
+            - ./database:/var/lib/postgresql/data
+            - ./dumps:/dumps
         ports:
-            - "5433:5432"     
-            
-            
+            - "5433:5432" 
     mqtt:
         image: eclipse-mosquitto
         restart: always
         container_name: emergency_mqtt
         ports:
-          - 1883:1883
-          - 9001:9001
+          - 1884:1883
+          - 9002:9001
         volumes:
-            - type: bind
-              source: "./log" 
-              target: "/mosquitto/log"
+            - ./log:/mosquitto/log

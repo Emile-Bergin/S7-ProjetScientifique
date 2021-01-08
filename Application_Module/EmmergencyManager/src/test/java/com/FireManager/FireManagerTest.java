@@ -35,12 +35,12 @@ public class FireManagerTest {
 
     @Test
     public void checkCreateFires() throws Exception {
-        Sensor s1 = new Sensor(0, 0, 0, 45.0, 8.0, 0);
-        Sensor s2 = new Sensor(1, 0, 1, 45.0, 8.0, 1);
-        Sensor s3 = new Sensor(2, 1, 0, 45.0, 8.0, 2);
-        Sensor s4 = new Sensor(3, 1, 1, 45.0, 8.0, 3);
-        Sensor s5 = new Sensor(4, 2, 0, 45.0, 8.0, 4);
-        Sensor s6 = new Sensor(5, 2, 1, 45.0, 8.0, 5);
+        Sensor s1 = new Sensor(0, 0, 0, 45.0, 8.0, 0, Boolean.TRUE);
+        Sensor s2 = new Sensor(1, 0, 1, 45.0, 8.0, 1, Boolean.TRUE);
+        Sensor s3 = new Sensor(2, 1, 0, 45.0, 8.0, 2, Boolean.TRUE);
+        Sensor s4 = new Sensor(3, 1, 1, 45.0, 8.0, 3, Boolean.TRUE);
+        Sensor s5 = new Sensor(4, 2, 0, 45.0, 8.0, 4, Boolean.TRUE);
+        Sensor s6 = new Sensor(5, 2, 1, 45.0, 8.0, 5, Boolean.TRUE);
         List<Sensor> sensors = new ArrayList<Sensor>();
         sensors.add(s1);
         sensors.add(s2);
@@ -60,7 +60,7 @@ public class FireManagerTest {
         List<Sensor>sensorsWithNewOnes= new ArrayList<Sensor>();
         for(int i=0;i<=5;i++){
             try {
-                Sensor s= new Sensor(i, i,i,45.0, 8.0, 2);
+                Sensor s= new Sensor(i, i,i,45.0, 8.0, 2, Boolean.TRUE);
                 sensorsWithNewOnes.add(s);
                 fm.m_sensors.add(s);
             } catch (Exception e) {
@@ -68,8 +68,8 @@ public class FireManagerTest {
             }
         }
         try {
-            sensorsWithNewOnes.add( new Sensor(6,6,6,45.0, 8.0, 0));
-            sensorsWithNewOnes.add( new Sensor(7,6,6,45.0, 8.0, 2));
+            sensorsWithNewOnes.add( new Sensor(6,6,6,45.0, 8.0, 0, Boolean.TRUE));
+            sensorsWithNewOnes.add( new Sensor(7,6,6,45.0, 8.0, 2, Boolean.TRUE));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -84,7 +84,7 @@ public class FireManagerTest {
         List<Sensor>sensorsWithNewOnes= new ArrayList<Sensor>();
         for(int i=0;i<=5;i++){
             try {
-                Sensor s= new Sensor(i, i,i,45.0, 8.0, 2);
+                Sensor s= new Sensor(i, i,i,45.0, 8.0, 2, Boolean.TRUE);
                 sensorsWithNewOnes.add(s);
                 fm.m_sensors.add(s);
             } catch (Exception e) {
@@ -111,7 +111,7 @@ public class FireManagerTest {
         for(int i=0;i<=5;i++){
             fm.m_fires.add(new Fire(i, null, 45.0,8.0,1));
             try {
-                fm.m_sensors.add(new Sensor(i, i,i,45.0, 8.0, 2));
+                fm.m_sensors.add(new Sensor(i, i,i,45.0, 8.0, 2, Boolean.TRUE));
             } catch (Exception e) {
                 e.printStackTrace();
             }
