@@ -60,4 +60,15 @@ API coté datacenter:
 				URL: /api/getTrucks/
 			Get Barracks
 				URL: /api/getBarracks/
+				
+	Simulator Web Server:
+		POST:
+			Upadte Fire:
+				URL: api/updateFire/
+			Upadte Truck:
+				URL: api/updateTruck/
+			Upadte Sensor:
+				URL: api/updateSensor/
+
+		
 			
