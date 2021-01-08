@@ -1,10 +1,11 @@
 import paho.mqtt.client as mqtt
 import json
+from app import IP
 #http://www.steves-internet-guide.com/into-mqtt-python-client/
 
 # Informations de connexion à votre broker MQTT : 
 # adresse IP
-broker = "127.0.0.1"
+broker = IP
 # on se connecte au broker et on publie le message sur le topic
 client = mqtt.Client("P1")
 client.connect(broker)

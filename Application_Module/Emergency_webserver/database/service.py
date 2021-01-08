@@ -1,22 +1,31 @@
 import psycopg2
+import json
+from app import IP
 
 # https://riptutorial.com/fr/python/example/18257/acces-a-la-base-de-donnees-postgresql-avec-psycopg2
 
 conn = psycopg2.connect(database="emergency", 
                         user="postgres",
-                        host="localhost",
+                        host=IP,
                         password="admin",
-                        port="5432") 
+                        port="5433") 
 
 cur = conn.cursor()
 
+def get(dataWanted, table):
+    sql = 'SELECT '+ ",".join(dataWanted) +' FROM '+ table
+    cur.execute(sql)
+    data = cur.fetchall()
+    ret = list()
+    for datum in data:
+        obj = {}
+        for datumWanted in enumerate(dataWanted):
+            obj[dataWanted[datumWanted[0]]] = datum[datumWanted[0]]
+        ret.append(obj)
+    return ret
+
 #======================================================#
 #SENSORS
-def getSensors():
-    sql = 'SELECT * FROM public.sensors'
-    cur.execute(sql)
-    return cur.fetchall()
-
 def updateSensor(id, intensity):
     sql = 'UPDATE public.sensors SET intensity = %s WHERE id = %s'
     args = (intensity, id)
@@ -31,11 +40,6 @@ def reportDeadSensor(id):
 
 #======================================================#
 #FIRES
-def getFires():
-    sql = 'SELECT * FROM public.fires'
-    cur.execute(sql)
-    return cur.fetchall()
-
 def createFire(date, longitude, latitude, intensity):
     sql = 'INSERT INTO public.fires (date, longitude, latitude, intensity) VALUES (%s, %s, %s, %s)'
     args = (date, longitude, latitude, intensity)
@@ -44,11 +48,6 @@ def createFire(date, longitude, latitude, intensity):
 
 #======================================================#
 #SENSOR_FIRE
-def getSensors_Fires():
-    sql = 'SELECT * FROM public.sensors__fires'
-    cur.execute(sql)
-    return cur.fetchall()
-
 def createSensor_Fire(id_sensor, id_fire):
     sql = 'INSERT INTO public.sensors__fires (id_sensor, id_fire) VALUES (%s, %s)'
     args = (id_sensor, id_fire)
@@ -56,18 +55,7 @@ def createSensor_Fire(id_sensor, id_fire):
     conn.commit()
 
 #======================================================#
-#TRUCKS
-def getTrucks():
-    sql = 'SELECT * FROM fireworker.trucks'
-    cur.execute(sql)
-    return cur.fetchall()
-
-#======================================================#
 #MISSIONS
-def getMissions():
-    sql = 'SELECT * FROM fireworker.missions'
-    cur.execute(sql)
-    return cur.fetchall()
 
 def createMission(id_fire, id_truck, date):
     sql = 'INSERT INTO fireworker.missions (id_fire, id_truck, date) VALUES (%s, %s, %s)'
@@ -77,9 +65,6 @@ def createMission(id_fire, id_truck, date):
 
 #======================================================#
 #BARRACKS
-def getBarracks():
-    sql = 'SELECT * FROM fireworker.barracks'
-    cur.execute(sql)
-    return cur.fetchall()
 
-
+#======================================================#
+#TRUCKS
