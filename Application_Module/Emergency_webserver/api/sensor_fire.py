@@ -8,6 +8,6 @@ def getSensor_FireAPI():
 
 @app.route("/api/createSensorFire/", methods=["POST"])
 def createSensor_FireAPI():
-    db.createSensor_Fire(request.form.get("id_sensor"), request.form.get("id_fire"))
+    db.createSensor_Fire(request.form.get("m_sensor"), request.form.get("m_fire"))
     return ''
 

@@ -18,6 +18,6 @@ def getMissionsAPI():
 
 @app.route("/api/createMission/", methods=["POST"])
 def createMissionAPI():
-    db.createMission(request.form.get("id_fire"), request.form.get("id_truck"), request.form.get("date"))
+    db.createMission(request.form.get("m_fire"), request.form.get("m_truck"), request.form.get("m_date"))
     return ''
 

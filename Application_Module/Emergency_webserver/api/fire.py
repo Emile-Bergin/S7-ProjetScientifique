@@ -19,7 +19,7 @@ def getFireAPI():
 
 @app.route("/api/createFire/", methods=["POST"])
 def createFireAPI():
-    db.createFire(request.form.get("date"), request.form.get("longitute"), request.form.get("latitude"), request.form.get("intensity"))
-    sendFireMQTT(request.form.get("date"), request.form.get("longitute"), request.form.get("latitude"), request.form.get("intensity"))
+    db.createFire(request.form.get("m_date"), request.form.get("m_longitute"), request.form.get("m_latitude"), request.form.get("m_intensity"))
+    sendFireMQTT(request.form.get("m_date"), request.form.get("m_longitute"), request.form.get("m_latitude"), request.form.get("m_intensity"))
     return ''
 

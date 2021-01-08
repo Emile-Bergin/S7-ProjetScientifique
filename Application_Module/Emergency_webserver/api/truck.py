@@ -9,7 +9,7 @@ def getTrucksAPI():
     for datum in data:
         data2.append({
             "m_id" : datum["id"],
-            "m_id_barrack" : datum["id_barrack"],
+            "m_barrack" : datum["id_barrack"],
             "m_longitude" : datum["longitude"],
             "m_latitude" : datum["latitude"]
         })    

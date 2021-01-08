@@ -1,5 +1,6 @@
 API coté datacenter:
 
+Emergency Web server :
 	Microbit:
 		POST:
 			Update Sensor:
@@ -22,29 +23,27 @@ API coté datacenter:
 				URL: /api/createSensorFire/
 				Format:
 					{
-						"id_sensor" : "..."
-						"id_fire" : "..."
+						"m_sensor" : "..."
+						"m_fire" : "..."
 					}
 			Create Mission:
 				URL: /api/createMission/
 				Format:
 					{
-						"id_fire" : "..."
-						"id_truck" : "..."
-						"date" : "..."
+						"m_fire" : "..."
+						"m_truck" : "..."
+						"m_date" : "..."
 					}
 			Create Fire:
 				URL: /api/createFire/
 				Format:
 					{
-						"date" : "..."
-						"longitute" : "..."
-						"latitude" : "..."
-						"intensity" : "..."
-					}
-			Update Truck:
-				URL: api/updateTruck/
-			
+						"m_id" : "..."
+						"m_date" : "..."
+						"m_longitute" : "..."
+						"m_latitude" : "..."
+						"m_intensity" : "..."
+					}		
 		GET:
 			Get Barracks
 				URL: /api/getBarracks/
@@ -58,10 +57,23 @@ API coté datacenter:
 				URL: /api/getSensors/
 			Get Trucks
 				URL: /api/getTrucks/
-			Get Barracks
-				URL: /api/getBarracks/
+
+	Simulator:
+		POST:
+			Update Truck:
+				URL: /api/updateTruck/
+				Format:
+					{
+						"m_id" : "..."
+						"m_longitude" : "..."
+						"m_latitude" : "..."
+					}
 				
-	Simulator Web Server:
+			
+
+				
+Simulator Web Server:
+	Simulator:
 		POST:
 			Upadte Fire:
 				URL: api/updateFire/
@@ -69,6 +81,17 @@ API coté datacenter:
 				URL: api/updateTruck/
 			Upadte Sensor:
 				URL: api/updateSensor/
+				
+sensor web server:
+	Simulator:
+		POST:
+			Update sensor:
+				URL: /api/updateSensor/
+				Format:
+					{
+						"m_id" : "..."
+						"m_intensity" : "..."
+					}
 
 		
 			
