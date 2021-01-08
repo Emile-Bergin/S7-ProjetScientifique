@@ -5,10 +5,10 @@ import com.Objects.Mode;
 import com.Objects.Sensor;
 import com.Objects.Truck;
 
-public class ApiSimulatorWebServerConnector {
+public class ApiSimulatorWebServer {
     private SimulatorWebServerConnector m_simulatorWebServerConnector;
 
-    public ApiSimulatorWebServerConnector(SimulatorWebServerConnector swsc){
+    public ApiSimulatorWebServer(SimulatorWebServerConnector swsc){
         m_simulatorWebServerConnector=swsc;
     }
 

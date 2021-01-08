@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 
 public class Mission {
-    private Integer m_id;
     private Fire m_fire;
     private List<Truck> m_trucks= new ArrayList<Truck>();
     private Date m_date;
@@ -14,7 +13,6 @@ public class Mission {
     public Mission(Fire m_fire) {
         this.m_fire = m_fire;
         this.m_trucks = null;
-        m_id = null;
         m_date = new Date();
     }
 

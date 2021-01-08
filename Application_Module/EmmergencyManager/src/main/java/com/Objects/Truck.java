@@ -2,7 +2,7 @@ package com.Objects;
 
 public class Truck implements PhysiqueElement {
     private Integer m_id;
-    private Integer m_idCaserne;
+    private Integer m_barrack;
     private Integer m_type;
     private Double m_longitude;
     private Double m_latitude;
@@ -10,7 +10,7 @@ public class Truck implements PhysiqueElement {
 
     public Truck(Integer m_id, Integer m_idCaserne, Integer m_type, Double m_longitude, Double m_latitude) {
         this.m_id = m_id;
-        this.m_idCaserne = m_idCaserne;
+        this.m_barrack = m_idCaserne;
         this.m_type = m_type;
         this.m_longitude = m_longitude;
         this.m_latitude = m_latitude;
@@ -21,7 +21,7 @@ public class Truck implements PhysiqueElement {
     public String toString() {
         return "Truck{" +
                 "m_id=" + m_id +
-                ", m_idCaserne=" + m_idCaserne +
+                ", m_idCaserne=" + m_barrack +
                 ", m_type=" + m_type +
                 ", m_longitude=" + m_longitude +
                 ", m_latitude=" + m_latitude +
@@ -57,8 +57,8 @@ public class Truck implements PhysiqueElement {
         return m_id;
     }
 
-    public Integer getM_idCaserne() {
-        return m_idCaserne;
+    public Integer getM_barrack() {
+        return m_barrack;
     }
 
     public Integer getM_type() {

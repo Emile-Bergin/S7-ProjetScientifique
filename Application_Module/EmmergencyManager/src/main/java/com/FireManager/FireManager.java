@@ -37,9 +37,9 @@ public class FireManager implements Manager {
     }
 
     void updateSensors() { //add New Sensors If Not Present And Update Intensity
-        //List<Sensor> sensorsUpdated = m_webServerManager.getSensors();
+        List<Sensor> sensorsUpdated = m_api.getSensors();
         Mode.println("FireManager: updateSensors");
-        //compareSensors(sensorsUpdated);
+        compareSensors(sensorsUpdated);
     }
 
     void compareSensors(List<Sensor> sensorsUpdated) {
