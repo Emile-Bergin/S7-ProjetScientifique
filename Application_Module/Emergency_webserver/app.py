@@ -13,7 +13,7 @@ def hello():
     return "Hello World!"
 
 def main():
-    app.run(debug=True, host=IP port=5001)
+    app.run(debug=True, host=IP, port=5001)
     
 #A ne pas toucher => Après avoir déclaré app
 import api.fire
