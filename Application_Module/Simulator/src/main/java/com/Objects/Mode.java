@@ -1,4 +1,4 @@
-package com.SuperCompany;
+package com.Objects;
 
 public class Mode {
     private static boolean DEBUG = true;

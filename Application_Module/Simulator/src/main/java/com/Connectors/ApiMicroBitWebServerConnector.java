@@ -1,4 +1,4 @@
-package com.EmergencyWebServerConnectors;
+package com.Connectors;
 
 import com.Objects.Mode;
 import com.Objects.Sensor;

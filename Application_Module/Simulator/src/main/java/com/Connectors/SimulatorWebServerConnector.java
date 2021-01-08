@@ -1,2 +1,4 @@
-package com.Connectors;public class SimulatorWebServerConnector {
+package com.Connectors;
+
+public interface SimulatorWebServerConnector {
 }

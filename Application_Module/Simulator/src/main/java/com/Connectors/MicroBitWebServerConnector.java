@@ -1,4 +1,4 @@
-package com.EmergencyWebServerConnectors;
+package com.Connectors;
 
 public interface MicroBitWebServerConnector {
 }

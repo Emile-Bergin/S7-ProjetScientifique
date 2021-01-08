@@ -1,4 +1,4 @@
-package com.EmergencyWebServerConnectors;
+package com.Connectors;
 
 import com.Objects.Fire;
 import com.Objects.Mission;
