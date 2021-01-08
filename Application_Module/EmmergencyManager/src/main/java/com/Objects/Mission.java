@@ -1,15 +1,21 @@
 package com.Objects;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Mission {
+    private Integer m_id;
     private Fire m_fire;
     private List<Truck> m_trucks= new ArrayList<Truck>();
+    private Date m_date;
 
     public Mission(Fire m_fire) {
         this.m_fire = m_fire;
         this.m_trucks = null;
+        m_id = null;
+        m_date = new Date();
     }
 
     public Mission(Fire m_fire, List<Truck> m_trucks) {

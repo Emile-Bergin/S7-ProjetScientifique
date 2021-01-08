@@ -7,14 +7,16 @@ public class Sensor implements PhysiqueElement {
     private Double m_longitude;
     private Double m_latitude;
     private Integer m_intensity;
+    private Boolean m_alive;
 
-    public Sensor(Integer m_id, Integer m_column, Integer m_line, Double m_longitude, Double m_latitude, Integer m_intensity) throws Exception {
+    public Sensor(Integer m_id, Integer m_column, Integer m_line, Double m_longitude, Double m_latitude, Integer m_intensity, Boolean isAlive) throws Exception {
         this.m_id = m_id;
         this.m_column = m_column;
         this.m_line = m_line;
         this.m_longitude = m_longitude;
         this.m_latitude = m_latitude;
         setM_intensity(m_intensity);
+        m_alive=isAlive;
     }
 
     @Override
