@@ -4,7 +4,7 @@ import database.service as db
 
 @app.route('/api/getTrucks/')
 def getTrucksAPI():
-    data = jsonify(db.get(('id','id_barrack','longitude','latitude'),"fireworker.trucks"))
+    data = db.get(['id','id_barrack','longitude','latitude'],"fireworker.trucks")
     data2 = []
     for datum in data:
         data2.append({
