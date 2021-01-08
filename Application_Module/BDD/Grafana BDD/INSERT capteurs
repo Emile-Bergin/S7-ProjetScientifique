@@ -1,0 +1,65 @@
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
+INSERT INTO public.sensors (alive) VALUES (true);
