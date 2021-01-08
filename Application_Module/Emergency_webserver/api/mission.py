@@ -4,7 +4,7 @@ import database.service as db
 
 @app.route('/api/getMissions/')
 def getMissionsAPI():
-    data = jsonify(db.get(('id','id_fire','id_truck','date','processed'),"fireworker.missions"))
+    data = db.get(['id','id_fire','id_truck','date','processed'],"fireworker.missions")
     data2 = []
     for datum in data:
         data2.append({
