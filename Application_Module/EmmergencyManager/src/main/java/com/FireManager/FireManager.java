@@ -96,7 +96,9 @@ public class FireManager implements Manager {
                 }
             }
             if(!isPresent && s.getM_intensity()>0) {
-                m_fires.add(new Fire(s.getM_id(), new java.util.Date(), s.getM_longitude(), s.getM_latitude(), s.getM_intensity()));
+                Fire f = new Fire(s.getM_id(), new java.util.Date(), s.getM_longitude(), s.getM_latitude(), s.getM_intensity());
+                m_api.createFires(f);
+                m_fires.add(f);
             }
         }
     }
