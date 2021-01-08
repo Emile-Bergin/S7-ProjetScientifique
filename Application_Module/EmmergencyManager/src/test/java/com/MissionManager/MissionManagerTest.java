@@ -151,10 +151,10 @@ public class MissionManagerTest {
 
     @Test
     public void checkIsTruckFreeWhenNoTruck(){
-       Truck t=mm.isTruckFree(6);
+        Truck t=mm.isTruckFree(6);
 
-       assertEquals(mm.m_trucks.size(), 0);
-       assertEquals(t, null);
+        assertEquals(mm.m_trucks.size(), 0);
+        assertEquals(t, null);
     }
 
     @Test
