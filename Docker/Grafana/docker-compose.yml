@@ -3,10 +3,10 @@ version: '3.1'
 
 services:
  
-    db_emergency:
+    db_grafana:
         image: postgres
         restart: always
-        container_name: emergency_db
+        container_name: grafana_db
         environment:
             POSTGRES_PASSWORD: admin
         volumes:
@@ -17,17 +17,6 @@ services:
               source: "./dumps"
               target: "/dumps"
         ports:
-            - "5433:5432"     
+            - "5434:5432"     
             
-            
-    mqtt:
-        image: eclipse-mosquitto
-        restart: always
-        container_name: emergency_mqtt
-        ports:
-          - 1883:1883
-          - 9001:9001
-        volumes:
-            - type: bind
-              source: "./log" 
-              target: "/mosquitto/log"
+           
