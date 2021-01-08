@@ -1,0 +1,13 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğŸ¦’ıÿÿÿÿ
+s	java:S116	"^Rename this field "m_webSeverConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦ÙºÓ
+A
+java:S1168"+Return an empty collection instead of null.(¥¹ï
+A
+java:S1168"+Return an empty collection instead of null.(¥¹ï
+A
+java:S1168&"+Return an empty collection instead of null.(¥¹ï
+A
+java:S11680"+Return an empty collection instead of null.(¥¹ï
+A
+java:S11689"+Return an empty collection instead of null.(¥¹ï
