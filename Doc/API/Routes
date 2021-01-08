@@ -1,0 +1,97 @@
+API coté datacenter:
+
+Emergency Web server :
+	Microbit:
+		POST:
+			Update Sensor:
+				URL: /api/updateSensor/
+				Format:
+					{
+						"intensity" : "..."
+						"id" : "..."
+					}
+			Report Dead Sensor:
+				URL: /api/reportDeadSensor/
+				Format:
+					{
+						"id" : "..."
+					}
+	
+	Emergency Manager:
+		POST:
+			Create Sensor__Fire: n
+				URL: /api/createSensorFire/
+				Format:
+					{
+						"m_sensor" : "..."
+						"m_fire" : "..."
+					}
+			Create Mission:
+				URL: /api/createMission/
+				Format:
+					{
+						"m_fire" : "..."
+						"m_truck" : "..."
+						"m_date" : "..."
+					}
+			Create Fire:
+				URL: /api/createFire/
+				Format:
+					{
+						"m_id" : "..."
+						"m_date" : "..."
+						"m_longitute" : "..."
+						"m_latitude" : "..."
+						"m_intensity" : "..."
+					}		
+		GET:
+			Get Barracks
+				URL: /api/getBarracks/
+			Get Fires
+				URL: /api/getFires/
+			Get Missions
+				URL: /api/getMissions/
+			Get Sensors__Fires
+				URL: /api/getSensorsFires/
+			Get Sensors
+				URL: /api/getSensors/
+			Get Trucks
+				URL: /api/getTrucks/
+
+	Simulator:
+		POST:
+			Update Truck:
+				URL: /api/updateTruck/
+				Format:
+					{
+						"m_id" : "..."
+						"m_longitude" : "..."
+						"m_latitude" : "..."
+					}
+				
+			
+
+				
+Simulator Web Server:
+	Simulator:
+		POST:
+			Upadte Fire:
+				URL: api/updateFire/
+			Upadte Truck:
+				URL: api/updateTruck/
+			Upadte Sensor:
+				URL: api/updateSensor/
+				
+sensor web server:
+	Simulator:
+		POST:
+			Update sensor:
+				URL: /api/updateSensor/
+				Format:
+					{
+						"m_id" : "..."
+						"m_intensity" : "..."
+					}
+
+		
+			

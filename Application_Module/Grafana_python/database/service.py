@@ -13,7 +13,7 @@ cur = conn.cursor()
 #======================================================#
 #SENSORS
 def createSensors(date, id, intensity):
-    sql = 'INSERT INTO public.sensors (date, id, intensity) VALUES (%s, %s, %s)'
+    sql = 'INSERT INTO public.sensors_history (date, id, intensity) VALUES (%s, %s, %s)'
     args = (date, id, intensity)
     cur.execute(sql, args)
     conn.commit()
@@ -21,7 +21,7 @@ def createSensors(date, id, intensity):
 #======================================================#
 #FIRES
 def createFire(date, longitude, latitude, intensity):
-    sql = 'INSERT INTO public.fires (date, longitude, latitude, intensity) VALUES (%s, %s, %s, %s)'
+    sql = 'INSERT INTO public.fires_history (date, longitude, latitude, intensity) VALUES (%s, %s, %s, %s)'
     args = (date, longitude, latitude, intensity)
     cur.execute(sql, args)
     conn.commit()

@@ -8,13 +8,12 @@ from datetime import datetime
 
 
 def on_message(client, userdata, message):
+    print("Reception")
     if message.topic == "fire":
         jsonmsg = json.loads(str(message.payload.decode("utf-8")))
         db.createFire(jsonmsg["date"], jsonmsg["position"][0], jsonmsg["position"][1], jsonmsg["intensity"])
     elif message.topic == "sensor":
-        print(datetime.now())
         jsonmsg = json.loads(str(message.payload.decode("utf-8")))
-        #print(jsonmsg)
         db.createSensors(datetime.now(), jsonmsg["id"], jsonmsg["intensity"])
 
 # Informations de connexion à votre broker MQTT : 
