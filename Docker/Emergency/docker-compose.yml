@@ -12,12 +12,14 @@ services:
         volumes:
             - ./database:/var/lib/postgresql/data
             - ./dumps:/dumps
+        ports:
+            - "5433:5432" 
     mqtt:
         image: eclipse-mosquitto
         restart: always
         container_name: emergency_mqtt
         ports:
-          - 1883:1883
-          - 9001:9001
+          - 1884:1883
+          - 9002:9001
         volumes:
             - ./log:/mosquitto/log
