@@ -37,7 +37,7 @@ public class Api {
                 return null;
             }
         } else
-            return null;
+            return m_dataFactory.getTrucks();
     }
 
     public List<Barrack> getBarracks() {
@@ -49,7 +49,7 @@ public class Api {
                 return null;
             }
         }else
-            return null;
+            return m_dataFactory.getBarracks();
     }
 
 
@@ -62,7 +62,7 @@ public class Api {
                 return null;
             }
         }else
-            return null;
+            return m_dataFactory.getSensors();
     }
 
     public List<Mission> getMissions() {

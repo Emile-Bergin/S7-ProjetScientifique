@@ -25,7 +25,7 @@ public class DataFactory {
             for (int i=0;i<=m_column;i++){
                 for (int k=0;k<=m_line;k++){
                     try {
-                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), 0));
+                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), 0,Boolean.TRUE));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -37,7 +37,7 @@ public class DataFactory {
             for (int i=0;i<=m_column;i++){
                 for (int k=0;k<=m_line;k++){
                     try {
-                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), rd.nextInt(8)));
+                        m_Sensors.add(new Sensor(id, i, k, new Double(i), new Double(k), rd.nextInt(8),Boolean.TRUE));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
