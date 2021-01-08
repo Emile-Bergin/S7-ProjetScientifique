@@ -3,13 +3,13 @@ from serial import *
 from queue import Queue
 import requests
 
-SERIALPORT = "COM6"
+SERIALPORT = "/dev/ttyACM1"
 BAUDRATE = 115200
 ser = Serial()
 ListUpdate = Queue()
 msg = ""
 
-url = 'http://127.0.0.1:5000/api/updateSensor/'
+url = 'http://192.168.1.25:5000/api/updateSensor/'
 
 ser.port = SERIALPORT
 def initUART():
@@ -55,7 +55,7 @@ if __name__ == '__main__':
             if not ListUpdate.empty():
                 pending = ListUpdate.get()
                 obj = {"intensity": pending.split(':')[1], "id": pending.split(':')[0]}
-                x = requests.post(url, data=obj)
+                x = requests.post(url, data=obj, timeout=1)
                 if x:
                     print("Response OK")
                 else:
