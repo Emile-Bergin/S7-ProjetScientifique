@@ -1,0 +1,5 @@
+FROM openjdk:11.0.9
+WORKDIR /
+ADD out/artifacts/EmmergencyManager_jar/EmmergencyManager.jar EmmergencyManager.jar
+EXPOSE 5555
+CMD java -jar EmmergencyManager.jar

@@ -3,7 +3,6 @@ from microbit import *
 from machine import *
 from threebg import *
 
-MICROBIT_ID = 17
 #CODE Micro:bit Sensors
 
 setRadioOnAndSetting(18, 18, 251)

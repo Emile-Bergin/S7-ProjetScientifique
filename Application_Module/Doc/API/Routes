@@ -18,7 +18,7 @@ API coté datacenter:
 	
 	Emergency Manager:
 		POST:
-			Create Sensor__Fire:
+			Create Sensor__Fire: n
 				URL: /api/createSensorFire/
 				Format:
 					{
@@ -42,6 +42,9 @@ API coté datacenter:
 						"latitude" : "..."
 						"intensity" : "..."
 					}
+			Update Truck:
+				URL: api/updateTruck/
+			
 		GET:
 			Get Barracks
 				URL: /api/getBarracks/
@@ -57,4 +60,15 @@ API coté datacenter:
 				URL: /api/getTrucks/
 			Get Barracks
 				URL: /api/getBarracks/
+				
+	Simulator Web Server:
+		POST:
+			Upadte Fire:
+				URL: api/updateFire/
+			Upadte Truck:
+				URL: api/updateTruck/
+			Upadte Sensor:
+				URL: api/updateSensor/
+
+		
 			

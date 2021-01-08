@@ -5,8 +5,6 @@ from threebg import *
 
 #CODE Micro:bit DataCenter
 
-MICROBIT_ID = 18
-
 setRadioOnAndSetting(18, 18, 251)
 
 # UART initialisation

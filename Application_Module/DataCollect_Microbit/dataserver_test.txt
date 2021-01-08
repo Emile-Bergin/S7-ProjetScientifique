@@ -1,0 +1,37 @@
+import radio as radio
+from microbit import *
+from machine import *
+from threebg import *
+
+#CODE Micro:bit DataCenter
+#Datacenter Microbit ID is 0.
+
+setRadioOnAndSetting(18, 18, 251)
+
+# UART initialisation
+uart.init(115200)
+
+# Read on UART
+def uartReadMsg():
+    msg = uart.readline()
+    return str(msg)
+
+# Write on UART
+def uartSendMsg(msg):
+    uart.write(msg)
+
+while True:
+    msg = ReceiveMsg()
+    sleep(3001)
+    # Si un message est reçu par radio : 
+    if msg != None :
+        if getTypeMsg(msg) == "update":
+            receipt = createMessage("receipt", getSourceFromMsg(msg), str(0), "OK")
+            SendMsg(receipt)
+            display.scroll(msg)
+            uartSendMsg(getSourceFromMsg(msg) + ':' + getValueFromMsg(msg))
+            
+            
+            
+            
+            
