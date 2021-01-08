@@ -1,5 +1,7 @@
 package com.SuperCompany;
 
+import com.Objects.Mode;
+
 public class RefreshData {
     //Class voué a disparaître, remplacé par  ApiService
     private GeneralManager m_generalManager;
