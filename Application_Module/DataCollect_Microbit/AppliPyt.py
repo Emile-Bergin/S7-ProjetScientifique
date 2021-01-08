@@ -43,7 +43,6 @@ if __name__ == '__main__':
     initUART()
     try:
         while ser.isOpen():
-            print("hey")
             character = receiveUartMessage().decode()
             msg = msg + character
             if '\n' in msg :
@@ -54,7 +53,7 @@ if __name__ == '__main__':
                     msg = ""
             if not ListUpdate.empty():
                 pending = ListUpdate.get()
-                obj = {"intensity": pending.split(':')[1], "id": pending.split(':')[0]}
+                obj = {"m_intensity": pending.split(':')[1], "m_id": pending.split(':')[0]}
                 x = requests.post(url, data=obj, timeout=1)
                 if x:
                     print("Response OK")
