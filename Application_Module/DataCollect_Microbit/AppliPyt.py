@@ -1,11 +1,11 @@
 from time import sleep
-import serial
+from serial import *
 from queue import Queue
 import requests
 
 SERIALPORT = "COM6"
 BAUDRATE = 115200
-ser = serial.Serial()
+ser = Serial()
 ListUpdate = Queue()
 msg = ""
 
@@ -14,9 +14,9 @@ url = 'http://127.0.0.1:5000/api/updateSensor/'
 ser.port = SERIALPORT
 def initUART():
     ser.baudrate = BAUDRATE
-    ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
-    ser.parity = serial.PARITY_NONE  # set parity check: no parity
-    ser.stopbits = serial.STOPBITS_ONE  # number of stop bits
+    ser.bytesize = EIGHTBITS  # number of bits per bytes
+    ser.parity = PARITY_NONE  # set parity check: no parity
+    ser.stopbits = STOPBITS_ONE  # number of stop bits
     ser.timeout = None  # block read
 
     ser.xonxoff = False  # disable software flow control
@@ -25,7 +25,7 @@ def initUART():
     print('Starting Up Serial Monitor')
     try:
         ser.open()
-    except serial.SerialException:
+    except SerialException:
         print("Serial {} port not available".format(SERIALPORT))
         exit()
 
@@ -43,6 +43,7 @@ if __name__ == '__main__':
     initUART()
     try:
         while ser.isOpen():
+            print("hey")
             character = receiveUartMessage().decode()
             msg = msg + character
             if '\n' in msg :

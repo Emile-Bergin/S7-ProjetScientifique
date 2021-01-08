@@ -24,12 +24,13 @@ while True:
     if uart.any():
         msg = str(uartReadMsg())
         msg = msg.split('\'')[1]
-    sleep(2000)
+    sleep(000)
     if msg != "vide":
         msgToSend = createMessage("update", str(18), msg.split(":")[0], msg.split(":")[1])
-        display.scroll(msgToSend)
         SendMsg(msgToSend)
         
+            
+            
             
             
             

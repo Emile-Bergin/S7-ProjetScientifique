@@ -21,12 +21,10 @@ def uartSendMsg(msg):
 
 while True:
     msg = ReceiveMsg()
-    sleep(5001)
+    sleep(1001)
     # Si un message est reçu par radio : 
     if msg != None :
         if getTypeMsg(msg) == "update":
-            display.scroll(msg)
             uartSendMsg(getSourceFromMsg(msg) + ':' + getValueFromMsg(msg))
-            
     
     
