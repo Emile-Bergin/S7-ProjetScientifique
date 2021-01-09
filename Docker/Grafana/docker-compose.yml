@@ -16,7 +16,20 @@ services:
             - type: bind
               source: "./dumps"
               target: "/dumps"
+            - type: bind
+              source: "./scripts"
+              target: "/scripts"
         ports:
             - "5434:5432"     
-            
+    web_grafana:
+        image: grafana/grafana
+        restart: always
+        container_name: grafana_web
+        volumes:
+            - type: bind
+              source: "./dashboard" 
+              target: "/dashboard"
+        ports:
+            - "3001:3000"
+           
            
