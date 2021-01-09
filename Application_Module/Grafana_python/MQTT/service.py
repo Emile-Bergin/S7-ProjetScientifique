@@ -4,8 +4,7 @@ import time
 import json
 from datetime import datetime
 
-#http://www.steves-internet-guide.com/into-mqtt-python-client/
-
+IP = "localhost"
 
 def on_message(client, userdata, message):
     print("Reception")
@@ -18,7 +17,7 @@ def on_message(client, userdata, message):
 
 # Informations de connexion à votre broker MQTT : 
 # adresse IP
-broker = "127.0.0.1"
+broker = IP
 # on se connecte au broker et on publie le message sur le topic
 client = mqtt.Client("S1")
 client.on_message=on_message #attach function to callback
