@@ -26,5 +26,6 @@ while True:
     if msg != None :
         if getTypeMsg(msg) == "update":
             uartSendMsg(getSourceFromMsg(msg) + ':' + getValueFromMsg(msg))
-    
-    
+            display.scroll('a')
+            msgToSend = createMessage("receipt", getSourceFromMsg(msg), str(0), getValueFromMsg(msg))
+            SendMsg(msgToSend)

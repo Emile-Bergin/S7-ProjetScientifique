@@ -23,6 +23,7 @@ def initUART():
     ser.rtscts = False  # disable hardware (RTS/CTS) flow control
     ser.dsrdtr = False  # disable hardware (DSR/DTR) flow control
     print('Starting Up Serial Monitor')
+    print('Opened serial on port COM6')
     try:
         ser.open()
     except SerialException:
