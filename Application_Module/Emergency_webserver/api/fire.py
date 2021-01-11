@@ -5,7 +5,7 @@ from MQTT.service import sendFireMQTT
 
 @app.route('/api/getFires/')
 def getFireAPI():
-    data = jsonify(db.get(('id','date','longitude','latitude','intensity'),"public.fires"))
+    data = db.get(['id','date','longitude','latitude','intensity'],"public.fires")
     data2 = []
     for datum in data:
         data2.append({
@@ -19,6 +19,7 @@ def getFireAPI():
 
 @app.route("/api/createFire/", methods=["POST"])
 def createFireAPI():
+    print(request.form)
     db.createFire(request.form.get("m_date"), request.form.get("m_longitute"), request.form.get("m_latitude"), request.form.get("m_intensity"))
     sendFireMQTT(request.form.get("m_date"), request.form.get("m_longitute"), request.form.get("m_latitude"), request.form.get("m_intensity"))
     return ''

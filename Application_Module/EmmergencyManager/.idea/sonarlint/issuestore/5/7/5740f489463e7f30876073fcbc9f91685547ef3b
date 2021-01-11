@@ -1,25 +1,0 @@
-
-i	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï Ô)8ÿĞøîì.
-j	java:S100 "NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶¥ÛÉ8üª÷îì.
-m	java:S1174"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›Ä8ÿĞøîì.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÔÈÚıÿÿÿÿ8ºÔßîì.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÔÈÚıÿÿÿÿ8ºÔßîì.
-o	java:S100<"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç¦ışÿÿÿÿ8‡Úùîì.
-j	java:S1004"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë›Ä8ÿĞøîì.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÔÈÚıÿÿÿÿ8ºÔßîì.
-j	java:S1000"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÏ¢Ê8ÿĞøîì.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÔÈÚıÿÿÿÿ8ºÔßîì.
-o	java:S1008"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è±óúüÿÿÿÿ8‡Úùîì.
-q	java:S116"URename this field "m_latitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÃ×8ˆ ãì.
-o	java:S100$"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øğÉÂûÿÿÿÿ8üª÷îì.
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
-m	java:S116"QRename this field "m_type" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(â°äü8ãæ”ãì.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÔÈÚıÿÿÿÿ8ºÔßîì.
-r	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤˜ùÅûÿÿÿÿ8ÿĞøîì.
-j	java:S100@"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹Íı¿8‡Úùîì.
-r	java:S116"VRename this field "m_idCaserne" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Î¡¹ç8ãæ”ãì.
-r	java:S116"VRename this field "m_longitude" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(®“ÎÖ8ˆ ãì.
-p	java:S116"ORename this field "m_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿÆæ“şÿÿÿÿ8ãæ”ãì.
-o	java:S100,"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤˜ùÅûÿÿÿÿ8ÿĞøîì.
-r	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øğÉÂûÿÿÿÿ8üª÷îì.
-t	java:S116	"SRename this field "m_isBusy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª„Õşÿÿÿÿ8’¶¡ãì.
