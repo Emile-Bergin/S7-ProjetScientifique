@@ -239,6 +239,13 @@ GRANT SELECT ON TABLE public.fires_history TO grafana;
 
 
 --
+-- Name: TABLE sensors; Type: ACL; Schema: public; Owner: postgres
+--
+
+GRANT SELECT ON TABLE public.sensors TO grafana;
+
+
+--
 -- Name: TABLE sensors_history; Type: ACL; Schema: public; Owner: postgres
 --
 

@@ -10,13 +10,18 @@ services:
         environment:
             POSTGRES_PASSWORD: admin
         volumes:
-            - type: bind
-              source: "./database" 
-              target: "/var/lib/postgresql/data"
-            - type: bind
-              source: "./dumps"
-              target: "/dumps"
+            - ./database:/var/lib/postgresql/data
+            - ./dumps:/dumps
+            - ./scripts:/scripts
         ports:
             - "5434:5432"     
-            
+    web_grafana:
+        image: grafana/grafana
+        restart: always
+        container_name: grafana_web
+        volumes:
+            - ./dashboard:/dashboard
+        ports:
+            - "3001:3000"
+           
            

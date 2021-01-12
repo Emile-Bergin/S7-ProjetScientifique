@@ -1,12 +1,12 @@
 import psycopg2
 
-# https://riptutorial.com/fr/python/example/18257/acces-a-la-base-de-donnees-postgresql-avec-psycopg2
+IP = "192.168.1.25"
 
 conn = psycopg2.connect(database="grafana", 
                         user="postgres",
-                        host="localhost",
+                        host=IP,
                         password="admin",
-                        port="5432") 
+                        port="5434") 
 
 cur = conn.cursor()
 

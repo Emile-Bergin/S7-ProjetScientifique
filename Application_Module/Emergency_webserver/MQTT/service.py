@@ -8,7 +8,7 @@ from app import IP
 broker = IP
 # on se connecte au broker et on publie le message sur le topic
 client = mqtt.Client("P1")
-client.connect(broker)
+client.connect(broker, 1884)
 
 def test():
     client.publish("test", "HelloWorld")

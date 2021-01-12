@@ -20,6 +20,5 @@ services:
         container_name: emergency_mqtt
         ports:
           - 1884:1883
-          - 9002:9001
         volumes:
             - ./log:/mosquitto/log
