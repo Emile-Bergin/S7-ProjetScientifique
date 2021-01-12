@@ -1,9 +1,10 @@
 Pour installer docker :
 	Emergency:
-
-
-
-
+		cd .../Docker/Emergency
+		docker-compose up
+		Lancer console du container emergency_db:
+			su postgres
+			psql -U postgres < 'dumps/emergency.dmp'
 	Grafana:
 		cd .../Docker/Grafana
 		docker-compose up

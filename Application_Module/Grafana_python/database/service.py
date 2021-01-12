@@ -1,6 +1,6 @@
 import psycopg2
 
-IP = "localhost"
+IP = "192.168.1.25"
 
 conn = psycopg2.connect(database="grafana", 
                         user="postgres",
