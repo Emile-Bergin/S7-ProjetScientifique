@@ -2,7 +2,7 @@ package com.SuperCompany;
 
 public class Mode {
     private static boolean DEBUG = true;
-    public static boolean USEREELAPI = false;
+    public static boolean USEREELAPI = true;
 
     public static void println(String str){
         if (DEBUG){

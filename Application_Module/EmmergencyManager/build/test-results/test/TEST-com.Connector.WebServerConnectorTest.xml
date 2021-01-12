@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-12T19:03:18" hostname="ubuntu-emile" time="0.236">
+<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-12T20:26:04" hostname="ubuntu-emile" time="0.025">
   <properties/>
   <testcase name="getSensors" classname="com.Connector.WebServerConnectorTest" time="0.001"/>
   <testcase name="getBarracks" classname="com.Connector.WebServerConnectorTest" time="0.001"/>
-  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="0.213"/>
-  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="0.017"/>
-  <system-out><![CDATA[Tue Jan 12 20:03:18 CET 2021
+  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="0.005"/>
+  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="0.018"/>
+  <system-out><![CDATA[Tue Jan 12 21:26:04 CET 2021
 ]]></system-out>
   <system-err><![CDATA[java.net.ConnectException: Failed to connect to /127.0.0.1:5000
 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
