@@ -2,6 +2,7 @@ from time import sleep
 import queue
 import serial
 import time
+from threading import Thread
 
 # send serial message
 SERIALPORT = "/dev/ttyACM0"
@@ -14,7 +15,7 @@ def initUART():
     ser.bytesize = serial.EIGHTBITS  # number of bits per bytes
     ser.parity = serial.PARITY_NONE  # set parity check: no parity
     ser.stopbits = serial.STOPBITS_ONE  # number of stop bits
-    ser.timeout = None  # block read
+    ser.timeout = 5  # block read
 
     ser.xonxoff = False  # disable software flow control
     ser.rtscts = False  # disable hardware (RTS/CTS) flow control
@@ -29,14 +30,27 @@ def initUART():
 def sendUARTMessage(msg):
     ser.write(msg.encode())
 
+def receiveUartMessage(size):
+    return ser.read(size)
+
 def launch(Messages):
+    received = True
     initUART()
+    message = []
     try:
         while ser.isOpen():
-            time.sleep(5)
-            if not Messages.empty() :
-                sendUARTMessage(Messages.get())
+            if received:
+                message = Messages.get()
+                print(message)
+            sendUARTMessage(message)
+            msg = str(receiveUartMessage(10))
+            print("msg reçu" + str(msg))
+            if msg.split('\'')[1] == "receipt:OK":
+                received = True
+            else:
+                received = False
 
     except (KeyboardInterrupt, SystemExit):
         ser.close()
         exit()
+

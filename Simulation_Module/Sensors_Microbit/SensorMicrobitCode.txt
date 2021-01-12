@@ -24,20 +24,12 @@ while True:
     if uart.any():
         msg = str(uartReadMsg())
         msg = msg.split('\'')[1]
-    sleep(000)
     if msg != "vide":
-        msgToSend = createMessage("update", str(18), msg.split(":")[0], msg.split(":")[1])
+        display.scroll(msg)
+        msgToSend = createMessage("update", str(0), msg.split(":")[0], msg.split(":")[1])
         SendMsg(msgToSend)
-        
-            
-            
-            
-            
-            
-
-        
-            
-            
-            
-
-            
+    radioMsg = ReceiveMsg()
+    if radioMsg != None :
+        if getTypeMsg(radioMsg) == "receipt":
+            uartSendMsg("receipt:OK")
+            display.scroll('a')
