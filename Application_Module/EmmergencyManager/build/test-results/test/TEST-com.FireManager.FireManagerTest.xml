@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.FireManager.FireManagerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-12T19:03:17" hostname="ubuntu-emile" time="0.274">
+  <properties/>
+  <testcase name="checkCreateFires" classname="com.FireManager.FireManagerTest" time="0.167"/>
+  <testcase name="checkIncreaseFire" classname="com.FireManager.FireManagerTest" time="0.094"/>
+  <testcase name="checkUpdateSensorsAddNewSensor" classname="com.FireManager.FireManagerTest" time="0.008"/>
+  <testcase name="checkUpdateSensorsUpdateIntensity" classname="com.FireManager.FireManagerTest" time="0.004"/>
+  <system-out><![CDATA[Création MissionManager
+Fin Création MissionManager
+Création FireManager
+Fin Création FireManager
+FireManager: DetectNewAndIncreaseFire
+FireManager: areThereNewFires?
+[Fire{m_id=1, m_date=Tue Jan 12 20:03:17 CET 2021, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=2, m_date=Tue Jan 12 20:03:17 CET 2021, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=3, m_date=Tue Jan 12 20:03:17 CET 2021, m_longitude=45.0, m_latitude=8.0, m_intensity=3, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=4, m_date=Tue Jan 12 20:03:17 CET 2021, m_longitude=45.0, m_latitude=8.0, m_intensity=4, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=5, m_date=Tue Jan 12 20:03:17 CET 2021, m_longitude=45.0, m_latitude=8.0, m_intensity=5, m_previousIntensity=[], m_increase=false}
+]
+Création MissionManager
+Fin Création MissionManager
+Création FireManager
+Fin Création FireManager
+[Sensor{m_id=0, m_column=0, m_line=0, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+, Sensor{m_id=1, m_column=1, m_line=1, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+, Sensor{m_id=2, m_column=2, m_line=2, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+, Sensor{m_id=3, m_column=3, m_line=3, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+, Sensor{m_id=4, m_column=4, m_line=4, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+, Sensor{m_id=5, m_column=5, m_line=5, m_longitude=45.0, m_latitude=8.0, m_intensity=2}
+]
+[Fire{m_id=0, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=1, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=2, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=3, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=4, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+, Fire{m_id=5, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=1, m_previousIntensity=[], m_increase=false}
+]
+FireManager: areThereNewFires?
+[Fire{m_id=0, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+, Fire{m_id=1, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+, Fire{m_id=2, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+, Fire{m_id=3, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+, Fire{m_id=4, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+, Fire{m_id=5, m_date=null, m_longitude=45.0, m_latitude=8.0, m_intensity=2, m_previousIntensity=[1], m_increase=true}
+]
+Création MissionManager
+Fin Création MissionManager
+Création FireManager
+Fin Création FireManager
+Création MissionManager
+Fin Création MissionManager
+Création FireManager
+Fin Création FireManager
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

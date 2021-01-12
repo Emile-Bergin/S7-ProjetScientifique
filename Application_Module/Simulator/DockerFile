@@ -1,0 +1,5 @@
+FROM openjdk:11.0.9
+WORKDIR /
+ADD out/artifacts/Simulator_jar/Simulator.jar Simulator.jar
+EXPOSE 5556
+CMD java -jar Simulator.jar

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="330.0" y="300.0">com.Objects.Sensor</node>
+    <node x="181.0" y="300.0">com.Objects.Mission</node>
+    <node x="0.0" y="0.0">com.Connectors.ApiSimulatorWebServer</node>
+    <node x="0.0" y="150.0">com.Connectors.ApiMicroBitWebServer</node>
+    <node x="0.0" y="75.0">com.Connectors.ApiEmergencyWebServer</node>
+    <node x="0.0" y="225.0">com.MissionManager.MissionManager</node>
+    <node x="253.0" y="150.0">com.SuperCompany.GeneralManager</node>
+    <node x="0.0" y="300.0">com.SuperCompany.RefreshData</node>
+    <node x="133.0" y="375.0">com.Objects.Fire</node>
+    <node x="258.0" y="375.0">com.SuperCompany.Main</node>
+    <node x="205.0" y="225.0">com.SensorManager.SensorManager</node>
+    <node x="0.0" y="375.0">com.Objects.Truck</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Group" zoom="1.0" x="786.0" y="373.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,11 +1,13 @@
 package com.Connector;
 
+import com.Objects.Fire;
 import org.junit.Before;
 import org.junit.Test;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 
@@ -26,6 +28,18 @@ public class WebServerConnectorTest {
 
     @Test
     public void getBarracks(){
+        assertEquals(1,1);
+    }
+
+    @Test
+    public void createFire(){
+        try {
+            Date d = new java.util.Date();
+            System.out.println(d.toString());
+            System.out.println(wsc.createFire(new Fire(1, d, 45.0, 8.0, 4)).execute());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         assertEquals(1,1);
     }
 
