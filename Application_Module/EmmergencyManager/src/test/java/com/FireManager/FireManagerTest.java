@@ -119,7 +119,7 @@ public class FireManagerTest {
 
         System.out.println(fm.m_sensors.toString());
         System.out.println(fm.m_fires.toString());
-        fm.areThereNewFires();
+        fm.DetectNewAndIncreaseFire();
         System.out.println(fm.m_fires.toString());
 
         for(Fire f: fm.m_fires){

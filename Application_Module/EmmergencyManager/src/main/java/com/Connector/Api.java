@@ -65,6 +65,18 @@ public class Api {
             return m_dataFactory.getSensors();
     }
 
+    public List<SensorFire> getSensorsFires() {
+        if (Mode.USEREELAPI) {
+            try {
+                return m_webSeverConnector.getSensorsFires().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }else
+            return null;
+    }
+
     public List<Mission> getMissions() {
         if (Mode.USEREELAPI) {
             try {
@@ -97,10 +109,10 @@ public class Api {
         }
     }
 
-    public void createSensorFire(Sensor s, Fire f) {
+    public void createSensorFire(SensorFire sf) {
         if (Mode.USEREELAPI) {
             try {
-                m_webSeverConnector.createSensorFire(s.getM_id().toString(), f.getM_id().toString()).execute();
+                m_webSeverConnector.createSensorFire(sf).execute();
             } catch (IOException e) {
                 e.printStackTrace();
             }

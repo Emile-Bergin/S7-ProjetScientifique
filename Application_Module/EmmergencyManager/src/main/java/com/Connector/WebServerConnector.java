@@ -14,6 +14,9 @@ public interface WebServerConnector{
     @GET("api/getSensors/")
     Call<List<Sensor>> getSensors();
 
+    @GET("api/getSensorsFires/")
+    Call<List<SensorFire>> getSensorsFires();
+
     @GET("api/getFires/")
     Call<List<Fire>> getFires();
 
@@ -36,8 +39,7 @@ public interface WebServerConnector{
     Call<Void> updateTruck(@Body Truck t);
 
     @POST("api/createSensorFire/")
-    @FormUrlEncoded
-    Call<Void> createSensorFire(@Field("id_sensor") String id_Sensor, @Field("id_fire") String id_fire);
+    Call<Void> createSensorFire(@Body SensorFire sf);
 }
 
 /*

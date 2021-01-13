@@ -55,4 +55,8 @@ public class Fire implements PhysiqueElement {
     public void setM_increase(Boolean m_increase) {
         this.m_increase = m_increase;
     }
+
+    public Timestamp getM_date() {
+        return m_date;
+    }
 }

@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 from app import app
 import database.service as db
+import json
 
 @app.route('/api/getMissions/')
 def getMissionsAPI():
@@ -18,6 +19,8 @@ def getMissionsAPI():
 
 @app.route("/api/createMission/", methods=["POST"])
 def createMissionAPI():
-    db.createMission(request.form.get("m_fire"), request.form.get("m_truck"), request.form.get("m_date"))
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    db.createMission(dataJson["m_fire"], dataJson["m_truck"], dataJson["m_date"])
     return ''
 
