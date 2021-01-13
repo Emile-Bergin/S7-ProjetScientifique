@@ -4,6 +4,7 @@ import com.Objects.*;
 import retrofit2.Call;
 import retrofit2.http.*;
 
+import java.util.Date;
 import java.util.List;
 
 public interface WebServerConnector{
@@ -23,20 +24,20 @@ public interface WebServerConnector{
     Call<List<Truck>>getTrucks();
 
     @POST("api/createFire/")
-    Call<Fire> createFire(@Body Fire fire);
+    Call<Void> createFire(@Body Fire fire);
 
     @POST("api/createMission/")
-    Call<Mission> createMission(@Body Mission Mission);
+    Call<Void> createMission(@Body Mission Mission);
 
     @POST("api/updateMission/")
-    Call<Mission> updateMission(@Body Mission m);
+    Call<Void> updateMission(@Body Mission m);
 
     @POST("api/updateTruck/")
-    Call<Truck> updateTruck(@Body Truck t);
+    Call<Void> updateTruck(@Body Truck t);
 
-    @FormUrlEncoded
     @POST("api/createSensorFire/")
-    Call<Fire> createSensorFire(@Field("id_sensor") String id_Sensor, @Field("id_fire") String id_fire);
+    @FormUrlEncoded
+    Call<Void> createSensorFire(@Field("id_sensor") String id_Sensor, @Field("id_fire") String id_fire);
 }
 
 /*

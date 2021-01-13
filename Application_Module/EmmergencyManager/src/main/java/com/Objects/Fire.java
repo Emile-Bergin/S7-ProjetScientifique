@@ -1,19 +1,20 @@
 package com.Objects;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Fire implements PhysiqueElement {
     private Integer m_id;
-    private Date m_date;
+    private Timestamp m_date;
     private Double m_longitude;
     private Double m_latitude;
     private Integer m_intensity;
     private List<Integer> m_previousIntensity= new ArrayList<Integer>();
     private Boolean m_increase=Boolean.FALSE;
 
-    public Fire(Integer m_id, Date m_date, Double m_longitude, Double m_latitude, Integer m_intensity) {
+    public Fire(Integer m_id, Timestamp m_date, Double m_longitude, Double m_latitude, Integer m_intensity) {
         this.m_id = m_id;
         this.m_date = m_date;
         this.m_longitude = m_longitude;

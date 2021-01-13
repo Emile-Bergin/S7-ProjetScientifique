@@ -7,6 +7,7 @@ import com.Objects.Sensor;
 import com.SuperCompany.Manager;
 import com.SuperCompany.Mode;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,20 +45,22 @@ public class FireManager implements Manager {
 
     void compareSensors(List<Sensor> sensorsUpdated) {
         Boolean isPresent=Boolean.FALSE;
-        for (Sensor sensorUptaded: sensorsUpdated){
-            isPresent= Boolean.FALSE;
-            for (Sensor sensor: m_sensors){
-                if(sensorUptaded.getM_id()==sensor.getM_id()){   //Si le sensor existe on ne l'ajoute pas mais le met a jour
-                    isPresent=Boolean.TRUE;
-                    try {
-                        sensor.setM_intensity(sensorUptaded.getM_intensity());
-                    } catch (Exception e) {
-                        e.printStackTrace();
+        if(sensorsUpdated != null){
+            for (Sensor sensorUptaded: sensorsUpdated){
+                isPresent= Boolean.FALSE;
+                for (Sensor sensor: m_sensors){
+                    if(sensorUptaded.getM_id()==sensor.getM_id()){   //Si le sensor existe on ne l'ajoute pas mais le met a jour
+                        isPresent=Boolean.TRUE;
+                        try {
+                            sensor.setM_intensity(sensorUptaded.getM_intensity());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
-            }
-            if(!isPresent){
-                m_sensors.add(sensorUptaded);
+                if(!isPresent){
+                    m_sensors.add(sensorUptaded);
+                }
             }
         }
     }
@@ -96,7 +99,7 @@ public class FireManager implements Manager {
                 }
             }
             if(!isPresent && s.getM_intensity()>0) {
-                Fire f = new Fire(s.getM_id(), new java.util.Date(), s.getM_longitude(), s.getM_latitude(), s.getM_intensity());
+                Fire f = new Fire(s.getM_id(), new Timestamp(System.currentTimeMillis()), s.getM_longitude(), s.getM_latitude(), s.getM_intensity());
                 m_api.createFires(f);
                 m_fires.add(f);
             }
