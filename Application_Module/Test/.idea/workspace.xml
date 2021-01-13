@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a88df24-3824-4844-aca1-9339e7b58bd1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/.idea/project-template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/Api.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/FakeServer$EchoGetHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/FakeServer$EchoHeaderHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/FakeServer$EchoPostHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/FakeServer$RootHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/FakeServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Connector/WebServerConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/FireManager/FireManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/MissionManager/MissionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/Barrack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/Fire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/Mission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/PhysiqueElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/Sensor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/Objects/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/DataFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/GeneralManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/Mode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/RefreshData$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/main/com/SuperCompany/RefreshData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/test/com/Connector/WebServerConnectorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/test/com/FireManager/FireManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/test/com/MissionManager/MissionManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/classes/java/test/com/SuperCompany/SensorTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/libs/EmmergencyManager-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/classes/com.Connector.WebServerConnectorTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/classes/com.FireManager.FireManagerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/classes/com.MissionManager.MissionManagerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/classes/com.SuperCompany.SensorTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/css/base-style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/js/report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/packages/com.Connector.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/packages/com.FireManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/packages/com.MissionManager.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/reports/tests/test/packages/com.SuperCompany.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/TEST-com.Connector.WebServerConnectorTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/TEST-com.FireManager.FireManagerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/TEST-com.MissionManager.MissionManagerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/TEST-com.SuperCompany.SensorTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/binary/output.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EmmergencyManager/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1myryhxrpYEiUfDfo9zs60Bt71Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a88df24-3824-4844-aca1-9339e7b58bd1" name="Default Changelist" comment="" />
+      <created>1610476929865</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610476929865</updated>
+      <workItem from="1610476933421" duration="151000" />
+      <workItem from="1610477146404" duration="736000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

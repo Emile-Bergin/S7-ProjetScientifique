@@ -4,7 +4,9 @@ import com.Connectors.ApiEmergencyWebServer;
 import com.Connectors.ApiMicroBitWebServer;
 import com.Connectors.ApiSimulatorWebServer;
 import com.Objects.Fire;
+import com.Objects.Mission;
 import com.Objects.Sensor;
+import com.Objects.Truck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ public class SensorManager {
     private List<Fire> m_fires;
     private List<Sensor> m_sensor;
     private List<Sensor> m_sensorsToUpdate;
+    private List<Mission> m_missions;
 
     public SensorManager(){
         m_apiEmergencyWebServer =  new ApiEmergencyWebServer();
@@ -27,6 +30,7 @@ public class SensorManager {
     public void update() {
         m_fires = m_apiEmergencyWebServer.getFires();
         m_sensor = m_apiSimulatorWebServer.getSensors();
+        m_missions = m_apiEmergencyWebServer.getMissions();
         updateSensor();
         postUpdatedSensor();
 
@@ -36,7 +40,47 @@ public class SensorManager {
         m_sensorsToUpdate = new ArrayList<Sensor>();
         if(m_sensor!=null) {
             for (Sensor s : m_sensor) {
-                if (new Random().nextBoolean()) {
+                if(s.getM_intensity()!=0){                              // Si il y a deja une intensité
+                    Mission m=getMissionLinkToSensor(s);                //On recupere la mission
+                    if (m!=null){
+                        if(m.getM_trucks().size()>0){                   //Si il y a des camions affecté a la mission
+                            int sum=0;
+                            for (Truck t : m.getM_trucks()){
+                                sum+=t.getM_type();
+                            }
+                            if(sum>=s.getM_intensity()){
+                                try {
+                                    s.setM_intensity(s.getM_intensity() - 1);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }else{
+                                try {
+                                    s.setM_intensity(s.getM_intensity() + 1);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }else{
+                            try {
+                                s.setM_intensity(s.getM_intensity() + 1);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                }else{                                      // 10% de chance que le capteur declenche un nouveau feu
+                    if(new Random().nextFloat()<0.2){
+                        try {
+                            s.setM_intensity(1);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+
+                /*if (new Random().nextBoolean()) {
                     if (s.getM_intensity() < 8) {
                         try {
                             s.setM_intensity(s.getM_intensity() + 1);
@@ -56,10 +100,19 @@ public class SensorManager {
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
-                }
+                }*/
 
             }
         }
+    }
+
+    private Mission getMissionLinkToSensor(Sensor s) {
+        for(Mission m: m_missions){
+            if(m.getM_fire().getM_id()==s.getM_id()){
+                return m;
+            }
+        }
+        return null;
     }
 
     private void postUpdatedSensor() {

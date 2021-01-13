@@ -1,0 +1,42 @@
+
+f	java:S1175"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÔÕÔá
+;
+java:S2129" Remove this "Double" constructor(íšÒ¿ûÿÿÿÿ
+n	java:S116"TRename this field "m_Sensors" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹“ÿ”øÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹“ÿ”øÿÿÿÿ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(†‘Òöúÿÿÿÿ
+E
+java:S37405"/Provide the parametrized type for this generic.(ÔÕÔá
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+f	java:S116"QRename this field "m_line" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜€”
+s
+java:S1450"XRemove the "m_Sensors" field and declare it as a local variable in the relevant methods.(¹“ÿ”øÿÿÿÿ
+I
+java:S1874(".Remove this use of "Double"; it is deprecated.(æ‘Õ‡üÿÿÿÿ
+E
+java:S5411"*Use the primitive boolean expression here.(½ª¢íùÿÿÿÿ
+h	java:S116"SRename this field "m_column" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‡²€´
+;
+java:S2129" Remove this "Double" constructor(íšÒ¿ûÿÿÿÿ
+;
+java:S2129(" Remove this "Double" constructor(æ‘Õ‡üÿÿÿÿ
+9
+java:S21196"Save and re-use this "Random".(®ø»›şÿÿÿÿ
+I
+java:S1874".Remove this use of "Double"; it is deprecated.(íšÒ¿ûÿÿÿÿ
+M
+java:S1068"2Remove this unused "trucksLocation" private field.(©Ñ˜°ùÿÿÿÿ
+9
+java:S2119"Save and re-use this "Random".(®ø»›şÿÿÿÿ
+I
+java:S1874(".Remove this use of "Double"; it is deprecated.(æ‘Õ‡üÿÿÿÿ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Õ­ßã
+n
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ùœ{
+;
+java:S2129(" Remove this "Double" constructor(æ‘Õ‡üÿÿÿÿ
+I
+java:S1874".Remove this use of "Double"; it is deprecated.(íšÒ¿ûÿÿÿÿ

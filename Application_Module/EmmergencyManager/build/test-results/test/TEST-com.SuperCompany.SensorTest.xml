@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.SuperCompany.SensorTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-12T20:26:04" hostname="ubuntu-emile" time="0.006">
+  <properties/>
+  <testcase name="checkCreationOkay" classname="com.SuperCompany.SensorTest" time="0.0"/>
+  <testcase name="checkIntensityLessThanZeroThrowException" classname="com.SuperCompany.SensorTest" time="0.004"/>
+  <testcase name="checkIntensityMoreThanHeightThrowException" classname="com.SuperCompany.SensorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

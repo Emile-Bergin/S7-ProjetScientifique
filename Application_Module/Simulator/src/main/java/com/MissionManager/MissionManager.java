@@ -1,6 +1,7 @@
 package com.MissionManager;
 
 import com.Connectors.ApiEmergencyWebServer;
+import com.Objects.Fire;
 import com.Objects.Mission;
 import com.Objects.Truck;
 import com.SensorManager.SensorManager;
@@ -35,6 +36,7 @@ public class MissionManager {
             for (Mission m : m_missions) {
                 if (m.getM_trucks().size() != 0) {
                     for (Truck t : m.getM_trucks()) {
+                        //bringTruckCloserToFire(t,m.getM_fire());
                         t.setM_latitude(new Random().nextDouble());     //Position Bidon
                         t.setM_longitude(new Random().nextDouble());    //Position Bidon
                         m_trucksToUpdate.add(t);
@@ -42,6 +44,10 @@ public class MissionManager {
                 }
             }
         }
+    }
+
+    private void bringTruckCloserToFire(Truck t, Fire f) {
+
     }
 
     void postUpdatesTrucks() {
