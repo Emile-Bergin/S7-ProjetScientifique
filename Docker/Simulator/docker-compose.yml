@@ -1,0 +1,17 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+ 
+    db_simulator:
+        image: postgres
+        restart: always
+        container_name: simulator_db
+        environment:
+            POSTGRES_PASSWORD: admin
+        volumes:
+            - ./database:/var/lib/postgresql/data
+            - ./dumps:/dumps
+            - ./scripts:/scripts
+        ports:
+            - "5435:5432" 
