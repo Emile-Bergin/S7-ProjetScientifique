@@ -81,6 +81,7 @@ public class MissionManager implements Manager {
                         created = Boolean.TRUE;
                     }
                 }
+                updateMissions();
             }
         }
     }

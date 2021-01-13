@@ -83,16 +83,6 @@ public class FireManager implements Manager {
     void DetectNewAndIncreaseFire() { //Aucun traitement pour l'instant Sensors = Fires
         Mode.println("FireManager: DetectNewAndIncreaseFire");
         Boolean isPresent=Boolean.FALSE;
-        /*for(Fire f : m_fires){
-            if(f.getM_intensity() == 0) {
-                for(SensorFire sf : m_sensorsFires){
-                    if(f.getM_id() == sf.getM_idFire()) m_api.deleteSensorFire(sf);
-                }
-                m_api.deleteFire(f);
-                updateSensorsFires();
-                updateFires();
-            }
-        }*/
         for(Sensor s: m_sensors) {                                     //parcours les sensors
             isPresent= Boolean.FALSE;                                   //par defaut le feu n'est pas présent
             for(Fire f: m_fires){                                       //parcours les feux
