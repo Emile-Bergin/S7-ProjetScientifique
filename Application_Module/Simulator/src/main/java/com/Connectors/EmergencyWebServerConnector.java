@@ -22,6 +22,6 @@ public interface EmergencyWebServerConnector {
     Call<List<Fire>> getFires();
 
     @POST("api/updateTruck/")
-    Call<Truck> updateTruck(@Body Truck t);
+    Call<Void> updateTruck(@Body Truck t);
 
 }
