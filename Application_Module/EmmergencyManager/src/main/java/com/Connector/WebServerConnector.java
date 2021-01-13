@@ -29,8 +29,17 @@ public interface WebServerConnector{
     @POST("api/createFire/")
     Call<Void> createFire(@Body Fire fire);
 
+    @POST("api/updateFire/")
+    Call<Void> updateFire(@Body Fire fire);
+
+    @POST("api/deleteFire/")
+    Call<Void> deleteFire(@Body Fire fire);
+
     @POST("api/createMission/")
     Call<Void> createMission(@Body Mission Mission);
+
+    @POST("api/deleteMission/")
+    Call<Void> deleteMission(@Body Mission m);
 
     @POST("api/updateMission/")
     Call<Void> updateMission(@Body Mission m);
@@ -40,6 +49,9 @@ public interface WebServerConnector{
 
     @POST("api/createSensorFire/")
     Call<Void> createSensorFire(@Body SensorFire sf);
+
+    @POST("api/deleteSensorFire/")
+    Call<Void> deleteSensorFire(@Body SensorFire sf);
 }
 
 /*

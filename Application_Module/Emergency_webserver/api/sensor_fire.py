@@ -23,3 +23,10 @@ def createSensor_FireAPI():
     db.createSensor_Fire(dataJson["m_idSensor"], dataJson["m_idFire"])
     return ''
 
+@app.route("/api/deleteSensorFire/", methods=["POST"])
+def deleteSensor_FireAPI():
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    db.deleteSensorFire(dataJson["m_idfire"])
+    return ''
+

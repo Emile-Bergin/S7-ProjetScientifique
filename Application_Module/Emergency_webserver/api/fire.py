@@ -22,12 +22,24 @@ def getFireAPI():
 
 @app.route("/api/createFire/", methods=["POST"])
 def createFireAPI():
-    print("test")
     data = request.data.decode("UTF8")
-    print("test2")
-    print(data)
     dataJson = json.loads(data)
     db.createFire(dataJson["m_date"], dataJson["m_longitude"], dataJson["m_latitude"], dataJson["m_intensity"])
     sendFireMQTT(dataJson["m_date"], dataJson["m_longitude"], dataJson["m_latitude"], dataJson["m_intensity"])
+    return ''
+
+@app.route("/api/updateFire/", methods=["POST"])
+def updateFireAPI():
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    db.updateFire(dataJson["m_id"], dataJson["m_intensity"])
+    sendFireMQTT(dataJson["m_date"], dataJson["m_longitude"], dataJson["m_latitude"], dataJson["m_intensity"])
+    return ''
+
+@app.route("/api/deleteFire/", methods=["POST"])
+def deleteFireAPI():
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    db.deleteFire(dataJson["m_id"])
     return ''
 

@@ -10,17 +10,23 @@ def getMissionsAPI():
     for datum in data:
         data2.append({
             "m_id" : datum["id"],
-            "m_fire" : datum["id_fire"],
-            "m_truck" : datum["id_truck"],
-            "m_date" : datum["date"],
-            "m_processed" : datum["processed"]
-        })    
+            "m_idfire" : datum["id_fire"],
+            "m_idtruck" : datum["id_truck"],
+            "m_date" : datum["date"].isoformat()+"Z",
+        }) 
+    print(data2)   
     return jsonify(data2)
 
 @app.route("/api/createMission/", methods=["POST"])
 def createMissionAPI():
     data = request.data.decode("UTF8")
     dataJson = json.loads(data)
-    db.createMission(dataJson["m_fire"], dataJson["m_truck"], dataJson["m_date"])
+    db.createMission(dataJson["m_idfire"], dataJson["m_idtruck"], dataJson["m_date"])
     return ''
 
+@app.route("/api/deleteMission/", methods=["POST"])
+def deleteMissionAPI():
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    db.deleteMission(dataJson["m_id"])
+    return ''

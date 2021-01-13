@@ -3,6 +3,7 @@ package com.FireManager;
 import com.Connector.Api;
 import com.MissionManager.MissionManager;
 import com.Objects.Fire;
+import com.Objects.Mission;
 import com.Objects.Sensor;
 import com.Objects.SensorFire;
 import com.SuperCompany.Manager;
@@ -79,28 +80,32 @@ public class FireManager implements Manager {
         Mode.println(m_fires.toString());
     }
 
-    void compareFires(List<Fire> firesUpdated) {
-        //TODO
-        // +tests
-    }
-
     void DetectNewAndIncreaseFire() { //Aucun traitement pour l'instant Sensors = Fires
         Mode.println("FireManager: DetectNewAndIncreaseFire");
         Boolean isPresent=Boolean.FALSE;
-        for (Sensor s: m_sensors) {                                     //parcours les sensors
+        /*for(Fire f : m_fires){
+            if(f.getM_intensity() == 0) {
+                for(SensorFire sf : m_sensorsFires){
+                    if(f.getM_id() == sf.getM_idFire()) m_api.deleteSensorFire(sf);
+                }
+                m_api.deleteFire(f);
+                updateSensorsFires();
+                updateFires();
+            }
+        }*/
+        for(Sensor s: m_sensors) {                                     //parcours les sensors
             isPresent= Boolean.FALSE;                                   //par defaut le feu n'est pas présent
             for(Fire f: m_fires){                                       //parcours les feux
                 for(SensorFire sf: m_sensorsFires){
                     if(f.getM_id()==sf.getM_idFire() && s.getM_id()==sf.getM_idSensor()) {                           //si les id correspondent
                         if(f.getM_intensity()!=s.getM_intensity()) {        //si les intensité sont différentes
-                            if(f.getM_intensity()<s.getM_intensity()){      //si l'intensité du feu est inférieur a celui du capteur
-                                f.setM_increase(Boolean.TRUE);              //met a jour increase
-                            }
                             System.out.println(s.toString());
                             f.setM_intensity(s.getM_intensity());           //met a jour l'intensité
+                            m_api.updateFires(f);
                         }
                         isPresent=Boolean.TRUE;
                     }
+
                 }
             }
             if(!isPresent && s.getM_intensity()>0) {
@@ -109,10 +114,13 @@ public class FireManager implements Manager {
                 m_api.createFires(new Fire(null, timestamp, s.getM_longitude(), s.getM_latitude(), s.getM_intensity()));
                 updateFires();
                 for(Fire f:m_fires){
-                    if(f.getM_date().compareTo(timestamp) == 1){
-                        Mode.println(s.toString());
-                        Mode.println(f.toString());
+                    List<Integer> ids_sensorFire = new ArrayList<Integer>();
+                    for (SensorFire sf : m_sensorsFires){
+                        ids_sensorFire.add(sf.getM_idFire());
+                    }
+                    if(f.getM_date().compareTo(timestamp) == 1 && !ids_sensorFire.contains(f.getM_id())){
                         m_api.createSensorFire(new SensorFire(s.getM_id(), f.getM_id()));
+                        updateSensorsFires();
                     }
                 }
             }

@@ -99,6 +99,26 @@ public class Api {
         }
     }
 
+    public void updateFires(Fire f) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.updateFire(f).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteFire(Fire f) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.deleteFire(f).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void createMission(Mission m) {
         if (Mode.USEREELAPI) {
             try {
@@ -109,10 +129,30 @@ public class Api {
         }
     }
 
+    public void deleteMission(Mission m) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.deleteMission(m).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void createSensorFire(SensorFire sf) {
         if (Mode.USEREELAPI) {
             try {
                 m_webSeverConnector.createSensorFire(sf).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteSensorFire(SensorFire sf) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.deleteSensorFire(sf).execute();
             } catch (IOException e) {
                 e.printStackTrace();
             }

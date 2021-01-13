@@ -17,7 +17,7 @@ public class GeneralManager implements Manager{
 
     GeneralManager(){
         Mode.println("Création Manager");
-        m_retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.25:5001/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.7:5001/").addConverterFactory(GsonConverterFactory.create()).build();
         m_webServerConnector = m_retrofit.create(WebServerConnector.class);
         m_api= new Api(m_webServerConnector);
         m_missionManager = new MissionManager(m_api);
