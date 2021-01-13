@@ -67,7 +67,9 @@ public class MissionManager {
 
     private void updateTrucks() {
         m_trucks = m_api.getTrucks();
-        Mode.println(m_trucks.toString());
+        if(m_trucks != null) {
+            Mode.println(m_trucks.toString());
+        }
         updateTrucksState();
     }
 
