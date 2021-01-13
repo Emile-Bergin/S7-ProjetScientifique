@@ -15,7 +15,7 @@ public class ApiEmergencyWebServer {
     private Retrofit m_retrofit;
 
     public ApiEmergencyWebServer(){
-        m_retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.7:5001/").addConverterFactory(GsonConverterFactory.create()).build();
         m_emergencyWebServerConnector = m_retrofit.create(EmergencyWebServerConnector.class);
     }
 
@@ -54,15 +54,6 @@ public class ApiEmergencyWebServer {
         }else
             return null;
     }
-
-    /*
-    public List<Fire> getSensors(){
-        if(Mode.USEREELAPI){
-            //TODO
-            return null;
-        }else
-            return null;
-    }*/
 
     public void  updateTruck(Truck t){
         if(Mode.USEREELAPI){

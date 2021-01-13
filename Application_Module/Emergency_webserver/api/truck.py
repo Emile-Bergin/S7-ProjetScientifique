@@ -1,6 +1,7 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from app import app
 import database.service as db
+import json
 
 @app.route('/api/getTrucks/')
 def getTrucksAPI():
@@ -14,4 +15,12 @@ def getTrucksAPI():
             "m_latitude" : datum["latitude"]
         })    
     return jsonify(data2)
+
+@app.route("/api/updateTruck/", methods=["POST"])
+def updateTruckAPI():
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    print(dataJson)
+    db.updateTruck(dataJson["m_id"], dataJson["m_longitude"], dataJson["m_latitude"])
+    return ''
 

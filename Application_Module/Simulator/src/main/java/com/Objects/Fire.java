@@ -10,8 +10,6 @@ public class Fire implements PhysiqueElement {
     private Double m_longitude;
     private Double m_latitude;
     private Integer m_intensity;
-    private List<Integer> m_previousIntensity= new ArrayList<Integer>();
-    private Boolean m_increase=Boolean.FALSE;
 
     public Fire(Integer m_id, Date m_date, Double m_longitude, Double m_latitude, Integer m_intensity) {
         this.m_id = m_id;
@@ -29,8 +27,6 @@ public class Fire implements PhysiqueElement {
                 ", m_longitude=" + m_longitude +
                 ", m_latitude=" + m_latitude +
                 ", m_intensity=" + m_intensity +
-                ", m_previousIntensity=" + m_previousIntensity +
-                ", m_increase=" + m_increase +
                 "}\n";
     }
 
@@ -39,7 +35,6 @@ public class Fire implements PhysiqueElement {
     }
 
     public void setM_intensity(Integer newIntensity) {
-        m_previousIntensity.add(m_intensity);
         this.m_intensity = newIntensity;
     }
 
@@ -53,13 +48,5 @@ public class Fire implements PhysiqueElement {
 
     public Integer getM_intensity() {
         return m_intensity;
-    }
-
-    public Boolean getM_increase() {
-        return m_increase;
-    }
-
-    public void setM_increase(Boolean m_increase) {
-        this.m_increase = m_increase;
     }
 }

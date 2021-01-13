@@ -14,7 +14,6 @@ def getMissionsAPI():
             "m_idtruck" : datum["id_truck"],
             "m_date" : datum["date"].isoformat()+"Z",
         }) 
-    print(data2)   
     return jsonify(data2)
 
 @app.route("/api/createMission/", methods=["POST"])

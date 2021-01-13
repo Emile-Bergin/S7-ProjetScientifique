@@ -46,11 +46,29 @@ def createFire(date, longitude, latitude, intensity):
     cur.execute(sql, args)
     conn.commit()
 
+def updateFire(id, intensity):
+    sql = 'UPDATE public.fires SET intensity = %s WHERE id = %s'
+    args = (intensity, id)
+    cur.execute(sql, args)
+    conn.commit()
+
+def deleteFire(id):
+    sql = 'DELETE FROM public.fires WHERE id = %s'
+    args = (id, )
+    cur.execute(sql, args)
+    conn.commit()
+
 #======================================================#
 #SENSOR_FIRE
 def createSensor_Fire(id_sensor, id_fire):
     sql = 'INSERT INTO public.sensors__fires (id_sensor, id_fire) VALUES (%s, %s)'
     args = (id_sensor, id_fire)
+    cur.execute(sql, args)
+    conn.commit()
+
+def deleteSensor_Fire(id_fire):
+    sql = 'DELETE FROM public.sensors__fires WHERE id = %s'
+    args = (id_fire, )
     cur.execute(sql, args)
     conn.commit()
 
@@ -63,8 +81,20 @@ def createMission(id_fire, id_truck, date):
     cur.execute(sql, args)
     conn.commit()
 
+def deleteMission(id):
+    sql = 'DELETE FROM fireworker.missions WHERE id = %s'
+    args = (id, )
+    cur.execute(sql, args)
+    conn.commit()
+
 #======================================================#
 #BARRACKS
 
 #======================================================#
 #TRUCKS
+
+def updateTruck(id, longitude, latitude):
+    sql = 'UPDATE fireworker.trucks SET longitude = %s, latitude = %s WHERE id = %s'
+    args = (longitude, latitude, id)
+    cur.execute(sql, args)
+    conn.commit()

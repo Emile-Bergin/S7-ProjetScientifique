@@ -18,7 +18,6 @@ public class SensorManager {
     private ApiSimulatorWebServer m_apiSimulatorWebServer;
     private List<Fire> m_fires;
     private List<Sensor> m_sensor;
-    private List<Sensor> m_sensorsToUpdate;
     private List<Mission> m_missions;
 
     public SensorManager(){
@@ -28,15 +27,16 @@ public class SensorManager {
     }
 
     public void update() {
+        System.exit(1);
         m_fires = m_apiEmergencyWebServer.getFires();
         m_sensor = m_apiSimulatorWebServer.getSensors();
         m_missions = m_apiEmergencyWebServer.getMissions();
-        updateSensor();
-        postUpdatedSensor();
+        //updateSensor();
+        //postUpdatedSensor();
 
     }
 
-    private void updateSensor() { //Ne prends pas en compte l'intensité du feux et le nombre de camion sur place, une chance sur deux que le feux augmente
+    /*private void updateSensor() { //Ne prends pas en compte l'intensité du feux et le nombre de camion sur place, une chance sur deux que le feux augmente
         m_sensorsToUpdate = new ArrayList<Sensor>();
         if(m_sensor!=null) {
             for (Sensor s : m_sensor) {
@@ -101,7 +101,7 @@ public class SensorManager {
                         e.printStackTrace();
                     }
                 }*/
-
+/*
             }
         }
     }
@@ -123,5 +123,5 @@ public class SensorManager {
             }
         }
 
-    }
+    }*/
 }
