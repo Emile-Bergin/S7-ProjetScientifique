@@ -36,7 +36,7 @@ public class MissionManager {
             for (Mission m : m_missions) {
                 if (m.getM_trucks().size() != 0) {
                     for (Truck t : m.getM_trucks()) {
-                        //bringTruckCloserToFire(t,m.getM_fire());
+                        bringTruckCloserToFire(t,m.getM_fire());
                         t.setM_latitude(new Random().nextDouble());     //Position Bidon
                         t.setM_longitude(new Random().nextDouble());    //Position Bidon
                         m_trucksToUpdate.add(t);
@@ -47,7 +47,22 @@ public class MissionManager {
     }
 
     private void bringTruckCloserToFire(Truck t, Fire f) {
+        Double distanceLongitude= Math.abs(t.getM_longitude()-f.getM_longitude());
+        if(t.getM_longitude()<f.getM_longitude()){
+            t.setM_longitude(t.getM_longitude()+distanceLongitude/2);
+        }else{
+            t.setM_longitude(t.getM_longitude()-distanceLongitude/2);
+        }
 
+        Double distanceLatitude= Math.abs(t.getM_longitude()-f.getM_longitude());
+        if(distanceLatitude<0.0001)
+        if(t.getM_latitude()<f.getM_latitude()) {
+            if (t.getM_latitude() < f.getM_latitude()) {
+                t.setM_latitude(t.getM_latitude() + distanceLatitude / 2);
+            } else {
+                t.setM_latitude(t.getM_latitude() - distanceLatitude / 2);
+            }
+        }
     }
 
     void postUpdatesTrucks() {

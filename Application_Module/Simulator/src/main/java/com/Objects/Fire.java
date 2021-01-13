@@ -43,6 +43,14 @@ public class Fire implements PhysiqueElement {
         this.m_intensity = newIntensity;
     }
 
+    public Double getM_longitude() {
+        return m_longitude;
+    }
+
+    public Double getM_latitude() {
+        return m_latitude;
+    }
+
     public Integer getM_intensity() {
         return m_intensity;
     }

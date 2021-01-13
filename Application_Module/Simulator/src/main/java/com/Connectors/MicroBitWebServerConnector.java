@@ -7,5 +7,8 @@ import retrofit2.http.POST;
 
 public interface MicroBitWebServerConnector {
     @POST("api/updateSensor/")
-    Call<Sensor> updateSensor(@Body Sensor s);
+    Call<Void> updateSensor(@Body Sensor s);
+
+    @POST("api/disabledSensor/")
+    Call<Void> disableSensor(@Body Sensor s);
 }

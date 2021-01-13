@@ -12,13 +12,13 @@ import java.util.List;
 
 public interface SimulatorWebServerConnector {
     @POST("api/updateTruck/")
-    Call<Truck> updateTruck(@Body Truck t);
+    Call<Void> updateTruck(@Body Truck t);
 
     @POST("api/updateMission/")
-    Call<Mission> updateMission(@Body Mission m);
+    Call<Void> updateMission(@Body Mission m);
 
     @POST("api/updateSensor/")
-    Call<Sensor> updateSensor(@Body Sensor s);
+    Call<Void> updateSensor(@Body Sensor s);
 
     @GET("api/getSensors")
     Call<List<Sensor>> getSensors();
