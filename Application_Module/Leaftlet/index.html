@@ -56,7 +56,6 @@
 
 
        function loadFires() {
-			
          fetch("http://192.168.43.240:5001/api/getFires/").then(function(data) {
            return data.json();
          }).then((json) => {
@@ -82,7 +81,7 @@
        }
 
        function loadTrucks(){
-         fetch("http://192.168.43.240:5001/api/getTrucks/").then(function(data) {
+         fetch("http://127.0.0.1:5001/api/getTrucks/").then(function(data) {
            return data.json();
          }).then((json) => {
 			setTimeout(() => {  console.log("Attente truck!"); }, 2000);
@@ -106,7 +105,6 @@
        }
 
        function loadSensors(){
-	   
          fetch("http://192.168.43.240:5001/api/getSensors/").then(function(data) {
            return data.json();
          }).then((json) => {
