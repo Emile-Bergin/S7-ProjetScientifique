@@ -2,6 +2,7 @@ package com.Connectors;
 
 import com.Objects.Fire;
 import com.Objects.Mission;
+import com.Objects.SensorFire;
 import com.Objects.Truck;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -23,5 +24,8 @@ public interface EmergencyWebServerConnector {
 
     @POST("api/updateTruck/")
     Call<Void> updateTruck(@Body Truck t);
+
+    @GET("api/getSensorsFires/")
+    Call<List<SensorFire>> getSensorsFires();
 
 }

@@ -1,9 +1,6 @@
 package com.Connectors;
 
-import com.Objects.Fire;
-import com.Objects.Mission;
-import com.Objects.Mode;
-import com.Objects.Truck;
+import com.Objects.*;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -15,7 +12,7 @@ public class ApiEmergencyWebServer {
     private Retrofit m_retrofit;
 
     public ApiEmergencyWebServer(){
-        m_retrofit = new Retrofit.Builder().baseUrl("http://192.168.1.7:5001/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://164.4.1.1:5001/").addConverterFactory(GsonConverterFactory.create()).build();
         m_emergencyWebServerConnector = m_retrofit.create(EmergencyWebServerConnector.class);
     }
 
@@ -63,6 +60,18 @@ public class ApiEmergencyWebServer {
                 e.printStackTrace();
             }
         }
+    }
+
+    public List<SensorFire> getSensorsFires() {
+        if (Mode.USEREELAPI) {
+            try {
+                return m_emergencyWebServerConnector.getSensorsFires().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }else
+            return null;
     }
 
 

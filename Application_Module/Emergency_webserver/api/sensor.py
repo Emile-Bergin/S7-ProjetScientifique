@@ -17,7 +17,8 @@ def getSensorAPI():
             "m_latitude" : datum["latitude"],
             "m_intensity" : datum["intensity"],
             "m_alive" : datum["alive"]
-        })    
+        })   
+    print(data2) 
     return jsonify(data2)
 
 @app.route("/api/updateSensor/", methods=["POST"])

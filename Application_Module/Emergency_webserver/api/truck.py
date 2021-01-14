@@ -14,6 +14,7 @@ def getTrucksAPI():
             "m_longitude" : datum["longitude"],
             "m_latitude" : datum["latitude"]
         })    
+    print(data2)
     return jsonify(data2)
 
 @app.route("/api/updateTruck/", methods=["POST"])

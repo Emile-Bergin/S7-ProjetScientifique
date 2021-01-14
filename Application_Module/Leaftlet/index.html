@@ -56,9 +56,11 @@
 
 
        function loadFires() {
-         fetch("127.0.0.1:5001/api/getFires/").then(function(data) {
+			
+         fetch("http://192.168.43.240:5001/api/getFires/").then(function(data) {
            return data.json();
          }).then((json) => {
+			console.log("loadfire");
             console.log(json);
             //Affichage sur la carte
             json.forEach(element => affichageFire(element));
@@ -80,9 +82,11 @@
        }
 
        function loadTrucks(){
-         fetch("127.0.0.1:5001/api/getTrucks/").then(function(data) {
+         fetch("http://192.168.43.240:5001/api/getTrucks/").then(function(data) {
            return data.json();
          }).then((json) => {
+			setTimeout(() => {  console.log("Attente truck!"); }, 2000);
+			console.log("loadTrucks");
             console.log(json);
             //Affichage sur la carte
             json.forEach(element => affichageTruck(element));
@@ -102,9 +106,12 @@
        }
 
        function loadSensors(){
-         fetch("127.0.0.1:5001/api/getFires/").then(function(data) {
+	   
+         fetch("http://192.168.43.240:5001/api/getSensors/").then(function(data) {
            return data.json();
          }).then((json) => {
+			setTimeout(() => {  console.log("Attente Sensor!"); }, 4000);
+			console.log("loadSensors");
             console.log(json);
             //Affichage sur la carte
             json.forEach(element => affichageSensor(element));
@@ -136,7 +143,7 @@
          loadSensors();
        }
 
-       window.setInterval(function(){
+       /*window.setInterval(function(){
          markers.forEach((item, i) => {
             map.removeLayer(item);
          });
@@ -144,7 +151,7 @@
          loadFires();
          loadTrucks();
          loadSensors();
-        }, 5000);
+        }, 5000);*/
 
    </script>
 </body>

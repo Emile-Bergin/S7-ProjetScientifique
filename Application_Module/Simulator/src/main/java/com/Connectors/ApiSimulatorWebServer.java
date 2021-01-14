@@ -15,7 +15,7 @@ public class ApiSimulatorWebServer {
     private Retrofit m_retrofit;
 
     public ApiSimulatorWebServer(){
-        m_retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://164.4.1.1:5001/").addConverterFactory(GsonConverterFactory.create()).build();
         m_simulatorWebServerConnector= m_retrofit.create(SimulatorWebServerConnector.class);
     }
 

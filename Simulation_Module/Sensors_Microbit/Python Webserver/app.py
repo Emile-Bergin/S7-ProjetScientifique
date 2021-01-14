@@ -5,7 +5,7 @@ from queue import Queue
 from threading import Thread
 
 # Change host ip address here
-ipAdd = "192.168.1.25"
+ipAdd = "164.4.1.1"
 
 app = Flask(__name__)
 app.debug = False

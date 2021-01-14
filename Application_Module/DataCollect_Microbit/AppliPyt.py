@@ -9,7 +9,7 @@ ser = Serial()
 ListUpdate = Queue()
 msg = ""
 
-url = 'http://192.168.1.25:5001/api/updateSensor/'
+url = 'http://164.4.1.1:5001/api/updateSensor/'
 
 ser.port = SERIALPORT
 def initUART():

@@ -47,11 +47,9 @@ public class Sensor implements PhysiqueElement {
         return m_intensity;
     }
 
-    public void setM_intensity(Integer intensity) throws Exception {
+    public void setM_intensity(Integer intensity){
         if (intensity>=0 && intensity<=8){
             this.m_intensity = intensity;
-        }else{
-            throw new Exception("Valeur intensity n'est pas entre 0 et 8 : "+intensity);
         }
     }
 }

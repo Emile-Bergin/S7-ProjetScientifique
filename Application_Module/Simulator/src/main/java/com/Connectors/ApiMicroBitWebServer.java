@@ -12,7 +12,7 @@ public class ApiMicroBitWebServer {
     private Retrofit m_retrofit;
 
     public ApiMicroBitWebServer(){
-        m_retrofit = new Retrofit.Builder().baseUrl("http://127.0.0.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
+        m_retrofit = new Retrofit.Builder().baseUrl("http://164.4.1.1:5000/").addConverterFactory(GsonConverterFactory.create()).build();
         m_microBitWebServerConnector= m_retrofit.create(MicroBitWebServerConnector.class);
     }
 

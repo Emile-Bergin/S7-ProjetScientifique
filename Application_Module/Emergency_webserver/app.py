@@ -3,7 +3,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 import os
 
-IP = "192.168.1.25"
+IP = "164.4.1.1"
 
 app = Flask(__name__)
 CORS(app)
