@@ -10,4 +10,13 @@ public class Barrack {
         this.m_longitude = m_longitude;
         this.m_latitude = m_latitude;
     }
+
+    @Override
+    public String toString() {
+        return "Barrack{" +
+                "m_id=" + m_id +
+                ", m_longitude=" + m_longitude +
+                ", m_latitude=" + m_latitude +
+                '}';
+    }
 }

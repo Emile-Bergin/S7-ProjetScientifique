@@ -1,0 +1,1 @@
+INSERT INTO fireworker.barracks (longitude, latitude) values (-1, -1);

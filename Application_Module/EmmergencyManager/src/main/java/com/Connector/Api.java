@@ -65,6 +65,18 @@ public class Api {
             return m_dataFactory.getSensors();
     }
 
+    public List<SensorFire> getSensorsFires() {
+        if (Mode.USEREELAPI) {
+            try {
+                return m_webSeverConnector.getSensorsFires().execute().body();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+        }else
+            return null;
+    }
+
     public List<Mission> getMissions() {
         if (Mode.USEREELAPI) {
             try {
@@ -87,6 +99,26 @@ public class Api {
         }
     }
 
+    public void updateFires(Fire f) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.updateFire(f).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteFire(Fire f) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.deleteFire(f).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public void createMission(Mission m) {
         if (Mode.USEREELAPI) {
             try {
@@ -97,10 +129,30 @@ public class Api {
         }
     }
 
-    public void createSensorFire(Sensor s, Fire f) {
+    public void deleteMission(Mission m) {
         if (Mode.USEREELAPI) {
             try {
-                m_webSeverConnector.createSensorFire(s.getM_id().toString(), f.getM_id().toString()).execute();
+                m_webSeverConnector.deleteMission(m).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void createSensorFire(SensorFire sf) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.createSensorFire(sf).execute();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deleteSensorFire(SensorFire sf) {
+        if (Mode.USEREELAPI) {
+            try {
+                m_webSeverConnector.deleteSensorFire(sf).execute();
             } catch (IOException e) {
                 e.printStackTrace();
             }

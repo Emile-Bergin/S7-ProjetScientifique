@@ -12,6 +12,7 @@ services:
         volumes:
             - ./database:/var/lib/postgresql/data
             - ./dumps:/dumps
+            - ./scripts:/scripts
         ports:
             - "5433:5432" 
     mqtt:

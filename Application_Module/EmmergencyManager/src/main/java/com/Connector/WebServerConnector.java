@@ -14,6 +14,9 @@ public interface WebServerConnector{
     @GET("api/getSensors/")
     Call<List<Sensor>> getSensors();
 
+    @GET("api/getSensorsFires/")
+    Call<List<SensorFire>> getSensorsFires();
+
     @GET("api/getFires/")
     Call<List<Fire>> getFires();
 
@@ -26,8 +29,17 @@ public interface WebServerConnector{
     @POST("api/createFire/")
     Call<Void> createFire(@Body Fire fire);
 
+    @POST("api/updateFire/")
+    Call<Void> updateFire(@Body Fire fire);
+
+    @POST("api/deleteFire/")
+    Call<Void> deleteFire(@Body Fire fire);
+
     @POST("api/createMission/")
     Call<Void> createMission(@Body Mission Mission);
+
+    @POST("api/deleteMission/")
+    Call<Void> deleteMission(@Body Mission m);
 
     @POST("api/updateMission/")
     Call<Void> updateMission(@Body Mission m);
@@ -36,8 +48,10 @@ public interface WebServerConnector{
     Call<Void> updateTruck(@Body Truck t);
 
     @POST("api/createSensorFire/")
-    @FormUrlEncoded
-    Call<Void> createSensorFire(@Field("id_sensor") String id_Sensor, @Field("id_fire") String id_fire);
+    Call<Void> createSensorFire(@Body SensorFire sf);
+
+    @POST("api/deleteSensorFire/")
+    Call<Void> deleteSensorFire(@Body SensorFire sf);
 }
 
 /*

@@ -1,0 +1,4 @@
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) values (1, -1, -1);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) values (1, -1, -1);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) values (1, -1, -1);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) values (1, -1, -1);

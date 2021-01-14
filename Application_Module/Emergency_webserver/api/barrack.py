@@ -11,6 +11,7 @@ def getBarracksAPI():
             "m_id" : datum["id"],
             "m_longitude" : datum["longitude"],
             "m_latitude" : datum["latitude"]
-        })    
+        })   
+    print(data2) 
     return jsonify(data2)
 
