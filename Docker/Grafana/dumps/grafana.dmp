@@ -49,8 +49,8 @@ SET default_table_access_method = heap;
 CREATE TABLE public.fires_history (
     id integer NOT NULL,
     date timestamp without time zone NOT NULL,
-    longitude integer NOT NULL,
-    latitude integer NOT NULL,
+    longitude double precision NOT NULL,
+    latitude double precision NOT NULL,
     intensity integer
 );
 
