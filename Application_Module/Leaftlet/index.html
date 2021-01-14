@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
+  <title>Emmergency Supervisor</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -11,7 +11,11 @@
    crossorigin=""></script>
 </head>
 <body>
-  <input type="text" name="adresseServeur" value="192.168.1.7:5000">
+  <h1 style="justify-content:center; text-align:center;">Emmergency Supervisor</h1>
+  <form class="" action="index.html" method="post">
+    <label for="adresseServeur">Adresse du serveur:</label>
+    <input id="input" type="text" name="adresseServeur" value="192.168.43.240:5001">
+  </form>
    <div id="mapid" style="height: 800px;"></div>
    <script>
        var markers=[];
@@ -56,7 +60,7 @@
 
 
        function loadFires() {
-         fetch("http://192.168.43.240:5001/api/getFires/").then(function(data) {
+         fetch("http://"+document.getElementById("input").value+"/api/getFires/").then(function(data) {
            return data.json();
          }).then((json) => {
 			console.log("loadfire");
@@ -81,7 +85,7 @@
        }
 
        function loadTrucks(){
-         fetch("http://127.0.0.1:5001/api/getTrucks/").then(function(data) {
+         fetch("http://"+document.getElementById("input").value+"/api/getTrucks/").then(function(data) {
            return data.json();
          }).then((json) => {
 			setTimeout(() => {  console.log("Attente truck!"); }, 2000);
@@ -105,7 +109,7 @@
        }
 
        function loadSensors(){
-         fetch("http://192.168.43.240:5001/api/getSensors/").then(function(data) {
+         fetch("http://"+document.getElementById("input").value+"/api/getSensors/").then(function(data) {
            return data.json();
          }).then((json) => {
 			setTimeout(() => {  console.log("Attente Sensor!"); }, 4000);
