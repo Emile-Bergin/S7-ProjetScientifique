@@ -1,0 +1,8 @@
+
+v	java:S116"URename this field "m_retrofit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞòÁõıÿÿÿÿ8€ÿÓ‹î.
+ƒ	java:S116"hRename this field "m_simulatorWebServerConnector" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ı«l8«‘ƒ‹î.
+H
+java:S1168>"+Return an empty collection instead of null.(¥¹ï8«ù¿’î.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äíçµ
+H
+java:S1168;"+Return an empty collection instead of null.(¥¹ï8×ÊÀ’î.

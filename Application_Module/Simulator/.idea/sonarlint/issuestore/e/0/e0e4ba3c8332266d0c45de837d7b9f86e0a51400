@@ -1,0 +1,17 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ºÏà„ûÿÿÿÿ
+o	java:S116"SRename this field "m_trucks" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õé‘8çùÍŒî.
+}	java:S116"bRename this field "m_apiEmergencyWebServer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÇ×D8•ÿÇ‹î.
+v	java:S116"ZRename this field "m_sensormanager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£ÖÏ8›‰Œî.
+L
+java:S1066H"/Merge this if statement with the enclosing one.(×Ü«8ÉŸ±àï.
+i
+java:S3973G"GUse indentation to denote the code conditionally executed by this "if".(Şª¥Óıÿÿÿÿ8ÉŸ±àï.
+v	java:S116"URename this field "m_missions" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÏÑ¢ıÿÿÿÿ8çùÍŒî.
+M
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ñàÂ€ğ.
+s	java:S116"RRename this field "m_fires" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø—çµşÿÿÿÿ8ñàÂ€ğ.
+]	java:S1251"<This block of commented-out lines of code should be removed.(îñ¯Ãüÿÿÿÿ8ñàÂ€ğ.
+X
+java:S1144>";Remove this unused private "bringTruckCloserToFire" method.(éÓ³Ó8ñàÂ€ğ.
