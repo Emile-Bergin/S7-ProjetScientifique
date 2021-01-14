@@ -10,7 +10,7 @@
   <h1 style="justify-content:center; text-align:center;">Emmergency Supervisor</h1>
   <form class="" action="index.html" method="post">
     <label for="adresseServeur">Adresse du serveur:</label>
-    <input id="input" type="text" name="adresseServeur" value="192.168.43.240:5001">
+    <input id="input" type="text" name="adresseServeur" value="164.4.1.1:5001">
   </form>
    <div id="mapid" style="height: 800px;"></div>
    <script>
@@ -142,7 +142,7 @@
          loadSensors();
        }
 
-       /*window.setInterval(function(){
+       window.setInterval(function(){
          markers.forEach((item, i) => {
             map.removeLayer(item);
          });
@@ -150,7 +150,7 @@
          loadFires();
          loadTrucks();
          loadSensors();
-        }, 5000);*/
+        }, 5000);
 
    </script>
 </body>
