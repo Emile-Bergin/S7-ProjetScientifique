@@ -3,12 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Emmergency Supervisor</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-   crossorigin=""/>
-   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-   crossorigin=""></script>
+  <link rel="stylesheet" href="style.css"/>
+   <script src="leaflet.js"></script>
 </head>
 <body>
   <h1 style="justify-content:center; text-align:center;">Emmergency Supervisor</h1>
@@ -22,7 +18,7 @@
        var map = L.map('mapid').setView([45.757215498088684, 4.833058526710953], 13);
 
        var fireIcon = L.icon({
-            iconUrl: 'https://cutewallpaper.org/21/fire-background-gif/Animated-fire-gif-transparent-background-2-GIF-Images-Download.gif',
+            iconUrl: 'fire.gif',
             iconSize:     [40, 40], // size of the icon
             iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
             shadowAnchor: [20, 40],  // the same for the shadow
@@ -30,7 +26,7 @@
         });
 
         var fireTruckIcon = L.icon({
-             iconUrl: 'https://image.flaticon.com/icons/png/512/224/224464.png',
+             iconUrl: 'firetruck.png',
              iconSize:     [40, 40], // size of the icon
              iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
              shadowAnchor: [20, 40],  // the same for the shadow
@@ -38,7 +34,7 @@
          });
 
          var sensorUpIcon = L.icon({
-              iconUrl: 'https://uploads-ssl.webflow.com/5c8655db7c584bdd84e9882d/5c8f9f365eeaac854998460a_sensor_icon.png',
+              iconUrl: 'greenSensor.png',
               iconSize:     [40, 40], // size of the icon
               iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
               shadowAnchor: [20, 40],  // the same for the shadow
@@ -46,7 +42,7 @@
           });
 
           var sensorDownIcon = L.icon({
-               iconUrl: 'https://icon-library.com/images/d355df539c.png',
+               iconUrl: 'redSensor.png',
                iconSize:     [40, 40], // size of the icon
                iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
                shadowAnchor: [20, 40],  // the same for the shadow
@@ -95,12 +91,13 @@
             json.forEach(element => affichageTruck(element));
           }).catch(function(error) {
               console.log('error direction', error);
-          });/*
+          });
+          /*
          var data="[{\"m_barrack\": 1, \"m_id\": 1, \"m_latitude\": 45.750215, \"m_longitude\": 4.803305}, {\"m_barrack\": 1, \"m_id\": 2, \"m_latitude\": 45.7400, \"m_longitude\": 4.839}]";
          console.log(data);
          var obj = JSON.parse(data);
          console.log(obj);
-         obj.forEach(element => affichageTrucks(element));*/
+         obj.forEach(element => affichageTruck(element));*/
        }
 
        function affichageTruck(element){
@@ -124,7 +121,7 @@
          console.log(data);
          var obj = JSON.parse(data);
          console.log(obj);
-         obj.forEach(element => affichageSensors(element));*/
+         obj.forEach(element => affichageSensor(element));*/
        }
 
        function affichageSensor(element){
