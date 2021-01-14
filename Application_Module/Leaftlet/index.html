@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+</head>
+<body>
+  <input type="text" name="adresseServeur" value="192.168.1.7:5000">
+   <div id="mapid" style="height: 800px;"></div>
+   <script>
+       var markers=[];
+       var map = L.map('mapid').setView([45.757215498088684, 4.833058526710953], 13);
+
+       var fireIcon = L.icon({
+            iconUrl: 'https://cutewallpaper.org/21/fire-background-gif/Animated-fire-gif-transparent-background-2-GIF-Images-Download.gif',
+            iconSize:     [40, 40], // size of the icon
+            iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
+            shadowAnchor: [20, 40],  // the same for the shadow
+            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+        });
+
+        var fireTruckIcon = L.icon({
+             iconUrl: 'https://image.flaticon.com/icons/png/512/224/224464.png',
+             iconSize:     [40, 40], // size of the icon
+             iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
+             shadowAnchor: [20, 40],  // the same for the shadow
+             popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+         });
+
+         var sensorUpIcon = L.icon({
+              iconUrl: 'https://uploads-ssl.webflow.com/5c8655db7c584bdd84e9882d/5c8f9f365eeaac854998460a_sensor_icon.png',
+              iconSize:     [40, 40], // size of the icon
+              iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
+              shadowAnchor: [20, 40],  // the same for the shadow
+              popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+          });
+
+          var sensorDownIcon = L.icon({
+               iconUrl: 'https://icon-library.com/images/d355df539c.png',
+               iconSize:     [40, 40], // size of the icon
+               iconAnchor:   [20, 40], // point of the icon which will correspond to marker's location
+               shadowAnchor: [20, 40],  // the same for the shadow
+               popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+           });
+
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+       }).addTo(map);
+
+
+
+       function loadFires() {
+         fetch("127.0.0.1:5001/api/getFires/").then(function(data) {
+           return data.json();
+         }).then((json) => {
+            console.log(json);
+            //Affichage sur la carte
+            json.forEach(element => affichageFire(element));
+          }).catch(function(error) {
+              console.log('error direction', error);
+          });
+          /*
+         var data="[{\"m_date\": \"2021-01-13T20:38:55Z\", \"m_id\": 44, \"m_intensity\": -1, \"m_latitude\": 45.757215, \"m_longitude\": 4.83305}, {\"m_date\": \"2021-01-13T20:39:38Z\", \"m_id\": 45, \"m_intensity\": 5, \"m_latitude\": 45.750, \"m_longitude\": 4.83}]";
+         console.log(data);
+         var obj = JSON.parse(data);
+         console.log(obj);
+         obj.forEach(element => affichageFire(element));*/
+       }
+
+       function affichageFire(element){
+         console.log(element.m_latitude);
+         markers.push(L.marker([element.m_latitude, element.m_longitude], {icon: fireIcon}).addTo(map)
+             .bindPopup('Date:'+element.m_date+'\nintensité:'+element.m_intensity));
+       }
+
+       function loadTrucks(){
+         fetch("127.0.0.1:5001/api/getTrucks/").then(function(data) {
+           return data.json();
+         }).then((json) => {
+            console.log(json);
+            //Affichage sur la carte
+            json.forEach(element => affichageTruck(element));
+          }).catch(function(error) {
+              console.log('error direction', error);
+          });/*
+         var data="[{\"m_barrack\": 1, \"m_id\": 1, \"m_latitude\": 45.750215, \"m_longitude\": 4.803305}, {\"m_barrack\": 1, \"m_id\": 2, \"m_latitude\": 45.7400, \"m_longitude\": 4.839}]";
+         console.log(data);
+         var obj = JSON.parse(data);
+         console.log(obj);
+         obj.forEach(element => affichageTrucks(element));*/
+       }
+
+       function affichageTruck(element){
+         markers.push(L.marker([element.m_latitude, element.m_longitude], {icon: fireTruckIcon}).addTo(map)
+             .bindPopup('id:'+element.m_id));
+       }
+
+       function loadSensors(){
+         fetch("127.0.0.1:5001/api/getFires/").then(function(data) {
+           return data.json();
+         }).then((json) => {
+            console.log(json);
+            //Affichage sur la carte
+            json.forEach(element => affichageSensor(element));
+          }).catch(function(error) {
+              console.log('error direction', error);
+          });/*
+         var data="[{\"m_alive\": false, \"m_column\": 0, \"m_id\": 5, \"m_intensity\": 0, \"m_latitude\": 45.749, \"m_line\": 4, \"m_longitude\": 4.81}, {\"m_alive\": true, \"m_column\": 0, \"m_id\": 7, \"m_intensity\": 0, \"m_latitude\": 45.7500, \"m_line\": 6, \"m_longitude\": 4.85}]";
+         console.log(data);
+         var obj = JSON.parse(data);
+         console.log(obj);
+         obj.forEach(element => affichageSensors(element));*/
+       }
+
+       function affichageSensor(element){
+         if(element.m_alive){
+           markers.push(L.marker([element.m_latitude, element.m_longitude], {icon: sensorUpIcon}).addTo(map)
+               .bindPopup('id:'+element.m_id));
+         }else{
+           markers.push(L.marker([element.m_latitude, element.m_longitude], {icon: sensorDownIcon}).addTo(map)
+               .bindPopup('id:'+element.m_id));
+         }
+
+
+       }
+
+       window.onload=function(){
+         loadFires();
+         loadTrucks();
+         loadSensors();
+       }
+
+       window.setInterval(function(){
+         markers.forEach((item, i) => {
+            map.removeLayer(item);
+         });
+         markers = [];
+         loadFires();
+         loadTrucks();
+         loadSensors();
+        }, 5000);
+
+   </script>
+</body>
+</html>
