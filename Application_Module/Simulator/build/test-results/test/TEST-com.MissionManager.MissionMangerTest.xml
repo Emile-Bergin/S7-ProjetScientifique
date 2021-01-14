@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.MissionManager.MissionMangerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-14T08:49:37" hostname="ubuntu-emile" time="0.369">
+  <properties/>
+  <testcase name="checkUpdateTruck" classname="com.MissionManager.MissionMangerTest" time="0.369"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

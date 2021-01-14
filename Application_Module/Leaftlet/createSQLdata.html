@@ -26,11 +26,12 @@
    var paslatitude= difflatitude/nbcolonne;
    var paslongitude= difflongitude/nbligne;
 
+
    var data="";
 
    for (var c = 1; c <= nbcolonne; c++) {
      for (var l = 1; l <= nbligne; l++) {
-       data+="INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES ("+c+","+l+","+paslongitude*l+","+paslatitude*c+",0,true);\n";
+       data+="INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES ("+c+","+l+","+(minlongitude+paslongitude*l)+","+(minlatitude+paslatitude*c)+",0,true);\n";
        //console.log("INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES ("+c+","+l+","+paslongitude*l+","+paslatitude*c+",0,true);\n");
      }
    }

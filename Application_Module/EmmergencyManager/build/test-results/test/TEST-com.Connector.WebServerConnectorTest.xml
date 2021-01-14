@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-12T20:26:04" hostname="ubuntu-emile" time="0.025">
+<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-14T08:43:21" hostname="ubuntu-emile" time="0.754">
   <properties/>
-  <testcase name="getSensors" classname="com.Connector.WebServerConnectorTest" time="0.001"/>
-  <testcase name="getBarracks" classname="com.Connector.WebServerConnectorTest" time="0.001"/>
-  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="0.005"/>
-  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="0.018"/>
-  <system-out><![CDATA[Tue Jan 12 21:26:04 CET 2021
+  <testcase name="getSensors" classname="com.Connector.WebServerConnectorTest" time="0.408"/>
+  <testcase name="getBarracks" classname="com.Connector.WebServerConnectorTest" time="0.002"/>
+  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="0.28"/>
+  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="0.062"/>
+  <system-out><![CDATA[2021-01-14 09:43:22.379
 ]]></system-out>
-  <system-err><![CDATA[java.net.ConnectException: Failed to connect to /127.0.0.1:5000
+  <system-err><![CDATA[java.net.ConnectException: Failed to connect to /192.168.1.7:5001
 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
@@ -28,7 +28,7 @@
 	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
 	at okhttp3.RealCall.execute(RealCall.java:81)
 	at retrofit2.OkHttpCall.execute(OkHttpCall.java:204)
-	at com.Connector.WebServerConnectorTest.createFire(WebServerConnectorTest.java:39)
+	at com.Connector.WebServerConnectorTest.createFire(WebServerConnectorTest.java:53)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -89,7 +89,7 @@ Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
 	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
 	... 70 more
-java.net.ConnectException: Failed to connect to /127.0.0.1:5000
+java.net.ConnectException: Failed to connect to /192.168.1.7:5001
 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
@@ -110,7 +110,7 @@ java.net.ConnectException: Failed to connect to /127.0.0.1:5000
 	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
 	at okhttp3.RealCall.execute(RealCall.java:81)
 	at retrofit2.OkHttpCall.execute(OkHttpCall.java:204)
-	at com.Connector.WebServerConnectorTest.getFires(WebServerConnectorTest.java:49)
+	at com.Connector.WebServerConnectorTest.getFires(WebServerConnectorTest.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
