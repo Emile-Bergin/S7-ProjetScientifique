@@ -46,9 +46,8 @@ public class MissionManager {
                 if(m.getM_idfire() == f.getM_id()){
                     for (Truck t : m_trucks) {
                         if(m.getM_idtruck() == t.getM_id()) {
-                            //bringTruckCloserToFire(t, f);
-                            t.setM_latitude(new Random().nextDouble()*10);     //Position Bidon
-                            t.setM_longitude(new Random().nextDouble()*10);    //Position Bidon
+                            t.setM_latitude(f.getM_latitude());
+                            t.setM_longitude(f.getM_longitude());
                             m_apiEmergencyWebServer.updateTruck(t);
                         }
                     }

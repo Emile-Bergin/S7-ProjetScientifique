@@ -1,8 +1,11 @@
 from flask import Flask, jsonify, request
 from app import app, pendingMessages
+import json
 
 @app.route("/api/updateSensor/", methods=["POST"])
 def updateSensorAPI():
-    newMsg = request.form.get("m_id") + ":" + request.form.get("m_intensity")
+    data = request.data.decode("UTF8")
+    dataJson = json.loads(data)
+    newMsg = str(dataJson["m_id"]) + ":" + str(dataJson["m_intensity"])
     pendingMessages.put(newMsg)
     return ""

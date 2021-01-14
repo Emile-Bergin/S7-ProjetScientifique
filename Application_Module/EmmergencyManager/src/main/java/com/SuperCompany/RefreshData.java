@@ -3,7 +3,7 @@ package com.SuperCompany;
 public class RefreshData {
     //Class voué a disparaître, remplacé par  ApiService
     private GeneralManager m_generalManager;
-    private Integer m_refreshTime = 5; //En secondes
+    private Integer m_refreshTime = 30; //En secondes
 
     RefreshData(){
         Mode.println("Création RefreshData");
