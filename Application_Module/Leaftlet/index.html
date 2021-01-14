@@ -80,7 +80,7 @@
        }
 
        function loadTrucks(){
-         fetch("127.0.0.1:5001/api/getTrucks/").then(function(data) {
+         fetch("http://127.0.0.1:5001/api/getTrucks/").then(function(data) {
            return data.json();
          }).then((json) => {
             console.log(json);
@@ -102,7 +102,7 @@
        }
 
        function loadSensors(){
-         fetch("127.0.0.1:5001/api/getFires/").then(function(data) {
+         fetch("127.0.0.1:5001/api/getSensors/").then(function(data) {
            return data.json();
          }).then((json) => {
             console.log(json);

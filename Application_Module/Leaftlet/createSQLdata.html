@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Titre de la page</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+</head>
+<body>
+   <script>
+   var maxlatitude= 45.79536387253486;
+   var minlatitude=45.68898110603114;
+   var minlongitude=4.7619714791069185;
+   var maxlongitude=4.967278493232123;
+
+   var difflatitude=maxlatitude-minlatitude;
+   var difflongitude= maxlatitude-minlatitude;
+
+   var nbcolonne=6;
+   var nbligne=10;
+
+   var paslatitude= difflatitude/nbcolonne;
+   var paslongitude= difflongitude/nbligne;
+
+   var data="";
+
+   for (var c = 1; c <= nbcolonne; c++) {
+     for (var l = 1; l <= nbligne; l++) {
+       data+="INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES ("+c+","+l+","+paslongitude*l+","+paslatitude*c+",0,true);\n";
+       //console.log("INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES ("+c+","+l+","+paslongitude*l+","+paslatitude*c+",0,true);\n");
+     }
+   }
+   console.log(data);
+
+   </script>
+</body>
+</html>
