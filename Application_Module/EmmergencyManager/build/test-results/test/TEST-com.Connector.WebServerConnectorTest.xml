@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-14T08:43:21" hostname="ubuntu-emile" time="0.754">
+<testsuite name="com.Connector.WebServerConnectorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-01-14T10:26:17" hostname="ubuntu-emile" time="20.586">
   <properties/>
-  <testcase name="getSensors" classname="com.Connector.WebServerConnectorTest" time="0.408"/>
-  <testcase name="getBarracks" classname="com.Connector.WebServerConnectorTest" time="0.002"/>
-  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="0.28"/>
-  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="0.062"/>
-  <system-out><![CDATA[2021-01-14 09:43:22.379
+  <testcase name="getSensors" classname="com.Connector.WebServerConnectorTest" time="0.413"/>
+  <testcase name="getBarracks" classname="com.Connector.WebServerConnectorTest" time="0.003"/>
+  <testcase name="createFire" classname="com.Connector.WebServerConnectorTest" time="10.145"/>
+  <testcase name="getFires" classname="com.Connector.WebServerConnectorTest" time="10.025"/>
+  <system-out><![CDATA[2021-01-14 11:26:18.177
 ]]></system-out>
-  <system-err><![CDATA[java.net.ConnectException: Failed to connect to /192.168.1.7:5001
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
+  <system-err><![CDATA[java.net.SocketTimeoutException: connect timed out
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
+	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
@@ -79,7 +86,7 @@
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
+java.net.SocketTimeoutException: connect timed out
 	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
 	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
 	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
@@ -88,9 +95,6 @@ Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
 	at java.base/java.net.Socket.connect(Socket.java:609)
 	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
 	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
-	... 70 more
-java.net.ConnectException: Failed to connect to /192.168.1.7:5001
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:265)
 	at okhttp3.internal.connection.RealConnection.connect(RealConnection.java:183)
 	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:224)
 	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
@@ -161,15 +165,5 @@ java.net.ConnectException: Failed to connect to /192.168.1.7:5001
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-Caused by: java.net.ConnectException: Connexion refusée (Connection refused)
-	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
-	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
-	at java.base/java.net.Socket.connect(Socket.java:609)
-	at okhttp3.internal.platform.Platform.connectSocket(Platform.java:130)
-	at okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:263)
-	... 70 more
 ]]></system-err>
 </testsuite>
