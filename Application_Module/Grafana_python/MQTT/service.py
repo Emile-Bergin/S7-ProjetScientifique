@@ -4,7 +4,7 @@ import time
 import json
 from datetime import datetime
 
-IP = "192.168.1.25"
+IP = "164.4.1.1"
 
 def on_message(client, userdata, message):
     print("Reception")
