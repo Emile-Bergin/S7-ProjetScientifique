@@ -58,3 +58,12 @@ INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,inte
 INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES (6,8,4.84707769230989,45.79536387253486,0,true);
 INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES (6,9,4.857715968960261,45.79536387253486,0,true);
 INSERT INTO public.sensors (sensor_column, sensor_line, longitude, latitude,intensity, alive) VALUES (6,10,4.868354245610632,45.79536387253486,0,true);
+
+
+INSERT INTO fireworker.barracks (longitude, latitude) VALUES (4.857715968960261,45.75990295036695)
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
+INSERT INTO fireworker.trucks (id_barrack, longitude, latitude) VALUES (1, 4.857715968960261,45.75990295036695);
