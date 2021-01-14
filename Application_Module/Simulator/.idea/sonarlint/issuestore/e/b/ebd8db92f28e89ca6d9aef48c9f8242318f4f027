@@ -1,0 +1,10 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ
+P
+java:S1161":Add the "@Override" annotation above this method signature(“–ýþ
+m	java:S116"XRename this field "m_refreshTime" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ú„¨º
+\
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(ØùËÜ
+u	java:S116"[Rename this field "m_generalManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(û€åáøÿÿÿÿ
+\
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€

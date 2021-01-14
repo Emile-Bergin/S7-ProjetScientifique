@@ -1,0 +1,4 @@
+
+v	java:S116"ZRename this field "m_sensorManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íîÈÏ8‰ºî.
+v	java:S116"[Rename this field "m_missionManager" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½õºq8ò°¹‹î.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒ¤¥¹ûÿÿÿÿ

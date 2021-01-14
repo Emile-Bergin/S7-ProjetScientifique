@@ -1,0 +1,24 @@
+
+x
+java:S1450"VRemove the "m_fires" field and declare it as a local variable in the relevant methods.(Ø—çµşÿÿÿÿ8ÄÕ™î.
+o	java:S116"SRename this field "m_sensor" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¡¦È8äŒ§î.
+]	java:S125S"<This block of commented-out lines of code should be removed.(ğÏ¾ûÿÿÿÿ8³ª¸»ï.
+M
+java:S1068"+Remove this unused "m_fires" private field.(Ø—çµşÿÿÿÿ8Šş˜î.
+`
+java:S1155w">Use isEmpty() to check whether the collection is empty or not.(­¥…üúÿÿÿÿ8–Ô‘î.
+U
+java:S4973o"9Use the "equals" method if value comparison was intended.(¼Ò¹=8ß•—»ï.
+s	java:S116"RRename this field "m_fires" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ø—çµşÿÿÿÿ8Šş˜î.
+[
+java:S1155.">Use isEmpty() to check whether the collection is empty or not.(ıÚĞ­8¶³»»ï.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡İçó
+‚	java:S116"aRename this field "m_apiMicroBitWebServer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»ù¹úÿÿÿÿ8· Ÿî.
+}	java:S116"\Rename this field "m_sensorsToUpdate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Âî˜Ÿıÿÿÿÿ8äŒ§î.
+v	java:S116"URename this field "m_missions" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şÏÑ¢ıÿÿÿÿ8÷Í×’î.
+t
+java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 59 to the 15 allowed.(§ºšÓúÿÿÿÿ8œõ®î.
+v
+java:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(÷ÕØ8¤£¨î.
+ƒ	java:S116"bRename this field "m_apiSimulatorWebServer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ„·èüÿÿÿÿ8· Ÿî.
+}	java:S116"bRename this field "m_apiEmergencyWebServer" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÇ×D8ù³–î.
